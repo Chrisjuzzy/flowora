@@ -1,0 +1,27 @@
+app = "flowora-worker"
+primary_region = "sea"
+kill_signal = "SIGINT"
+kill_timeout = "30s"
+
+[build]
+  dockerfile = "apps/backend/Dockerfile.production"
+
+[env]
+  ENVIRONMENT = "production"
+  DEBUG = "false"
+  LOG_LEVEL = "INFO"
+  DEFAULT_AI_PROVIDER = "openai"
+  DEFAULT_AI_MODEL = "gpt-4.1-mini"
+  REQUEST_TIMEOUT_SECONDS = "120"
+  TIMEOUT_BUFFER_SECONDS = "10"
+  OLLAMA_TIMEOUT_SECONDS = "110"
+  ALLOW_LLM_MOCK_FALLBACK = "false"
+  MINIO_SECURE = "true"
+
+[processes]
+  app = "celery -A celery_app.celery_app worker --loglevel=INFO --queues=celery,agent_executions,workflows,optimization,scheduled,swarm,compliance,ethics,simulation"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "1024mb"

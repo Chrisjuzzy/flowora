@@ -1,0 +1,46 @@
+app = "flowora-api"
+primary_region = "sjc"
+kill_signal = "SIGINT"
+kill_timeout = "30s"
+
+[build]
+  dockerfile = "../../apps/backend/Dockerfile.production"
+
+[env]
+  ENVIRONMENT = "production"
+  HOST = "0.0.0.0"
+  PORT = "8000"
+  DEBUG = "false"
+  LOG_LEVEL = "INFO"
+  DEFAULT_AI_PROVIDER = "openai"
+  DEFAULT_AI_MODEL = "gpt-4.1-mini"
+  REQUEST_TIMEOUT_SECONDS = "120"
+  TIMEOUT_BUFFER_SECONDS = "10"
+  OLLAMA_TIMEOUT_SECONDS = "110"
+  EMAIL_VERIFICATION_REQUIRED = "true"
+  AUTO_VERIFY_EMAIL = "false"
+  ALLOW_LLM_MOCK_FALLBACK = "false"
+  MINIO_SECURE = "true"
+
+[processes]
+  app = "uvicorn main:app --host 0.0.0.0 --port 8000 --workers 1"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "10s"
+    grace_period = "45s"
+    method = "GET"
+    path = "/health"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "1024mb"

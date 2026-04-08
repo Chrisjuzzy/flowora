@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowora-api
+  namespace: flowora
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flowora-api
+  template:
+    metadata:
+      labels:
+        app: flowora-api
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/your-org/flowora-backend:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: flowora-config
+            - secretRef:
+                name: flowora-secrets
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 20

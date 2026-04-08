@@ -1,0 +1,16 @@
+{
+  "name": "Lead Funnel Workflow",
+  "config_json": {
+    "nodes": [
+      { "id": "input", "type": "input", "label": "Target Market" },
+      { "id": "lead-agent", "type": "agent", "label": "Lead Generation Agent" },
+      { "id": "blog-agent", "type": "agent", "label": "Blog Writer Agent" },
+      { "id": "output", "type": "output", "label": "Funnel Assets" }
+    ],
+    "edges": [
+      { "source": "input", "target": "lead-agent" },
+      { "source": "lead-agent", "target": "blog-agent" },
+      { "source": "blog-agent", "target": "output" }
+    ]
+  }
+}

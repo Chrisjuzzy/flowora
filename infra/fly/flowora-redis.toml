@@ -1,0 +1,19 @@
+app = "flowora-redis"
+primary_region = "sjc"
+kill_signal = "SIGINT"
+kill_timeout = "30s"
+
+[build]
+  image = "redis:7-alpine"
+
+[processes]
+  app = "sh -lc 'exec redis-server --appendonly yes --dir /data --save 60 1000 --requirepass \"$REDIS_PASSWORD\" --bind 0.0.0.0 --port 6379'"
+
+[mounts]
+  source = "redis_data"
+  destination = "/data"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "512mb"

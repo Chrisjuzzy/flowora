@@ -1,0 +1,14 @@
+{
+  "name": "SEO Audit Workflow",
+  "config_json": {
+    "nodes": [
+      { "id": "input", "type": "input", "label": "Website URL" },
+      { "id": "seo-agent", "type": "agent", "label": "SEO Audit Agent" },
+      { "id": "output", "type": "output", "label": "Audit Report" }
+    ],
+    "edges": [
+      { "source": "input", "target": "seo-agent" },
+      { "source": "seo-agent", "target": "output" }
+    ]
+  }
+}

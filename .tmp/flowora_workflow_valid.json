@@ -1,0 +1,14 @@
+{
+    "name":  "Flowora QA Workflow Valid",
+    "config_json":  {
+                        "steps":  [
+                                      "@{agent_id=2}"
+                                  ]
+                    },
+    "description":  "QA workflow with valid steps",
+    "is_public":  false,
+    "id":  35,
+    "owner_id":  1,
+    "clone_count":  0,
+    "install_count":  0
+}

@@ -1,0 +1,151 @@
+# Deprecated: use docker-compose.prod.yml for the canonical production deployment path.
+services:
+  api:
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile.production
+    container_name: flowora-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://flowora:flowora@postgres:5432/flowora
+      - SECRET_KEY=change-me
+      - DEBUG=false
+      - LOG_LEVEL=INFO
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_BUCKET=flowora
+      - MINIO_SECURE=false
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+    depends_on:
+      - postgres
+      - redis
+      - minio
+      - ollama
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile.production
+    container_name: flowora-worker
+    command: ["celery", "-A", "celery_app.celery_app", "worker", "-l", "info", "-Q", "agent_executions,workflows,optimization,scheduled,swarm,compliance,ethics,simulation"]
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://flowora:flowora@postgres:5432/flowora
+      - SECRET_KEY=change-me
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_BUCKET=flowora
+      - MINIO_SECURE=false
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+
+  beat:
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile.production
+    container_name: flowora-beat
+    command: ["celery", "-A", "celery_app.celery_app", "beat", "-l", "info"]
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://flowora:flowora@postgres:5432/flowora
+      - SECRET_KEY=change-me
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: flowora-postgres
+    environment:
+      - POSTGRES_USER=flowora
+      - POSTGRES_PASSWORD=flowora
+      - POSTGRES_DB=flowora
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: flowora-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: flowora-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio:latest
+    container_name: flowora-minio
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: flowora-prometheus
+    volumes:
+      - ./infra/prometheus-prod.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: flowora-grafana
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  minio_data:
+  prometheus_data:
+  grafana_data:
+  ollama_data:
+
+networks:
+  default:
+    name: flowora-network

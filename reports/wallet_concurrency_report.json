@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "attempted_requests": 50,
+    "successful_transactions": 10,
+    "failed_transactions_402": 40,
+    "unexpected_failures": 0,
+    "theoretical_success_limit": 10,
+    "initial_balance": 10.0,
+    "debit_amount": 1.0,
+    "expected_final_balance": 0.0,
+    "final_wallet_balance": 0.0,
+    "ledger_transaction_count": 10
+  },
+  "race_conditions": [],
+  "sample_successes": [
+    {
+      "worker_id": 3,
+      "status_code": 200,
+      "success": true,
+      "duration_ms": 447.33322899992345,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-3",
+      "transaction_id": 4,
+      "balance_after": 9.0,
+      "error": null
+    },
+    {
+      "worker_id": 4,
+      "status_code": 200,
+      "success": true,
+      "duration_ms": 728.4244919974299,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-4",
+      "transaction_id": 11,
+      "balance_after": 2.0,
+      "error": null
+    },
+    {
+      "worker_id": 8,
+      "status_code": 200,
+      "success": true,
+      "duration_ms": 624.2125749995466,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-8",
+      "transaction_id": 10,
+      "balance_after": 3.0,
+      "error": null
+    },
+    {
+      "worker_id": 12,
+      "status_code": 200,
+      "success": true,
+      "duration_ms": 713.2983740011696,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-12",
+      "transaction_id": 12,
+      "balance_after": 1.0,
+      "error": null
+    },
+    {
+      "worker_id": 14,
+      "status_code": 200,
+      "success": true,
+      "duration_ms": 727.412069998536,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-14",
+      "transaction_id": 13,
+      "balance_after": 0.0,
+      "error": null
+    }
+  ],
+  "sample_failures": [
+    {
+      "worker_id": 1,
+      "status_code": 402,
+      "success": false,
+      "duration_ms": 870.3154340000765,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-1",
+      "transaction_id": null,
+      "balance_after": null,
+      "error": "Insufficient wallet balance. Required 1.000000, available 0.000000."
+    },
+    {
+      "worker_id": 2,
+      "status_code": 402,
+      "success": false,
+      "duration_ms": 986.2946639987058,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-2",
+      "transaction_id": null,
+      "balance_after": null,
+      "error": "Insufficient wallet balance. Required 1.000000, available 0.000000."
+    },
+    {
+      "worker_id": 5,
+      "status_code": 402,
+      "success": false,
+      "duration_ms": 958.263796997926,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-5",
+      "transaction_id": null,
+      "balance_after": null,
+      "error": "Insufficient wallet balance. Required 1.000000, available 0.000000."
+    },
+    {
+      "worker_id": 6,
+      "status_code": 402,
+      "success": false,
+      "duration_ms": 853.6944379993656,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-6",
+      "transaction_id": null,
+      "balance_after": null,
+      "error": "Insufficient wallet balance. Required 1.000000, available 0.000000."
+    },
+    {
+      "worker_id": 7,
+      "status_code": 402,
+      "success": false,
+      "duration_ms": 873.6065289995167,
+      "reference_id": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f-7",
+      "transaction_id": null,
+      "balance_after": null,
+      "error": "Insufficient wallet balance. Required 1.000000, available 0.000000."
+    }
+  ],
+  "all_status_codes": [
+    200,
+    402
+  ],
+  "metadata": {
+    "user_id": 6,
+    "wallet_id": 5,
+    "currency": "USD",
+    "reference_prefix": "wallet-load-c1092e0d156e45a7b53a9c4bba01750f",
+    "elapsed_ms": 1119.99
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "name":  "Flowora QA Agent 2",
+    "description":  "QA agent run",
+    "config":  {
+                   "system_prompt":  "You are a test agent.",
+                   "prompt":  "Say hello to {input}."
+               },
+    "is_published":  false,
+    "tags":  null,
+    "category":  null,
+    "version":  "1.0.0",
+    "role":  null,
+    "skills":  null,
+    "ai_provider":  "local",
+    "model_name":  "llama3",
+    "temperature":  0.2,
+    "id":  2,
+    "owner_id":  1,
+    "created_at":  "2026-03-16T19:41:00.236319",
+    "updated_at":  "2026-03-16T19:41:17.151719"
+}

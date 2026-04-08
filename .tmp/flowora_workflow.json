@@ -1,0 +1,17 @@
+{
+    "name":  "Flowora QA Workflow",
+    "config_json":  {
+                        "edges":  [
+
+                                  ],
+                        "nodes":  [
+
+                                  ]
+                    },
+    "description":  "QA workflow",
+    "is_public":  false,
+    "id":  1,
+    "owner_id":  1,
+    "clone_count":  0,
+    "install_count":  0
+}

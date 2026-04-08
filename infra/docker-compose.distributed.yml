@@ -1,0 +1,132 @@
+services:
+  api:
+    build: ../apps/backend
+    container_name: flowora-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://flowora:flowora@postgres:5432/flowora
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/1
+      - SECRET_KEY=change-me
+      - DEBUG=false
+      - LOG_LEVEL=INFO
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+      - OTEL_SERVICE_NAME=flowora-api
+    depends_on:
+      - postgres
+      - redis
+      - qdrant
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  worker:
+    build: ../apps/backend
+    container_name: flowora-worker
+    command: ["celery", "-A", "celery_app.celery_app", "worker", "-l", "info", "-Q", "agent_executions,workflows,scheduled"]
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://flowora:flowora@postgres:5432/flowora
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/1
+      - SECRET_KEY=change-me
+      - DEBUG=false
+      - LOG_LEVEL=INFO
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+      - OTEL_SERVICE_NAME=flowora-worker
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+
+  beat:
+    build: ../apps/backend
+    container_name: flowora-beat
+    command: ["celery", "-A", "celery_app.celery_app", "beat", "-l", "info"]
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://flowora:flowora@postgres:5432/flowora
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/1
+      - SECRET_KEY=change-me
+      - DEBUG=false
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: flowora-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: flowora-postgres
+    environment:
+      - POSTGRES_USER=flowora
+      - POSTGRES_PASSWORD=flowora
+      - POSTGRES_DB=flowora
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: flowora-qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
+  otel-collector:
+    image: otel/opentelemetry-collector:0.96.0
+    container_name: flowora-otel
+    command: ["--config=/etc/otel-collector-config.yaml"]
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml:ro
+    ports:
+      - "4317:4317"
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: flowora-prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: flowora-grafana
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  qdrant_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  default:
+    name: flowora-network

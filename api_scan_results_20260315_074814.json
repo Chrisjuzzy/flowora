@@ -1,0 +1,2804 @@
+{
+  "scan_time": "2026-03-15T14:48:05.954944+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "swagger_loaded": true,
+  "endpoints": [
+    {
+      "path": "/auth/register",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 45.23,
+      "success": false,
+      "error": null,
+      "response": {
+        "error": true,
+        "message": "Internal server error",
+        "status_code": 500
+      }
+    },
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 14.44,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Incorrect email or password"
+      }
+    },
+    {
+      "path": "/auth/refresh",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 10.43,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid refresh token"
+      }
+    },
+    {
+      "path": "/auth/api-keys",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 10.33,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/auth/api-keys",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 32.57,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/auth/api-keys/{key_id}",
+      "method": "DELETE",
+      "status_code": 401,
+      "response_time_ms": 23.77,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/auth/logout",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 10.37,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/auth/verify-email",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 20.62,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/auth/resend-verification-code",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 30.23,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/auth/forgot-password",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 44.29,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "If email exists, password reset has been sent"
+      }
+    },
+    {
+      "path": "/auth/reset-password",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 24.35,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid or expired reset token"
+      }
+    },
+    {
+      "path": "/auth/token",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 14.11,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Incorrect username or password"
+      }
+    },
+    {
+      "path": "/auth/me",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 9.81,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/test",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 17.68,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "router working"
+      }
+    },
+    {
+      "path": "/agents/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 19.16,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 15.17,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 19.02,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "PUT",
+      "status_code": 401,
+      "response_time_ms": 21.77,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "DELETE",
+      "status_code": 401,
+      "response_time_ms": 22.12,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/public/{agent_id}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 13.95,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Agent not found"
+      }
+    },
+    {
+      "path": "/agents/public/{agent_id}/run",
+      "method": "POST",
+      "status_code": 429,
+      "response_time_ms": 10.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Rate limit exceeded. Please try again later."
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/run",
+      "method": "POST",
+      "status_code": 429,
+      "response_time_ms": 17.72,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Rate limit exceeded. Please try again later."
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/clone",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 18.81,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/versions",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 11.12,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/versions",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 18.49,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/rollback/{version_id}",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 34.56,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/executions/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 20.15,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/executions/{agent_id}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 10.46,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workflows/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 30.42,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workflows/",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 10.79,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workflows/public/{workflow_id}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 40.67,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Workflow not found"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 10.08,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/clone",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 20.33,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/install",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 28.42,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/publish",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 18.88,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/run",
+      "method": "POST",
+      "status_code": 429,
+      "response_time_ms": 6.99,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Rate limit exceeded. Please try again later."
+      }
+    },
+    {
+      "path": "/marketplace/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 16.72,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 14.14,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/listings",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 33.53,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/marketplace/listings",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27.84,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/listings/{listing_id}/buy",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 23.61,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/marketplace/{agent_id}/install",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 19.3,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/reviews",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 13.48,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/reviews",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45.93,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/listings/{listing_id}/reviews",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 20.9,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/marketplace/listings/{listing_id}/reviews",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45.37,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/publish",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 29.96,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/marketplace/system",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36.76,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_agents": 25,
+        "categories": {
+          "Content": [
+            {
+              "slug": "blog-post-longform-writer",
+              "name": "Blog Post Longform Writer",
+              "description": "Writes SEO-optimized, in-depth blog posts (2000+ words).",
+              "short_tagline": "Write SEO-optimized blog posts that rank",
+              "cost": 3,
+              "popularity_score": 91,
+              "execution_count": 0,
+              "estimated_output_time": 50,
+              "created_at": "2026-03-15T14:04:45.013488"
+            },
+            {
+              "slug": "content-calendar-builder",
+              "name": "30-Day Content Calendar Builder",
+              "description": "Creates monthly content plans with themes, topics, and posting schedules.",
+              "short_tagline": "Plan 30 days of content in minutes",
+              "cost": 2,
+              "popularity_score": 70,
+              "execution_count": 0,
+              "estimated_output_time": 30,
+              "created_at": "2026-03-15T14:04:45.013487"
+            }
+          ],
+          "Ecommerce": [
+            {
+              "slug": "amazon-listing-optimizer",
+              "name": "Amazon Listing Optimizer",
+              "description": "Optimizes Amazon listings for higher rankings and sales.",
+              "short_tagline": "Get your Amazon products to the top",
+              "cost": 2,
+              "popularity_score": 93,
+              "execution_count": 0,
+              "estimated_output_time": 30,
+              "created_at": "2026-03-15T14:04:45.013478"
+            },
+            {
+              "slug": "dropshipping-trend-scout",
+              "name": "Dropshipping Trend Scout",
+              "description": "Identifies trending products perfect for dropshipping businesses.",
+              "short_tagline": "Discover hot dropshipping products before competitors",
+              "cost": 2,
+              "popularity_score": 73,
+              "execution_count": 0,
+              "estimated_output_time": 20,
+              "created_at": "2026-03-15T14:04:45.013479"
+            },
+            {
+              "slug": "upsell-funnel-builder",
+              "name": "Upsell Funnel Builder",
+              "description": "Designs complete upsell funnels to maximize customer lifetime value.",
+              "short_tagline": "Build upsell funnels that multiply your AOV",
+              "cost": 2,
+              "popularity_score": 48,
+              "execution_count": 0,
+              "estimated_output_time": 28,
+              "created_at": "2026-03-15T14:04:45.013481"
+            },
+            {
+              "slug": "shopify-product-description-pro",
+              "name": "Shopify Product Description Pro",
+              "description": "Creates SEO-optimized product descriptions for Shopify stores.",
+              "short_tagline": "Write product descriptions that sell on Shopify",
+              "cost": 1,
+              "popularity_score": 43,
+              "execution_count": 0,
+              "estimated_output_time": 12,
+              "created_at": "2026-03-15T14:04:45.013477"
+            }
+          ],
+          "Lead Generation": [
+            {
+              "slug": "b2b-company-researcher",
+              "name": "B2B Company Researcher",
+              "description": "Deep research on B2B companies including financials, growth, and decision makers.",
+              "short_tagline": "Generate comprehensive B2B company research reports",
+              "cost": 3,
+              "popularity_score": 74,
+              "execution_count": 0,
+              "estimated_output_time": 60,
+              "created_at": "2026-03-15T14:04:45.013458"
+            },
+            {
+              "slug": "linkedin-prospect-builder",
+              "name": "LinkedIn Prospect Builder",
+              "description": "Creates targeted LinkedIn prospect lists based on job title, company, and industry.",
+              "short_tagline": "Build LinkedIn prospect lists by criteria",
+              "cost": 2,
+              "popularity_score": 72,
+              "execution_count": 0,
+              "estimated_output_time": 45,
+              "created_at": "2026-03-15T14:04:45.013451"
+            },
+            {
+              "slug": "local-business-lead-finder",
+              "name": "Local Business Lead Finder",
+              "description": "Discovers local businesses matching your target criteria with contact information.",
+              "short_tagline": "Find qualified local business prospects instantly",
+              "cost": 2,
+              "popularity_score": 64,
+              "execution_count": 0,
+              "estimated_output_time": 30,
+              "created_at": "2026-03-15T14:04:45.013445"
+            },
+            {
+              "slug": "cold-email-personalizer",
+              "name": "Cold Email Personalizer",
+              "description": "Generates personalized cold email templates based on prospect research.",
+              "short_tagline": "Write personalized cold emails at scale",
+              "cost": 1,
+              "popularity_score": 54,
+              "execution_count": 0,
+              "estimated_output_time": 15,
+              "created_at": "2026-03-15T14:04:45.013456"
+            },
+            {
+              "slug": "real-estate-seller-lead",
+              "name": "Real Estate Seller Lead Agent",
+              "description": "Finds homeowners likely to sell soon based on market indicators.",
+              "short_tagline": "Find ready-to-sell homeowners in your area",
+              "cost": 2,
+              "popularity_score": 43,
+              "execution_count": 0,
+              "estimated_output_time": 25,
+              "created_at": "2026-03-15T14:04:45.013460"
+            }
+          ],
+          "Marketing": [
+            {
+              "slug": "google-ads-headline-builder",
+              "name": "Google Ads Headline Builder",
+              "description": "Creates attention-grabbing Google Ads headlines that increase CTR.",
+              "short_tagline": "Build Google Ads headlines that get clicks",
+              "cost": 1,
+              "popularity_score": 86,
+              "execution_count": 0,
+              "estimated_output_time": 8,
+              "created_at": "2026-03-15T14:04:45.013465"
+            },
+            {
+              "slug": "youtube-script-generator",
+              "name": "YouTube Script Generator",
+              "description": "Creates engaging YouTube video scripts that retain viewers.",
+              "short_tagline": "Write YouTube scripts that keep viewers watching",
+              "cost": 2,
+              "popularity_score": 77,
+              "execution_count": 0,
+              "estimated_output_time": 20,
+              "created_at": "2026-03-15T14:04:45.013467"
+            },
+            {
+              "slug": "instagram-growth-planner",
+              "name": "Instagram Growth Planner",
+              "description": "Creates 90-day Instagram growth strategies with content calendars.",
+              "short_tagline": "Plan your Instagram growth with proven strategies",
+              "cost": 2,
+              "popularity_score": 75,
+              "execution_count": 0,
+              "estimated_output_time": 35,
+              "created_at": "2026-03-15T14:04:45.013462"
+            },
+            {
+              "slug": "seo-keyword-cluster-builder",
+              "name": "SEO Keyword Cluster Builder",
+              "description": "Creates keyword clusters for SEO strategy and content planning.",
+              "short_tagline": "Build SEO keyword clusters for better rankings",
+              "cost": 2,
+              "popularity_score": 63,
+              "execution_count": 0,
+              "estimated_output_time": 25,
+              "created_at": "2026-03-15T14:04:45.013469"
+            },
+            {
+              "slug": "facebook-ad-copy-generator",
+              "name": "Facebook Ad Copy Generator",
+              "description": "Writes proven Facebook ad copy variations optimized for conversions.",
+              "short_tagline": "Generate high-converting Facebook ad copy in seconds",
+              "cost": 1,
+              "popularity_score": 45,
+              "execution_count": 0,
+              "estimated_output_time": 10,
+              "created_at": "2026-03-15T14:04:45.013463"
+            }
+          ],
+          "Productivity": [
+            {
+              "slug": "business-plan-generator",
+              "name": "Business Plan Generator",
+              "description": "Creates professional business plans for funding and guidance.",
+              "short_tagline": "Generate professional business plans instantly",
+              "cost": 3,
+              "popularity_score": 85,
+              "execution_count": 0,
+              "estimated_output_time": 45,
+              "created_at": "2026-03-15T14:04:45.013482"
+            },
+            {
+              "slug": "sop-creator",
+              "name": "SOP Creator",
+              "description": "Generates detailed standard operating procedures for teams.",
+              "short_tagline": "Document processes with clear step-by-step SOPs",
+              "cost": 2,
+              "popularity_score": 55,
+              "execution_count": 0,
+              "estimated_output_time": 25,
+              "created_at": "2026-03-15T14:04:45.013485"
+            },
+            {
+              "slug": "meeting-summary-agent",
+              "name": "Meeting Summary Agent",
+              "description": "Extracts action items and key decisions from meeting notes.",
+              "short_tagline": "Turn meeting chaos into clear action items",
+              "cost": 1,
+              "popularity_score": 46,
+              "execution_count": 0,
+              "estimated_output_time": 8,
+              "created_at": "2026-03-15T14:04:45.013483"
+            },
+            {
+              "slug": "proposal-generator",
+              "name": "Proposal Generator",
+              "description": "Creates professional proposals that win more clients.",
+              "short_tagline": "Generate winning proposals quickly",
+              "cost": 2,
+              "popularity_score": 35,
+              "execution_count": 0,
+              "estimated_output_time": 22,
+              "created_at": "2026-03-15T14:04:45.013486"
+            }
+          ],
+          "Sales": [
+            {
+              "slug": "followup-email-sequence-builder",
+              "name": "Follow-Up Email Sequence Builder",
+              "description": "Creates automated follow-up email sequences that close sales.",
+              "short_tagline": "Build email sequences that convert cold prospects",
+              "cost": 2,
+              "popularity_score": 93,
+              "execution_count": 0,
+              "estimated_output_time": 25,
+              "created_at": "2026-03-15T14:04:45.013474"
+            },
+            {
+              "slug": "pricing-strategy-optimizer",
+              "name": "Pricing Strategy Optimizer",
+              "description": "Analyzes and optimizes pricing strategies for maximum revenue.",
+              "short_tagline": "Find your optimal pricing for maximum revenue",
+              "cost": 2,
+              "popularity_score": 83,
+              "execution_count": 0,
+              "estimated_output_time": 30,
+              "created_at": "2026-03-15T14:04:45.013475"
+            },
+            {
+              "slug": "objection-handling-generator",
+              "name": "Objection Handling Generator",
+              "description": "Crafts persuasive responses to common sales objections.",
+              "short_tagline": "Handle objections with proven responses",
+              "cost": 1,
+              "popularity_score": 65,
+              "execution_count": 0,
+              "estimated_output_time": 8,
+              "created_at": "2026-03-15T14:04:45.013473"
+            },
+            {
+              "slug": "sales-page-rewriter",
+              "name": "Sales Page Rewriter",
+              "description": "Optimizes sales pages to increase conversion rates and revenue.",
+              "short_tagline": "Rewrite sales pages that convert better",
+              "cost": 3,
+              "popularity_score": 50,
+              "execution_count": 0,
+              "estimated_output_time": 40,
+              "created_at": "2026-03-15T14:04:45.013471"
+            },
+            {
+              "slug": "high-ticket-offer-structurer",
+              "name": "High-Ticket Offer Structurer",
+              "description": "Designs premium offer structures for high-ticket products/services.",
+              "short_tagline": "Structure offers that close high-value deals",
+              "cost": 2,
+              "popularity_score": 45,
+              "execution_count": 0,
+              "estimated_output_time": 20,
+              "created_at": "2026-03-15T14:04:45.013470"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/marketplace/system/{slug}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 19.74,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/marketplace/system/{slug}/execute",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 21.37,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/marketplace/system/category/{category}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 37.12,
+      "success": true,
+      "error": null,
+      "response": {
+        "category": "Content",
+        "count": 2,
+        "agents": [
+          {
+            "slug": "blog-post-longform-writer",
+            "name": "Blog Post Longform Writer",
+            "description": "Writes SEO-optimized, in-depth blog posts (2000+ words).",
+            "short_tagline": "Write SEO-optimized blog posts that rank",
+            "cost": 3,
+            "popularity_score": 91,
+            "execution_count": 0,
+            "estimated_output_time": 50
+          },
+          {
+            "slug": "content-calendar-builder",
+            "name": "30-Day Content Calendar Builder",
+            "description": "Creates monthly content plans with themes, topics, and posting schedules.",
+            "short_tagline": "Plan 30 days of content in minutes",
+            "cost": 2,
+            "popularity_score": 70,
+            "execution_count": 0,
+            "estimated_output_time": 30
+          }
+        ]
+      }
+    },
+    {
+      "path": "/schedules/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 10.23,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/schedules/",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 11.84,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/schedules/{schedule_id}",
+      "method": "DELETE",
+      "status_code": 401,
+      "response_time_ms": 10.35,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/intelligence/insights",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27.59,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_memories": 0,
+        "total_reflections": 0,
+        "avg_confidence": 0.0,
+        "flagged_executions": 0,
+        "pending_evolutions": 0
+      }
+    },
+    {
+      "path": "/intelligence/dashboard",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 17.81,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_memories": 0,
+        "total_reflections": 0,
+        "avg_confidence": 0.0,
+        "flagged_executions": 0,
+        "pending_evolutions": 0
+      }
+    },
+    {
+      "path": "/intelligence/reflections",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.53,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/knowledge",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 12.88,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 2,
+          "topic": "test",
+          "content": "test",
+          "category": "Content",
+          "source_agent_id": 1,
+          "created_at": "2026-03-15T14:47:46.030891"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/knowledge",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 33.54,
+      "success": true,
+      "error": null,
+      "response": {
+        "category": "Content",
+        "reinforcement_score": 1,
+        "tenant_id": null,
+        "content": "test",
+        "topic": "test",
+        "id": 2,
+        "source_agent_id": 1,
+        "usage_count": 0,
+        "created_at": "2026-03-15T14:47:46.030891"
+      }
+    },
+    {
+      "path": "/intelligence/knowledge/{knowledge_id}/reinforce",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 29.54,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "reinforced",
+        "new_score": 2
+      }
+    },
+    {
+      "path": "/intelligence/patterns/{agent_id}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 14.74,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/evolutions",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 14.84,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/evolutions/{evo_id}/apply",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 23.99,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Evolution proposal not found"
+      }
+    },
+    {
+      "path": "/intelligence/messages",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 51.74,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 3,
+        "sender_agent_id": 1,
+        "receiver_agent_id": 1,
+        "content": "test_value",
+        "status": "delivered",
+        "created_at": "2026-03-15T14:48:07.738352"
+      }
+    },
+    {
+      "path": "/intelligence/messages",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 31.43,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 3,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "test_value",
+          "status": "delivered",
+          "created_at": "2026-03-15T14:48:07.738352"
+        },
+        {
+          "id": 2,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "test_value",
+          "status": "delivered",
+          "created_at": "2026-03-15T14:47:46.167565"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/delegations",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 21.11,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 3,
+        "parent_agent_id": 1,
+        "child_agent_id": 1,
+        "goal": "test_value",
+        "input_payload": "test_value",
+        "status": "pending",
+        "priority": 5,
+        "result": null,
+        "created_at": "2026-03-15T14:48:07.794508"
+      }
+    },
+    {
+      "path": "/intelligence/delegations/{task_id}/status",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 17.26,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Delegated task not found"
+      }
+    },
+    {
+      "path": "/intelligence/workspace_memory",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 57.39,
+      "success": false,
+      "error": null,
+      "response": {
+        "error": true,
+        "message": "Database error",
+        "status_code": 500
+      }
+    },
+    {
+      "path": "/intelligence/workspace_memory",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 21.7,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/swarm",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 1588.42,
+      "success": true,
+      "error": null,
+      "response": {
+        "swarm_id": "b8a771ea-e012-45e0-980d-79e67de55d19",
+        "agents_used": [
+          1
+        ],
+        "status": "completed",
+        "result": {
+          "error": "OpenAI API error: 401"
+        }
+      }
+    },
+    {
+      "path": "/workspaces/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 8.09,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workspaces/",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 16.51,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workspaces/{workspace_id}/members",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 9.5,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/workspaces/{workspace_id}/members",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 8.73,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/billing/invoices",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 8.53,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/billing/subscription",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 16.63,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/billing/checkout-session",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 15.77,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/billing/upgrade",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 8.15,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/billing/usage",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 7.61,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/billing/webhook",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 8.38,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "received"
+      }
+    },
+    {
+      "path": "/innovation/goals",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 8.92,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/innovation/goals",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 45.17,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/innovation/simulations",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 16.41,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/innovation/digital-twin",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 17.29,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/innovation/digital-twin",
+      "method": "PUT",
+      "status_code": 401,
+      "response_time_ms": 8.96,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/innovation/opportunities",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 14.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/deployment/edge/export/{agent_id}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 15.93,
+      "success": true,
+      "error": null,
+      "response": {
+        "agent_id": 1,
+        "name": "Edge Agent",
+        "config": {},
+        "runtime": "wasm-light-v1",
+        "edge_enabled": true,
+        "exported_at": "2026-03-15T14:48:09.728104"
+      }
+    },
+    {
+      "path": "/deployment/resources/config",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 16.2,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "updated",
+        "config": {
+          "max_cpu_percent": 75.0,
+          "max_memory_mb": 1024,
+          "auto_scale": true
+        }
+      }
+    },
+    {
+      "path": "/deployment/shards",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28.41,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "shard_id": "shard-001",
+          "region": "us-east-1",
+          "status": "active",
+          "capacity": 45.0
+        },
+        {
+          "shard_id": "shard-002",
+          "region": "eu-west-1",
+          "status": "active",
+          "capacity": 32.5
+        }
+      ]
+    },
+    {
+      "path": "/deployment/r",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 26.17,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "ok",
+        "message": "Deployment endpoint available"
+      }
+    },
+    {
+      "path": "/deployment/metrics",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 10.5,
+      "success": true,
+      "error": null,
+      "response": {
+        "cpu_usage": 0.0,
+        "memory_usage": 166.890625,
+        "cost_forecast_daily": 1.25,
+        "active_shards": 1,
+        "shard_details": []
+      }
+    },
+    {
+      "path": "/deployment/resource-limits",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 32.21,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "updated",
+        "agent_id": 1,
+        "priority": "normal"
+      }
+    },
+    {
+      "path": "/deployment/feedback",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 18.64,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/deployment/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24.69,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "name": "Small Business Starter",
+          "description": "Essential agents for running a small business (Email, Social, Invoicing)",
+          "category": "business",
+          "config": "{\"agents\": [{\"name\": \"Customer Support Bot\", \"description\": \"Handles common customer queries via email\", \"config\": {\"system_prompt\": \"You are a polite customer service agent.\"}}, {\"name\": \"Social Media Manager\", \"description\": \"Drafts posts for LinkedIn and Twitter\", \"config\": {\"system_prompt\": \"You are a social media expert.\"}}, {\"name\": \"Invoice Assistant\", \"description\": \"Extracts details from invoices\", \"config\": {\"system_prompt\": \"You are an accounting assistant.\"}}]}",
+          "is_active": true
+        },
+        {
+          "id": 2,
+          "name": "Developer Toolkit",
+          "description": "Agents to help with coding, debugging, and documentation",
+          "category": "developer",
+          "config": "{\"agents\": [{\"name\": \"Code Reviewer\", \"description\": \"Analyzes code for bugs and style issues\", \"config\": {\"system_prompt\": \"You are a senior software engineer.\"}}, {\"name\": \"Doc Writer\", \"description\": \"Generates documentation from code\", \"config\": {\"system_prompt\": \"You are a technical writer.\"}}, {\"name\": \"Test Generator\", \"description\": \"Writes unit tests for functions\", \"config\": {\"system_prompt\": \"You are a QA engineer.\"}}]}",
+          "is_active": true
+        },
+        {
+          "id": 3,
+          "name": "Content Creator Pack",
+          "description": "Agents for brainstorming, writing, and editing content",
+          "category": "creator",
+          "config": "{\"agents\": [{\"name\": \"Blog Post Writer\", \"description\": \"Writes engaging blog posts\", \"config\": {\"system_prompt\": \"You are a professional blogger.\"}}, {\"name\": \"SEO Optimizer\", \"description\": \"Suggests keywords and meta tags\", \"config\": {\"system_prompt\": \"You are an SEO specialist.\"}}, {\"name\": \"Script Writer\", \"description\": \"Writes scripts for YouTube videos\", \"config\": {\"system_prompt\": \"You are a scriptwriter.\"}}]}",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "path": "/deployment/templates/{template_id}/deploy",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 18.1,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Deployment failed: (psycopg2.errors.ForeignKeyViolation) insert or update on table \"agents\" violates foreign key constraint \"agents_owner_id_fkey\"\nDETAIL:  Key (owner_id)=(1) is not present in table \"users\".\n\n[SQL: INSERT INTO agents (name, description, config, owner_id, is_published, tags, category, version, workspace_id, edge_enabled, resource_priority, performance_rating, execution_count, created_at, updated_at, role, ai_provider, model_name, temperature, tenant_id) VALUES (%(name)s, %(description)s, %(config)s::JSON, %(owner_id)s, %(is_published)s, %(tags)s, %(category)s, %(version)s, %(workspace_id)s, %(edge_enabled)s, %(resource_priority)s, %(performance_rating)s, %(execution_count)s, %(created_at)s, %(updated_at)s, %(role)s, %(ai_provider)s, %(model_name)s, %(temperature)s, %(tenant_id)s) RETURNING agents.id]\n[parameters: {'name': 'Customer Support Bot', 'description': 'Handles common customer queries via email', 'config': '{\"system_prompt\": \"You are a polite customer service agent.\"}', 'owner_id': 1, 'is_published': False, 'tags': 'template:Small Business Starter', 'category': None, 'version': '1.0.0', 'workspace_id': None, 'edge_enabled': False, 'resource_priority': 'normal', 'performance_rating': 0.0, 'execution_count': 0, 'created_at': datetime.datetime(2026, 3, 15, 14, 48, 9, 898347), 'updated_at': datetime.datetime(2026, 3, 15, 14, 48, 9, 898351), 'role': None, 'ai_provider': 'openai', 'model_name': 'gpt-3.5-turbo', 'temperature': 0.7, 'tenant_id': None}]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"
+      }
+    },
+    {
+      "path": "/growth/referrals",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 8.2,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/growth/referrals/claim/{referral_id}",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 8.31,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/growth/showcase/trending",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 37.43,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "name": "Edge Agent",
+          "description": "Auto-created for edge export",
+          "config": {},
+          "is_published": false,
+          "tags": null,
+          "category": null,
+          "version": "1.0.0",
+          "role": null,
+          "skills": null,
+          "ai_provider": "openai",
+          "model_name": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "id": 1,
+          "owner_id": null,
+          "created_at": "2026-03-15T14:30:25.460910",
+          "updated_at": "2026-03-15T14:30:25.460914"
+        }
+      ]
+    },
+    {
+      "path": "/growth/showcase/popular",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 14.38,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "name": "Edge Agent",
+          "description": "Auto-created for edge export",
+          "config": {},
+          "is_published": false,
+          "tags": null,
+          "category": null,
+          "version": "1.0.0",
+          "role": null,
+          "skills": null,
+          "ai_provider": "openai",
+          "model_name": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "id": 1,
+          "owner_id": null,
+          "created_at": "2026-03-15T14:30:25.460910",
+          "updated_at": "2026-03-15T14:30:25.460914"
+        }
+      ]
+    },
+    {
+      "path": "/growth/insights",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 42.96,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/growth/community",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 20.38,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/community",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 15.84,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/growth/community/{post_id}/replies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 17.77,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/announcements",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 51.37,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/announcements",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 20.91,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/wallet/balance",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 25.18,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/wallet/recharge",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 15.96,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/wallet/transactions",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 19.12,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/talent/opportunities",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 22.06,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/talent/match",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 22.19,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "No agent profiles available"
+      }
+    },
+    {
+      "path": "/talent/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 21.54,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/compliance/scan",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 32.96,
+      "success": true,
+      "error": null,
+      "response": {
+        "vulnerabilities": [
+          {
+            "id": "mock-1",
+            "severity": "info",
+            "category": "availability",
+            "title": "AI Client Unavailable",
+            "description": "Ollama Python client is not installed. Install it to enable full vulnerability scanning.",
+            "affected_component": "compliance-scanner"
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "Install ollama Python client in the backend image",
+            "priority": "high"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/compliance/scan/system",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 55.97,
+      "success": true,
+      "error": null,
+      "response": {
+        "scan_id": "scan-20260315144810",
+        "system_info": {
+          "system_type": "test_value",
+          "hostname": "Test Agent",
+          "ip_address": "test_value",
+          "environment": "production",
+          "description": "test_value",
+          "target": "test_value",
+          "scan_type": "quick",
+          "tech_stack": [
+            "test_value"
+          ]
+        },
+        "vulnerabilities": [],
+        "fixes": [],
+        "summary": {
+          "total_vulnerabilities": 0,
+          "severity_breakdown": {},
+          "system_type": "test_value",
+          "tech_stack": [
+            "test_value"
+          ]
+        },
+        "scan_time": "2026-03-15T14:48:10.354705",
+        "scan_duration": 6.4e-05
+      }
+    },
+    {
+      "path": "/compliance/scans",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 58.91,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/code/audit",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 60.9,
+      "success": true,
+      "error": null,
+      "response": {
+        "audit_id": "5ee90baf-febb-49e8-840d-a2719659ea29",
+        "code_input": {
+          "source_type": "snippet",
+          "content": "def hello():\n    return 'hi'\n",
+          "language": "python",
+          "audit_type": "quick"
+        },
+        "issues": [
+          {
+            "id": "mock-1",
+            "severity": "info",
+            "category": "availability",
+            "title": "AI Service Unavailable",
+            "description": "Ollama AI service is not running. Please start Ollama to enable full code auditing.",
+            "file_path": null,
+            "line_number": null,
+            "code_snippet": null,
+            "suggestion": "Start Ollama service: ollama serve"
+          }
+        ],
+        "fixes": [],
+        "summary": {
+          "total_issues": 1,
+          "by_severity": {
+            "info": 1
+          },
+          "by_category": {
+            "availability": 1
+          }
+        },
+        "audit_time": "2026-03-15T14:48:10.480589",
+        "audit_duration": 0.1
+      }
+    },
+    {
+      "path": "/wellness/analyze",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 55.07,
+      "success": true,
+      "error": null,
+      "response": {
+        "burnout_risk": "Unknown",
+        "insights": [
+          "GitPython or git executable not available - cannot analyze commit history"
+        ],
+        "recommendations": [
+          "Install git in the backend image or disable wellness analysis"
+        ]
+      }
+    },
+    {
+      "path": "/infra/analyze",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 62.12,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "success",
+        "infrastructure_model": "test",
+        "assessment": {
+          "hardware": {
+            "cpu": {
+              "cores": 4,
+              "threads": 8,
+              "frequency": 1800.0030000000002
+            },
+            "memory": {
+              "total_gb": 7.66,
+              "available_gb": 5.13,
+              "percent_used": 33.0
+            },
+            "gpu": []
+          },
+          "software": {},
+          "performance": {},
+          "bottlenecks": [
+            {
+              "type": "gpu",
+              "severity": "medium",
+              "description": "No GPU detected. GPU acceleration would significantly improve performance"
+            },
+            {
+              "type": "quantization",
+              "severity": "medium",
+              "description": "No quantization specified. Quantization can reduce memory usage and improve inference speed"
+            }
+          ]
+        },
+        "recommendations": [
+          "Consider GPU acceleration for better performance",
+          "Implement model quantization to reduce memory usage",
+          "Monitor resource utilization during inference"
+        ]
+      }
+    },
+    {
+      "path": "/infra/optimize",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 48.28,
+      "success": true,
+      "error": null,
+      "response": {
+        "plan_id": "opt-20260315144810",
+        "infrastructure_model": {
+          "model_name": "qwen2.5-coder:7b",
+          "model_type": "LLM",
+          "parameters": "7B",
+          "framework": "PyTorch",
+          "quantization": null,
+          "current_hardware": {
+            "cpu_cores": 8,
+            "memory_gb": 16
+          },
+          "workload_pattern": null,
+          "performance_requirements": {
+            "latency_ms": "<100",
+            "throughput_req": "high"
+          }
+        },
+        "current_assessment": {
+          "hardware": {
+            "cpu": {
+              "cores": 4,
+              "threads": 8,
+              "frequency": 1800.0030000000002
+            },
+            "memory": {
+              "total_gb": 7.66,
+              "available_gb": 5.13,
+              "percent_used": 33.0
+            },
+            "gpu": []
+          },
+          "software": {},
+          "performance": {},
+          "bottlenecks": [
+            {
+              "type": "memory",
+              "severity": "high",
+              "description": "Model requires approximately 14.0GB of memory, but only 7.66GB is available"
+            },
+            {
+              "type": "gpu",
+              "severity": "medium",
+              "description": "No GPU detected. GPU acceleration would significantly improve performance"
+            },
+            {
+              "type": "quantization",
+              "severity": "medium",
+              "description": "No quantization specified. Quantization can reduce memory usage and improve inference speed"
+            }
+          ]
+        },
+        "suggestions": [
+          {
+            "id": "opt-quantization",
+            "category": "configuration",
+            "priority": "high",
+            "title": "Implement Model Quantization",
+            "description": "Reduce memory usage and improve inference speed through quantization",
+            "expected_improvement": "30-50% reduction in memory usage, 2-3x faster inference",
+            "implementation_effort": "Low",
+            "steps": [
+              "Evaluate 4-bit and 8-bit quantization options",
+              "Test quantized model for accuracy degradation",
+              "Implement quantization in inference pipeline",
+              "Monitor performance improvements"
+            ]
+          },
+          {
+            "id": "opt-gpu-acceleration",
+            "category": "hardware",
+            "priority": "high",
+            "title": "Add GPU Acceleration",
+            "description": "GPU acceleration can significantly improve model inference speed",
+            "expected_improvement": "10-50x faster inference depending on workload",
+            "implementation_effort": "Medium",
+            "steps": [
+              "Evaluate GPU options (NVIDIA, AMD, etc.)",
+              "Consider cloud GPU services for flexibility",
+              "Update inference pipeline to use GPU",
+              "Optimize batch sizes for GPU utilization"
+            ]
+          },
+          {
+            "id": "opt-ai-unavailable",
+            "category": "configuration",
+            "priority": "medium",
+            "title": "AI suggestions unavailable",
+            "description": "Ollama client is not installed; using rule-based recommendations only.",
+            "expected_improvement": "Varies based on implementation",
+            "implementation_effort": "Low",
+            "steps": [
+              "Install the Ollama Python client in the backend image",
+              "Ensure the Ollama service is running",
+              "Retry optimization for AI-generated suggestions"
+            ]
+          }
+        ],
+        "summary": {
+          "total_suggestions": 3,
+          "critical_issues": 0,
+          "high_priority_issues": 2,
+          "medium_priority_issues": 1,
+          "low_priority_issues": 0,
+          "categories": {
+            "hardware": 1,
+            "software": 0,
+            "configuration": 2,
+            "scaling": 0
+          }
+        },
+        "generated_at": "2026-03-15T14:48:10.647341"
+      }
+    },
+    {
+      "path": "/infra/health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 1109.3,
+      "success": true,
+      "error": null,
+      "response": {
+        "cpu": {
+          "utilization_percent": 9.2,
+          "status": "healthy"
+        },
+        "memory": {
+          "total_gb": 7.66,
+          "used_gb": 2.53,
+          "percent_used": 33.1,
+          "status": "healthy"
+        },
+        "disk": {
+          "total_gb": 1006.85,
+          "used_gb": 43.03,
+          "percent_used": 4.5,
+          "status": "healthy"
+        },
+        "gpu": []
+      }
+    },
+    {
+      "path": "/ethics/scan",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 102.1,
+      "success": true,
+      "error": null,
+      "response": {
+        "audit_id": "ethics-scan-20260315144811",
+        "ai_config": {
+          "system_name": "Quick Scan",
+          "system_type": "chatbot",
+          "purpose": "Quick ethical assessment",
+          "target_users": [
+            "general"
+          ],
+          "data_sources": [
+            "Test content"
+          ],
+          "model_details": {
+            "type": "unknown"
+          },
+          "deployment_context": null,
+          "safeguards": []
+        },
+        "concerns": [
+          {
+            "id": "bias-no-mitigation",
+            "category": "bias",
+            "severity": "high",
+            "title": "No Explicit Bias Mitigation",
+            "description": "AI configuration does not include explicit bias mitigation strategies",
+            "impact": "Model may perpetuate or amplify existing biases in the data",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups",
+              "society"
+            ],
+            "evidence": "No bias-related safeguards found in configuration"
+          },
+          {
+            "id": "privacy-no-safeguards",
+            "category": "privacy",
+            "severity": "high",
+            "title": "No Explicit Privacy Safeguards",
+            "description": "AI configuration does not include explicit privacy protection measures",
+            "impact": "User data may be at risk of exposure or misuse",
+            "affected_stakeholders": [
+              "end_users"
+            ],
+            "evidence": "No privacy-related safeguards found in configuration"
+          },
+          {
+            "id": "bias-limited-data",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Data Source Diversity",
+            "description": "AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "impact": "Model may not generalize well to diverse populations or contexts",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups"
+            ],
+            "evidence": "Data sources: Test content"
+          },
+          {
+            "id": "bias-limited-users",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Target User Diversity",
+            "description": "AI system is designed for a narrow range of users, which may lead to exclusion",
+            "impact": "System may not work well for users outside the primary target group",
+            "affected_stakeholders": [
+              "excluded_users"
+            ],
+            "evidence": "Target users: general"
+          },
+          {
+            "id": "transparency-no-explainability",
+            "category": "transparency",
+            "severity": "medium",
+            "title": "No Explainability Mechanisms",
+            "description": "AI configuration does not include explainability or interpretability features",
+            "impact": "Users and developers cannot understand how decisions are made",
+            "affected_stakeholders": [
+              "end_users",
+              "developers",
+              "regulators"
+            ],
+            "evidence": "No explainability-related safeguards found in configuration"
+          }
+        ],
+        "recommendations": [
+          {
+            "concern_id": "bias-limited-data",
+            "priority": "medium",
+            "title": "Address Limited Data Source Diversity",
+            "description": "Implement measures to address: AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-limited-users",
+            "priority": "medium",
+            "title": "Address Limited Target User Diversity",
+            "description": "Implement measures to address: AI system is designed for a narrow range of users, which may lead to exclusion",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-no-mitigation",
+            "priority": "high",
+            "title": "Address No Explicit Bias Mitigation",
+            "description": "Implement measures to address: AI configuration does not include explicit bias mitigation strategies",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "privacy-no-safeguards",
+            "priority": "high",
+            "title": "Address No Explicit Privacy Safeguards",
+            "description": "Implement measures to address: AI configuration does not include explicit privacy protection measures",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "transparency-no-explainability",
+            "priority": "medium",
+            "title": "Address No Explainability Mechanisms",
+            "description": "Implement measures to address: AI configuration does not include explainability or interpretability features",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          }
+        ],
+        "summary": {
+          "total_concerns": 5,
+          "critical_concerns": 0,
+          "high_concerns": 2,
+          "medium_concerns": 3,
+          "low_concerns": 0,
+          "categories": [
+            "bias",
+            "privacy",
+            "transparency"
+          ],
+          "overall_risk_level": "high"
+        },
+        "audit_time": "2026-03-15T14:48:11.860110"
+      }
+    },
+    {
+      "path": "/ethics/audit",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 28.32,
+      "success": true,
+      "error": null,
+      "response": {
+        "audit_id": "ethics-20260315144811",
+        "ai_config": {
+          "system_name": "Scan Audit",
+          "system_type": "chatbot",
+          "purpose": "Testing",
+          "target_users": [
+            "general"
+          ],
+          "data_sources": [
+            "synthetic"
+          ],
+          "model_details": {
+            "type": "llm"
+          },
+          "deployment_context": null,
+          "safeguards": null
+        },
+        "concerns": [
+          {
+            "id": "bias-no-mitigation",
+            "category": "bias",
+            "severity": "high",
+            "title": "No Explicit Bias Mitigation",
+            "description": "AI configuration does not include explicit bias mitigation strategies",
+            "impact": "Model may perpetuate or amplify existing biases in the data",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups",
+              "society"
+            ],
+            "evidence": "No bias-related safeguards found in configuration"
+          },
+          {
+            "id": "privacy-no-safeguards",
+            "category": "privacy",
+            "severity": "high",
+            "title": "No Explicit Privacy Safeguards",
+            "description": "AI configuration does not include explicit privacy protection measures",
+            "impact": "User data may be at risk of exposure or misuse",
+            "affected_stakeholders": [
+              "end_users"
+            ],
+            "evidence": "No privacy-related safeguards found in configuration"
+          },
+          {
+            "id": "bias-limited-data",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Data Source Diversity",
+            "description": "AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "impact": "Model may not generalize well to diverse populations or contexts",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups"
+            ],
+            "evidence": "Data sources: synthetic"
+          },
+          {
+            "id": "bias-limited-users",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Target User Diversity",
+            "description": "AI system is designed for a narrow range of users, which may lead to exclusion",
+            "impact": "System may not work well for users outside the primary target group",
+            "affected_stakeholders": [
+              "excluded_users"
+            ],
+            "evidence": "Target users: general"
+          },
+          {
+            "id": "transparency-no-explainability",
+            "category": "transparency",
+            "severity": "medium",
+            "title": "No Explainability Mechanisms",
+            "description": "AI configuration does not include explainability or interpretability features",
+            "impact": "Users and developers cannot understand how decisions are made",
+            "affected_stakeholders": [
+              "end_users",
+              "developers",
+              "regulators"
+            ],
+            "evidence": "No explainability-related safeguards found in configuration"
+          }
+        ],
+        "recommendations": [
+          {
+            "concern_id": "bias-limited-data",
+            "priority": "medium",
+            "title": "Address Limited Data Source Diversity",
+            "description": "Implement measures to address: AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-limited-users",
+            "priority": "medium",
+            "title": "Address Limited Target User Diversity",
+            "description": "Implement measures to address: AI system is designed for a narrow range of users, which may lead to exclusion",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-no-mitigation",
+            "priority": "high",
+            "title": "Address No Explicit Bias Mitigation",
+            "description": "Implement measures to address: AI configuration does not include explicit bias mitigation strategies",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "privacy-no-safeguards",
+            "priority": "high",
+            "title": "Address No Explicit Privacy Safeguards",
+            "description": "Implement measures to address: AI configuration does not include explicit privacy protection measures",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "transparency-no-explainability",
+            "priority": "medium",
+            "title": "Address No Explainability Mechanisms",
+            "description": "Implement measures to address: AI configuration does not include explainability or interpretability features",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          }
+        ],
+        "summary": {
+          "total_concerns": 5,
+          "critical_concerns": 0,
+          "high_concerns": 2,
+          "medium_concerns": 3,
+          "low_concerns": 0,
+          "categories": [
+            "privacy",
+            "transparency",
+            "bias"
+          ],
+          "overall_risk_level": "high"
+        },
+        "audit_time": "2026-03-15T14:48:11.891107"
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/memory",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 17.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/runs",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 95.52,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/feedback",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 52.22,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/learning-progress",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 45.53,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/observability/metrics",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18.67,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_requests": 223,
+        "error_requests": 112,
+        "avg_latency_ms": 127.63836886316138,
+        "min_latency_ms": 1.4109611511230469,
+        "max_latency_ms": 3793.013334274292
+      }
+    },
+    {
+      "path": "/observability/system-health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 30.69,
+      "success": true,
+      "error": null,
+      "response": {
+        "database": "ok",
+        "redis": "unknown",
+        "queue": "unknown"
+      }
+    },
+    {
+      "path": "/observability/execution-stats",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 22.73,
+      "success": true,
+      "error": null,
+      "response": {
+        "executions": 2,
+        "usage_logs": 0
+      }
+    },
+    {
+      "path": "/autonomy/agent-generation",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 56.93,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/autonomy/agents/{agent_id}/optimize",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 33.13,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/autonomy/agents/{agent_id}/tools",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 24.85,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/autonomy/products/generate",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 17.0,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/autonomy/workflows/generate",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 15.07,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/autonomy/company/run",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 24.08,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/autonomy/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 21.08,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/autonomy/templates",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 18.47,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/analytics/agents/{agent_id}/success-rate",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 27.74,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/analytics/agents/{agent_id}/tool-performance",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 20.93,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/analytics/agents/{agent_id}/prompt-performance",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 16.02,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/analytics/summary",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 16.23,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/analytics/founder-runs",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 15.15,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/analytics/founder-runs/{run_id}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 75.41,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/metrics",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 78.63,
+      "success": true,
+      "error": null,
+      "response": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 23674.0\npython_gc_objects_collec"
+    },
+    {
+      "path": "/storage/upload",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 22.18,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Missing boundary in multipart."
+      }
+    },
+    {
+      "path": "/storage/download/{object_name}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 16.88,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/trending/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 26.88,
+      "success": true,
+      "error": null,
+      "response": {
+        "agents": [
+          {
+            "agent_id": 1,
+            "name": "Edge Agent",
+            "description": "Auto-created for edge export",
+            "executions": 2
+          }
+        ]
+      }
+    },
+    {
+      "path": "/trending/workflows",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 19.27,
+      "success": true,
+      "error": null,
+      "response": {
+        "workflows": []
+      }
+    },
+    {
+      "path": "/trending/plugins",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 35.74,
+      "success": true,
+      "error": null,
+      "response": {
+        "plugins": []
+      }
+    },
+    {
+      "path": "/trending/summary",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24.64,
+      "success": true,
+      "error": null,
+      "response": {
+        "agents": [
+          {
+            "agent_id": 1,
+            "name": "Edge Agent",
+            "description": "Auto-created for edge export",
+            "executions": 2
+          }
+        ],
+        "workflows": [],
+        "plugins": []
+      }
+    },
+    {
+      "path": "/templates/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.84,
+      "success": true,
+      "error": null,
+      "response": {
+        "agents": [],
+        "workflows": [],
+        "tools": []
+      }
+    },
+    {
+      "path": "/templates/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 17.69,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/templates/agents",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 39.89,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/templates/workflows",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18.57,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/templates/workflows",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 17.79,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/templates/tools",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18.4,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/templates/tools",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 18.56,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/referral/redeem",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 53.47,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/founder/run",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 44.57,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Could not validate credentials"
+      }
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 13.97,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "AI Agent Builder running \u2705",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "path": "/health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 1064.73,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "healthy",
+        "app": "AI Agent Builder",
+        "debug": false,
+        "version": "1.0.0",
+        "database": "healthy",
+        "redis": "healthy",
+        "celery": "healthy",
+        "ollama": "healthy",
+        "minio": "healthy"
+      }
+    }
+  ],
+  "summary": {
+    "total": 160,
+    "success": 61,
+    "failed": 99,
+    "error": 0
+  }
+}

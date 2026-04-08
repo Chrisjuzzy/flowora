@@ -1,0 +1,57 @@
+{
+  "uid": "flowora-overview",
+  "title": "Flowora Overview",
+  "schemaVersion": 36,
+  "version": 1,
+  "refresh": "10s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Total Requests",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "total_requests",
+          "legendFormat": "requests"
+        }
+      ],
+      "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 }
+    },
+    {
+      "type": "stat",
+      "title": "Error Requests",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "error_requests",
+          "legendFormat": "errors"
+        }
+      ],
+      "gridPos": { "x": 6, "y": 0, "w": 6, "h": 4 }
+    },
+    {
+      "type": "stat",
+      "title": "Avg Latency (ms)",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "avg_latency_ms",
+          "legendFormat": "avg_latency"
+        }
+      ],
+      "gridPos": { "x": 12, "y": 0, "w": 6, "h": 4 }
+    },
+    {
+      "type": "stat",
+      "title": "Max Latency (ms)",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "max_latency_ms",
+          "legendFormat": "max_latency"
+        }
+      ],
+      "gridPos": { "x": 18, "y": 0, "w": 6, "h": 4 }
+    }
+  ]
+}

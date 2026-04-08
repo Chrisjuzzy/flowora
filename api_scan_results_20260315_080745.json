@@ -1,0 +1,3417 @@
+{
+  "scan_time": "2026-03-15T15:07:16.142040+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "swagger_loaded": true,
+  "endpoints": [
+    {
+      "path": "/auth/register",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 321.46,
+      "success": true,
+      "error": null,
+      "response": {
+        "email": "scan+1773587238@example.com",
+        "id": 4,
+        "created_at": "2026-03-15T15:07:18.836784",
+        "referral_code": "B31DS6NN",
+        "executions_this_month": 0,
+        "tokens_used_this_month": 0,
+        "subscription_tier": "free",
+        "subscription_status": "active",
+        "is_email_verified": false,
+        "organization_id": 4
+      }
+    },
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 91.9,
+      "success": true,
+      "error": null,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczNTkwODM5LCJpYXQiOjE3NzM1ODcyMzl9.Xzcxq8yO1lAqAo9KiNXffqZzRgfcVODR-wphj0h-5yw",
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwidHlwZSI6InJlZnJlc2giLCJleHAiOjE3NzQxOTIwMzksImlhdCI6MTc3MzU4NzIzOX0.zKbVgLMApPa1_lrGz2SsAKcWa-x1mTeh1XiUhwX8Spw",
+        "token_type": "bearer",
+        "role": "user"
+      }
+    },
+    {
+      "path": "/auth/refresh",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 35.73,
+      "success": true,
+      "error": null,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczNTkwODM5LCJpYXQiOjE3NzM1ODcyMzl9.Xzcxq8yO1lAqAo9KiNXffqZzRgfcVODR-wphj0h-5yw",
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwidHlwZSI6InJlZnJlc2giLCJleHAiOjE3NzQxOTIwMzksImlhdCI6MTc3MzU4NzIzOX0.zKbVgLMApPa1_lrGz2SsAKcWa-x1mTeh1XiUhwX8Spw",
+        "token_type": "bearer",
+        "role": "user"
+      }
+    },
+    {
+      "path": "/auth/api-keys",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 109.74,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/auth/api-keys",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 169.41,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "name": "default",
+        "key_prefix": "aab__DVI",
+        "is_active": true,
+        "created_at": "2026-03-15T15:07:19.440578",
+        "last_used": null,
+        "api_key": "aab__DVIlwWFwqgxjsKhIfYYgqZCku87qK2-rsVfgMxngj4"
+      }
+    },
+    {
+      "path": "/auth/api-keys/{key_id}",
+      "method": "DELETE",
+      "status_code": 200,
+      "response_time_ms": 196.52,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "revoked",
+        "id": 1
+      }
+    },
+    {
+      "path": "/auth/logout",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 104.26,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "Logged out successfully"
+      }
+    },
+    {
+      "path": "/auth/verify-email",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 76.47,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid verification code"
+      }
+    },
+    {
+      "path": "/auth/resend-verification-code",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 73.42,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "Verification code sent to your email"
+      }
+    },
+    {
+      "path": "/auth/forgot-password",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 66.26,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "If email exists, password reset link has been sent"
+      }
+    },
+    {
+      "path": "/auth/reset-password",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 81.08,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid or expired reset token"
+      }
+    },
+    {
+      "path": "/auth/token",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 88.4,
+      "success": true,
+      "error": null,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwidHlwZSI6ImFjY2VzcyIsImV4cCI6MTc3MzU5MDg0MCwiaWF0IjoxNzczNTg3MjQwfQ.L61z_go10z1-xsvBY--npAHLBtpHy-j0zntKishhl-Q",
+        "refresh_token": null,
+        "token_type": "bearer",
+        "role": "user"
+      }
+    },
+    {
+      "path": "/auth/me",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41.85,
+      "success": true,
+      "error": null,
+      "response": {
+        "email": "test@example.com",
+        "id": 2,
+        "created_at": "2026-03-15T15:07:17.605852",
+        "referral_code": "8BO5TFLZ",
+        "executions_this_month": 0,
+        "tokens_used_this_month": 0,
+        "subscription_tier": "free",
+        "subscription_status": "active",
+        "is_email_verified": false,
+        "organization_id": 2
+      }
+    },
+    {
+      "path": "/agents/test",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 32.65,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "router working"
+      }
+    },
+    {
+      "path": "/agents/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 61.29,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "name": "Edge Agent",
+          "description": "Auto-created for edge export",
+          "config": {},
+          "is_published": false,
+          "tags": null,
+          "category": null,
+          "version": "1.0.0",
+          "role": null,
+          "skills": null,
+          "ai_provider": "openai",
+          "model_name": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "id": 1,
+          "owner_id": null,
+          "created_at": "2026-03-15T14:30:25.460910",
+          "updated_at": "2026-03-15T14:30:25.460914"
+        }
+      ]
+    },
+    {
+      "path": "/agents/",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 153.22,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Agent",
+        "description": "Agent created by health scan",
+        "config": {
+          "system_prompt": "You are a helpful assistant."
+        },
+        "is_published": false,
+        "tags": null,
+        "category": null,
+        "version": "1.0.0",
+        "role": null,
+        "skills": null,
+        "ai_provider": "openai",
+        "model_name": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "id": 5,
+        "owner_id": 2,
+        "created_at": "2026-03-15T15:07:20.410110",
+        "updated_at": "2026-03-15T15:07:20.410118"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 43.21,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Agent",
+        "description": "Agent created by health scan",
+        "config": {
+          "system_prompt": "You are a helpful assistant."
+        },
+        "is_published": false,
+        "tags": null,
+        "category": null,
+        "version": "1.0.0",
+        "role": null,
+        "skills": null,
+        "ai_provider": "openai",
+        "model_name": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "id": 5,
+        "owner_id": 2,
+        "created_at": "2026-03-15T15:07:20.410110",
+        "updated_at": "2026-03-15T15:07:20.410118"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "PUT",
+      "status_code": 200,
+      "response_time_ms": 140.66,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Agent",
+        "description": "Updated by health scan",
+        "config": {
+          "system_prompt": "Updated."
+        },
+        "is_published": false,
+        "tags": null,
+        "category": null,
+        "version": "1.0.0",
+        "role": null,
+        "skills": null,
+        "ai_provider": "openai",
+        "model_name": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "id": 5,
+        "owner_id": 2,
+        "created_at": "2026-03-15T15:07:20.410110",
+        "updated_at": "2026-03-15T15:07:20.561804"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "DELETE",
+      "status_code": 200,
+      "response_time_ms": 281.41,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "Agent deleted successfully"
+      }
+    },
+    {
+      "path": "/agents/public/{agent_id}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 38.9,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Agent not found"
+      }
+    },
+    {
+      "path": "/agents/public/{agent_id}/run",
+      "method": "POST",
+      "status_code": 429,
+      "response_time_ms": 22.31,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Rate limit exceeded. Please try again later."
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/run",
+      "method": "POST",
+      "status_code": 403,
+      "response_time_ms": 266.5,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Please verify your email before executing agents."
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/clone",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 112.41,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Copy of Scan Agent",
+        "description": "Updated by health scan",
+        "config": {
+          "system_prompt": "Updated."
+        },
+        "is_published": false,
+        "tags": null,
+        "category": null,
+        "version": "1.0.0",
+        "role": null,
+        "skills": null,
+        "ai_provider": "openai",
+        "model_name": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "id": 7,
+        "owner_id": 2,
+        "created_at": "2026-03-15T15:07:21.510103",
+        "updated_at": "2026-03-15T15:07:21.510108"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/versions",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 60.09,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "version": "test_value",
+        "created_at": "2026-03-15T15:07:21.633823",
+        "description": "test_value"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/versions",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 42.67,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "version": "test_value",
+          "created_at": "2026-03-15T15:07:21.633823",
+          "description": "test_value"
+        }
+      ]
+    },
+    {
+      "path": "/agents/{agent_id}/rollback/{version_id}",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 85.13,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Agent",
+        "description": "Updated by health scan",
+        "config": {
+          "system_prompt": "Updated."
+        },
+        "is_published": false,
+        "tags": null,
+        "category": null,
+        "version": "test_value",
+        "role": null,
+        "skills": null,
+        "ai_provider": "openai",
+        "model_name": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "id": 5,
+        "owner_id": 2,
+        "created_at": "2026-03-15T15:07:20.410110",
+        "updated_at": "2026-03-15T15:07:21.741389"
+      }
+    },
+    {
+      "path": "/executions/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 48.34,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/executions/{agent_id}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45.96,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/workflows/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 44.32,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/workflows/",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 79.11,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Workflow",
+        "config_json": {
+          "steps": []
+        },
+        "description": null,
+        "is_public": false,
+        "id": 1,
+        "owner_id": 2,
+        "clone_count": 0,
+        "install_count": 0
+      }
+    },
+    {
+      "path": "/workflows/public/{workflow_id}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 36.52,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Workflow not found"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.7,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Workflow",
+        "config_json": {
+          "steps": []
+        },
+        "description": null,
+        "is_public": false,
+        "id": 1,
+        "owner_id": 2,
+        "clone_count": 0,
+        "install_count": 0
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/clone",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 130.2,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Copy of Scan Workflow",
+        "config_json": {
+          "steps": []
+        },
+        "description": null,
+        "is_public": false,
+        "id": 2,
+        "owner_id": 2,
+        "clone_count": 0,
+        "install_count": 0
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/install",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 91.23,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Workflow (Installed)",
+        "config_json": {
+          "steps": []
+        },
+        "description": null,
+        "is_public": false,
+        "id": 3,
+        "owner_id": 2,
+        "clone_count": 0,
+        "install_count": 0
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/publish",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 85.16,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Workflow",
+        "config_json": {
+          "steps": []
+        },
+        "description": null,
+        "is_public": true,
+        "id": 1,
+        "owner_id": 2,
+        "clone_count": 1,
+        "install_count": 1
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/run",
+      "method": "POST",
+      "status_code": 429,
+      "response_time_ms": 14.58,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Rate limit exceeded. Please try again later."
+      }
+    },
+    {
+      "path": "/marketplace/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39.56,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.85,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/listings",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 101.79,
+      "success": true,
+      "error": null,
+      "response": {
+        "price": 9.99,
+        "category": "general",
+        "is_active": true,
+        "listing_type": "agent",
+        "resource_id": 5,
+        "downloads": 0,
+        "rating": 0.0,
+        "version": "1.0.0",
+        "id": 1,
+        "agent_id": 5,
+        "seller_id": 2,
+        "created_at": "2026-03-15T15:07:22.523049",
+        "agent": {
+          "name": "Scan Agent",
+          "description": "Updated by health scan",
+          "config": {
+            "system_prompt": "Updated."
+          },
+          "is_published": false,
+          "tags": null,
+          "category": null,
+          "version": "test_value",
+          "role": null,
+          "skills": null,
+          "ai_provider": "openai",
+          "model_name": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "id": 5,
+          "owner_id": 2,
+          "created_at": "2026-03-15T15:07:20.410110",
+          "updated_at": "2026-03-15T15:07:21.741389"
+        }
+      }
+    },
+    {
+      "path": "/marketplace/listings",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39.18,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "price": 9.99,
+          "category": "general",
+          "is_active": true,
+          "listing_type": "agent",
+          "resource_id": 5,
+          "downloads": 0,
+          "rating": 0.0,
+          "version": "1.0.0",
+          "id": 1,
+          "agent_id": 5,
+          "seller_id": 2,
+          "created_at": "2026-03-15T15:07:22.523049",
+          "agent": {
+            "name": "Scan Agent",
+            "description": "Updated by health scan",
+            "config": {
+              "system_prompt": "Updated."
+            },
+            "is_published": false,
+            "tags": null,
+            "category": null,
+            "version": "test_value",
+            "role": null,
+            "skills": null,
+            "ai_provider": "openai",
+            "model_name": "gpt-3.5-turbo",
+            "temperature": 0.7,
+            "id": 5,
+            "owner_id": 2,
+            "created_at": "2026-03-15T15:07:20.410110",
+            "updated_at": "2026-03-15T15:07:21.741389"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/marketplace/listings/{listing_id}/buy",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 166.67,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "listing_id": 1,
+        "buyer_id": 2,
+        "amount": 0.0,
+        "created_at": "2026-03-15T15:07:22.716538"
+      }
+    },
+    {
+      "path": "/marketplace/{agent_id}/install",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 142.88,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Scan Agent (Installed)",
+        "description": "Updated by health scan",
+        "config": {
+          "system_prompt": "Updated."
+        },
+        "is_published": false,
+        "tags": null,
+        "category": null,
+        "version": "test_value",
+        "role": null,
+        "skills": null,
+        "ai_provider": "openai",
+        "model_name": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "id": 9,
+        "owner_id": 2,
+        "created_at": "2026-03-15T15:07:22.874867",
+        "updated_at": "2026-03-15T15:07:22.874873"
+      }
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/reviews",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 84.71,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "user_id": 2,
+        "rating": 5,
+        "comment": "Great agent",
+        "created_at": "2026-03-15T15:07:22.986392"
+      }
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/reviews",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 43.16,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "user_id": 2,
+          "rating": 5,
+          "comment": "Great agent",
+          "created_at": "2026-03-15T15:07:22.986392"
+        }
+      ]
+    },
+    {
+      "path": "/marketplace/listings/{listing_id}/reviews",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 196.31,
+      "success": true,
+      "error": null,
+      "response": {
+        "rating": 1,
+        "comment": "test_value",
+        "id": 1,
+        "listing_id": 1,
+        "user_id": 2,
+        "created_at": "2026-03-15T15:07:23.137097"
+      }
+    },
+    {
+      "path": "/marketplace/listings/{listing_id}/reviews",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 55.63,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "rating": 1,
+          "comment": "test_value",
+          "id": 1,
+          "listing_id": 1,
+          "user_id": 2,
+          "created_at": "2026-03-15T15:07:23.137097"
+        }
+      ]
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/publish",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 89.15,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "published",
+        "agent_id": 5
+      }
+    },
+    {
+      "path": "/marketplace/system",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 48.39,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_agents": 25,
+        "categories": {
+          "Content": [
+            {
+              "slug": "blog-post-longform-writer",
+              "name": "Blog Post Longform Writer",
+              "description": "Writes SEO-optimized, in-depth blog posts (2000+ words).",
+              "short_tagline": "Write SEO-optimized blog posts that rank",
+              "cost": 3,
+              "popularity_score": 91,
+              "execution_count": 0,
+              "estimated_output_time": 50,
+              "created_at": "2026-03-15T14:04:45.013488"
+            },
+            {
+              "slug": "content-calendar-builder",
+              "name": "30-Day Content Calendar Builder",
+              "description": "Creates monthly content plans with themes, topics, and posting schedules.",
+              "short_tagline": "Plan 30 days of content in minutes",
+              "cost": 2,
+              "popularity_score": 70,
+              "execution_count": 0,
+              "estimated_output_time": 30,
+              "created_at": "2026-03-15T14:04:45.013487"
+            }
+          ],
+          "Ecommerce": [
+            {
+              "slug": "amazon-listing-optimizer",
+              "name": "Amazon Listing Optimizer",
+              "description": "Optimizes Amazon listings for higher rankings and sales.",
+              "short_tagline": "Get your Amazon products to the top",
+              "cost": 2,
+              "popularity_score": 93,
+              "execution_count": 0,
+              "estimated_output_time": 30,
+              "created_at": "2026-03-15T14:04:45.013478"
+            },
+            {
+              "slug": "dropshipping-trend-scout",
+              "name": "Dropshipping Trend Scout",
+              "description": "Identifies trending products perfect for dropshipping businesses.",
+              "short_tagline": "Discover hot dropshipping products before competitors",
+              "cost": 2,
+              "popularity_score": 73,
+              "execution_count": 0,
+              "estimated_output_time": 20,
+              "created_at": "2026-03-15T14:04:45.013479"
+            },
+            {
+              "slug": "upsell-funnel-builder",
+              "name": "Upsell Funnel Builder",
+              "description": "Designs complete upsell funnels to maximize customer lifetime value.",
+              "short_tagline": "Build upsell funnels that multiply your AOV",
+              "cost": 2,
+              "popularity_score": 48,
+              "execution_count": 0,
+              "estimated_output_time": 28,
+              "created_at": "2026-03-15T14:04:45.013481"
+            },
+            {
+              "slug": "shopify-product-description-pro",
+              "name": "Shopify Product Description Pro",
+              "description": "Creates SEO-optimized product descriptions for Shopify stores.",
+              "short_tagline": "Write product descriptions that sell on Shopify",
+              "cost": 1,
+              "popularity_score": 43,
+              "execution_count": 0,
+              "estimated_output_time": 12,
+              "created_at": "2026-03-15T14:04:45.013477"
+            }
+          ],
+          "Lead Generation": [
+            {
+              "slug": "b2b-company-researcher",
+              "name": "B2B Company Researcher",
+              "description": "Deep research on B2B companies including financials, growth, and decision makers.",
+              "short_tagline": "Generate comprehensive B2B company research reports",
+              "cost": 3,
+              "popularity_score": 74,
+              "execution_count": 0,
+              "estimated_output_time": 60,
+              "created_at": "2026-03-15T14:04:45.013458"
+            },
+            {
+              "slug": "linkedin-prospect-builder",
+              "name": "LinkedIn Prospect Builder",
+              "description": "Creates targeted LinkedIn prospect lists based on job title, company, and industry.",
+              "short_tagline": "Build LinkedIn prospect lists by criteria",
+              "cost": 2,
+              "popularity_score": 72,
+              "execution_count": 0,
+              "estimated_output_time": 45,
+              "created_at": "2026-03-15T14:04:45.013451"
+            },
+            {
+              "slug": "local-business-lead-finder",
+              "name": "Local Business Lead Finder",
+              "description": "Discovers local businesses matching your target criteria with contact information.",
+              "short_tagline": "Find qualified local business prospects instantly",
+              "cost": 2,
+              "popularity_score": 64,
+              "execution_count": 0,
+              "estimated_output_time": 30,
+              "created_at": "2026-03-15T14:04:45.013445"
+            },
+            {
+              "slug": "cold-email-personalizer",
+              "name": "Cold Email Personalizer",
+              "description": "Generates personalized cold email templates based on prospect research.",
+              "short_tagline": "Write personalized cold emails at scale",
+              "cost": 1,
+              "popularity_score": 54,
+              "execution_count": 0,
+              "estimated_output_time": 15,
+              "created_at": "2026-03-15T14:04:45.013456"
+            },
+            {
+              "slug": "real-estate-seller-lead",
+              "name": "Real Estate Seller Lead Agent",
+              "description": "Finds homeowners likely to sell soon based on market indicators.",
+              "short_tagline": "Find ready-to-sell homeowners in your area",
+              "cost": 2,
+              "popularity_score": 43,
+              "execution_count": 0,
+              "estimated_output_time": 25,
+              "created_at": "2026-03-15T14:04:45.013460"
+            }
+          ],
+          "Marketing": [
+            {
+              "slug": "google-ads-headline-builder",
+              "name": "Google Ads Headline Builder",
+              "description": "Creates attention-grabbing Google Ads headlines that increase CTR.",
+              "short_tagline": "Build Google Ads headlines that get clicks",
+              "cost": 1,
+              "popularity_score": 86,
+              "execution_count": 0,
+              "estimated_output_time": 8,
+              "created_at": "2026-03-15T14:04:45.013465"
+            },
+            {
+              "slug": "youtube-script-generator",
+              "name": "YouTube Script Generator",
+              "description": "Creates engaging YouTube video scripts that retain viewers.",
+              "short_tagline": "Write YouTube scripts that keep viewers watching",
+              "cost": 2,
+              "popularity_score": 77,
+              "execution_count": 0,
+              "estimated_output_time": 20,
+              "created_at": "2026-03-15T14:04:45.013467"
+            },
+            {
+              "slug": "instagram-growth-planner",
+              "name": "Instagram Growth Planner",
+              "description": "Creates 90-day Instagram growth strategies with content calendars.",
+              "short_tagline": "Plan your Instagram growth with proven strategies",
+              "cost": 2,
+              "popularity_score": 75,
+              "execution_count": 0,
+              "estimated_output_time": 35,
+              "created_at": "2026-03-15T14:04:45.013462"
+            },
+            {
+              "slug": "seo-keyword-cluster-builder",
+              "name": "SEO Keyword Cluster Builder",
+              "description": "Creates keyword clusters for SEO strategy and content planning.",
+              "short_tagline": "Build SEO keyword clusters for better rankings",
+              "cost": 2,
+              "popularity_score": 63,
+              "execution_count": 0,
+              "estimated_output_time": 25,
+              "created_at": "2026-03-15T14:04:45.013469"
+            },
+            {
+              "slug": "facebook-ad-copy-generator",
+              "name": "Facebook Ad Copy Generator",
+              "description": "Writes proven Facebook ad copy variations optimized for conversions.",
+              "short_tagline": "Generate high-converting Facebook ad copy in seconds",
+              "cost": 1,
+              "popularity_score": 45,
+              "execution_count": 0,
+              "estimated_output_time": 10,
+              "created_at": "2026-03-15T14:04:45.013463"
+            }
+          ],
+          "Productivity": [
+            {
+              "slug": "business-plan-generator",
+              "name": "Business Plan Generator",
+              "description": "Creates professional business plans for funding and guidance.",
+              "short_tagline": "Generate professional business plans instantly",
+              "cost": 3,
+              "popularity_score": 85,
+              "execution_count": 0,
+              "estimated_output_time": 45,
+              "created_at": "2026-03-15T14:04:45.013482"
+            },
+            {
+              "slug": "sop-creator",
+              "name": "SOP Creator",
+              "description": "Generates detailed standard operating procedures for teams.",
+              "short_tagline": "Document processes with clear step-by-step SOPs",
+              "cost": 2,
+              "popularity_score": 55,
+              "execution_count": 0,
+              "estimated_output_time": 25,
+              "created_at": "2026-03-15T14:04:45.013485"
+            },
+            {
+              "slug": "meeting-summary-agent",
+              "name": "Meeting Summary Agent",
+              "description": "Extracts action items and key decisions from meeting notes.",
+              "short_tagline": "Turn meeting chaos into clear action items",
+              "cost": 1,
+              "popularity_score": 46,
+              "execution_count": 0,
+              "estimated_output_time": 8,
+              "created_at": "2026-03-15T14:04:45.013483"
+            },
+            {
+              "slug": "proposal-generator",
+              "name": "Proposal Generator",
+              "description": "Creates professional proposals that win more clients.",
+              "short_tagline": "Generate winning proposals quickly",
+              "cost": 2,
+              "popularity_score": 35,
+              "execution_count": 0,
+              "estimated_output_time": 22,
+              "created_at": "2026-03-15T14:04:45.013486"
+            }
+          ],
+          "Sales": [
+            {
+              "slug": "followup-email-sequence-builder",
+              "name": "Follow-Up Email Sequence Builder",
+              "description": "Creates automated follow-up email sequences that close sales.",
+              "short_tagline": "Build email sequences that convert cold prospects",
+              "cost": 2,
+              "popularity_score": 93,
+              "execution_count": 0,
+              "estimated_output_time": 25,
+              "created_at": "2026-03-15T14:04:45.013474"
+            },
+            {
+              "slug": "pricing-strategy-optimizer",
+              "name": "Pricing Strategy Optimizer",
+              "description": "Analyzes and optimizes pricing strategies for maximum revenue.",
+              "short_tagline": "Find your optimal pricing for maximum revenue",
+              "cost": 2,
+              "popularity_score": 83,
+              "execution_count": 0,
+              "estimated_output_time": 30,
+              "created_at": "2026-03-15T14:04:45.013475"
+            },
+            {
+              "slug": "objection-handling-generator",
+              "name": "Objection Handling Generator",
+              "description": "Crafts persuasive responses to common sales objections.",
+              "short_tagline": "Handle objections with proven responses",
+              "cost": 1,
+              "popularity_score": 65,
+              "execution_count": 0,
+              "estimated_output_time": 8,
+              "created_at": "2026-03-15T14:04:45.013473"
+            },
+            {
+              "slug": "sales-page-rewriter",
+              "name": "Sales Page Rewriter",
+              "description": "Optimizes sales pages to increase conversion rates and revenue.",
+              "short_tagline": "Rewrite sales pages that convert better",
+              "cost": 3,
+              "popularity_score": 50,
+              "execution_count": 0,
+              "estimated_output_time": 40,
+              "created_at": "2026-03-15T14:04:45.013471"
+            },
+            {
+              "slug": "high-ticket-offer-structurer",
+              "name": "High-Ticket Offer Structurer",
+              "description": "Designs premium offer structures for high-ticket products/services.",
+              "short_tagline": "Structure offers that close high-value deals",
+              "cost": 2,
+              "popularity_score": 45,
+              "execution_count": 0,
+              "estimated_output_time": 20,
+              "created_at": "2026-03-15T14:04:45.013470"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/marketplace/system/{slug}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 53.34,
+      "success": true,
+      "error": null,
+      "response": {
+        "slug": "blog-post-longform-writer",
+        "name": "Blog Post Longform Writer",
+        "description": "Writes SEO-optimized, in-depth blog posts (2000+ words).",
+        "short_tagline": "Write SEO-optimized blog posts that rank",
+        "category": "Content",
+        "cost": 3,
+        "popularity_score": 91,
+        "execution_count": 0,
+        "estimated_output_time": 50,
+        "inputs": {},
+        "outputs": {},
+        "creator": "system",
+        "requested_slug": "blog-post-longform-writer"
+      }
+    },
+    {
+      "path": "/marketplace/system/{slug}/execute",
+      "method": "POST",
+      "status_code": 403,
+      "response_time_ms": 97.47,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Please verify your email before executing agents."
+      }
+    },
+    {
+      "path": "/marketplace/system/category/{category}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 60.64,
+      "success": true,
+      "error": null,
+      "response": {
+        "category": "Content",
+        "count": 2,
+        "agents": [
+          {
+            "slug": "blog-post-longform-writer",
+            "name": "Blog Post Longform Writer",
+            "description": "Writes SEO-optimized, in-depth blog posts (2000+ words).",
+            "short_tagline": "Write SEO-optimized blog posts that rank",
+            "cost": 3,
+            "popularity_score": 91,
+            "execution_count": 0,
+            "estimated_output_time": 50
+          },
+          {
+            "slug": "content-calendar-builder",
+            "name": "30-Day Content Calendar Builder",
+            "description": "Creates monthly content plans with themes, topics, and posting schedules.",
+            "short_tagline": "Plan 30 days of content in minutes",
+            "cost": 2,
+            "popularity_score": 70,
+            "execution_count": 0,
+            "estimated_output_time": 30
+          }
+        ]
+      }
+    },
+    {
+      "path": "/schedules/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 61.44,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/schedules/",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 140.49,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "agent_id": 5,
+        "user_id": 2,
+        "cron_expression": "daily",
+        "is_active": true,
+        "last_run": null,
+        "next_run": "2026-03-15T15:07:23.776739"
+      }
+    },
+    {
+      "path": "/schedules/{schedule_id}",
+      "method": "DELETE",
+      "status_code": 200,
+      "response_time_ms": 106.0,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "deleted"
+      }
+    },
+    {
+      "path": "/intelligence/insights",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 74.38,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_memories": 0,
+        "total_reflections": 0,
+        "avg_confidence": 0.0,
+        "flagged_executions": 0,
+        "pending_evolutions": 0
+      }
+    },
+    {
+      "path": "/intelligence/dashboard",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29.78,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_memories": 0,
+        "total_reflections": 0,
+        "avg_confidence": 0.0,
+        "flagged_executions": 0,
+        "pending_evolutions": 0
+      }
+    },
+    {
+      "path": "/intelligence/reflections",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29.57,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/knowledge",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29.97,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 2,
+          "topic": "test",
+          "content": "test",
+          "category": "Content",
+          "source_agent_id": 1,
+          "created_at": "2026-03-15T14:47:46.030891"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/knowledge",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 36.31,
+      "success": true,
+      "error": null,
+      "response": {
+        "category": "Content",
+        "reinforcement_score": 2,
+        "tenant_id": null,
+        "content": "test",
+        "topic": "test",
+        "id": 2,
+        "source_agent_id": 1,
+        "usage_count": 0,
+        "created_at": "2026-03-15T14:47:46.030891"
+      }
+    },
+    {
+      "path": "/intelligence/knowledge/{knowledge_id}/reinforce",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 86.37,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "reinforced",
+        "new_score": 3
+      }
+    },
+    {
+      "path": "/intelligence/patterns/{agent_id}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34.64,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/evolutions",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54.42,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/evolutions/{evo_id}/apply",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 55.31,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Evolution proposal not found"
+      }
+    },
+    {
+      "path": "/intelligence/messages",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 102.46,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 4,
+        "sender_agent_id": 1,
+        "receiver_agent_id": 1,
+        "content": "test_value",
+        "status": "delivered",
+        "created_at": "2026-03-15T15:07:24.451583"
+      }
+    },
+    {
+      "path": "/intelligence/messages",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 51.79,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/delegations",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 46.51,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 4,
+        "parent_agent_id": 1,
+        "child_agent_id": 1,
+        "goal": "test_value",
+        "input_payload": "test_value",
+        "status": "pending",
+        "priority": 5,
+        "result": null,
+        "created_at": "2026-03-15T15:07:24.584852"
+      }
+    },
+    {
+      "path": "/intelligence/delegations/{task_id}/status",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 30.05,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Delegated task not found"
+      }
+    },
+    {
+      "path": "/intelligence/workspace_memory",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 81.86,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 4,
+        "workspace_id": 1,
+        "key": "scan_key",
+        "value": "scan_value",
+        "author_agent_id": null,
+        "created_at": "2026-03-15T15:07:24.661229"
+      }
+    },
+    {
+      "path": "/intelligence/workspace_memory",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54.53,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 4,
+          "workspace_id": 1,
+          "key": "scan_key",
+          "value": "scan_value",
+          "author_agent_id": null,
+          "created_at": "2026-03-15T15:07:24.661229"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/swarm",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 2150.13,
+      "success": true,
+      "error": null,
+      "response": {
+        "swarm_id": "960e37fc-6efe-4a30-84c1-80f5524d9b00",
+        "agents_used": [
+          5
+        ],
+        "status": "completed",
+        "result": {
+          "error": "OpenAI API error: 401"
+        }
+      }
+    },
+    {
+      "path": "/workspaces/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 88.67,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/workspaces/",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 277.0,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Test Agent",
+        "type": "general",
+        "id": 5,
+        "owner_id": 2,
+        "created_at": "2026-03-15T15:07:27.120949"
+      }
+    },
+    {
+      "path": "/workspaces/{workspace_id}/members",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 59.62,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "user_id": 2,
+          "role": "admin",
+          "joined_at": "2026-03-15T15:07:27.187575"
+        }
+      ]
+    },
+    {
+      "path": "/workspaces/{workspace_id}/members",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 45.45,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "User not found"
+      }
+    },
+    {
+      "path": "/billing/invoices",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45.11,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/billing/subscription",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39.49,
+      "success": true,
+      "error": null,
+      "response": {
+        "tier": "free",
+        "status": "active",
+        "start_date": "2026-03-15T15:07:27.465586",
+        "end_date": null,
+        "limits": {
+          "agents": 5,
+          "runs_per_month": 100
+        }
+      }
+    },
+    {
+      "path": "/billing/checkout-session",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 22.76,
+      "success": true,
+      "error": null,
+      "response": {
+        "url": "https://checkout.stripe.com/pay/price_pro_monthly?client_reference_id=2"
+      }
+    },
+    {
+      "path": "/billing/upgrade",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 67.12,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "success",
+        "message": "Upgraded to pro tier"
+      }
+    },
+    {
+      "path": "/billing/usage",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 38.92,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_executions": 0,
+        "total_tokens": 0,
+        "estimated_cost": 0.0,
+        "remaining_credits": 100.0,
+        "monthly_executions": 0
+      }
+    },
+    {
+      "path": "/billing/webhook",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 28.52,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "received"
+      }
+    },
+    {
+      "path": "/innovation/goals",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 44.55,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/innovation/goals",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 420.26,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "title": "test_value",
+        "status": "pending",
+        "progress": 0
+      }
+    },
+    {
+      "path": "/innovation/simulations",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 137.18,
+      "success": true,
+      "error": null,
+      "response": {
+        "agent_id": 1,
+        "scenario": "test_value",
+        "predicted_outcome": "Outcome: The customer will likely be satisfied if responded to promptly.\nScore: 85",
+        "score": 85,
+        "id": 1,
+        "created_at": "2026-03-15T15:07:28.196781",
+        "tenant_id": 2
+      }
+    },
+    {
+      "path": "/innovation/digital-twin",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 101.92,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "user_id": 2,
+        "preferences": {},
+        "behavior_model": {},
+        "proactive_enabled": false,
+        "predicted_needs": [],
+        "automated_tasks": [],
+        "last_updated": "2026-03-15T15:07:28.321931"
+      }
+    },
+    {
+      "path": "/innovation/digital-twin",
+      "method": "PUT",
+      "status_code": 200,
+      "response_time_ms": 77.95,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "user_id": 2,
+        "preferences": {
+          "focus": "growth"
+        },
+        "behavior_model": {},
+        "proactive_enabled": false,
+        "predicted_needs": [],
+        "automated_tasks": [],
+        "last_updated": "2026-03-15T15:07:28.321931"
+      }
+    },
+    {
+      "path": "/innovation/opportunities",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 35.38,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/deployment/edge/export/{agent_id}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29.15,
+      "success": true,
+      "error": null,
+      "response": {
+        "agent_id": 5,
+        "name": "Scan Agent",
+        "config": "gAAAAABptssprDMtczs1P0pqQfk2LjJO99AXdGqFzl74S1G5cdiMXjNorlMiPkFvke9PqZIRg0dBOrRDauI344D6c3gn7Cc6PKLh_WPxGc-Dan_oIokDIqU=",
+        "runtime": "wasm-light-v1",
+        "edge_enabled": false,
+        "exported_at": "2026-03-15T15:07:28.488477"
+      }
+    },
+    {
+      "path": "/deployment/resources/config",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 42.05,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "updated",
+        "config": {
+          "max_cpu_percent": 75.0,
+          "max_memory_mb": 1024,
+          "auto_scale": true
+        }
+      }
+    },
+    {
+      "path": "/deployment/shards",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25.05,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "shard_id": "shard-001",
+          "region": "us-east-1",
+          "status": "active",
+          "capacity": 45.0
+        },
+        {
+          "shard_id": "shard-002",
+          "region": "eu-west-1",
+          "status": "active",
+          "capacity": 32.5
+        }
+      ]
+    },
+    {
+      "path": "/deployment/r",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 19.18,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "ok",
+        "message": "Deployment endpoint available"
+      }
+    },
+    {
+      "path": "/deployment/metrics",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 23.36,
+      "success": true,
+      "error": null,
+      "response": {
+        "cpu_usage": 0.0,
+        "memory_usage": 167.78515625,
+        "cost_forecast_daily": 1.25,
+        "active_shards": 1,
+        "shard_details": []
+      }
+    },
+    {
+      "path": "/deployment/resource-limits",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 38.14,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "updated",
+        "agent_id": 5,
+        "priority": "normal"
+      }
+    },
+    {
+      "path": "/deployment/feedback",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 71.88,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "received"
+      }
+    },
+    {
+      "path": "/deployment/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36.06,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "name": "Small Business Starter",
+          "description": "Essential agents for running a small business (Email, Social, Invoicing)",
+          "category": "business",
+          "config": "{\"agents\": [{\"name\": \"Customer Support Bot\", \"description\": \"Handles common customer queries via email\", \"config\": {\"system_prompt\": \"You are a polite customer service agent.\"}}, {\"name\": \"Social Media Manager\", \"description\": \"Drafts posts for LinkedIn and Twitter\", \"config\": {\"system_prompt\": \"You are a social media expert.\"}}, {\"name\": \"Invoice Assistant\", \"description\": \"Extracts details from invoices\", \"config\": {\"system_prompt\": \"You are an accounting assistant.\"}}]}",
+          "is_active": true
+        },
+        {
+          "id": 2,
+          "name": "Developer Toolkit",
+          "description": "Agents to help with coding, debugging, and documentation",
+          "category": "developer",
+          "config": "{\"agents\": [{\"name\": \"Code Reviewer\", \"description\": \"Analyzes code for bugs and style issues\", \"config\": {\"system_prompt\": \"You are a senior software engineer.\"}}, {\"name\": \"Doc Writer\", \"description\": \"Generates documentation from code\", \"config\": {\"system_prompt\": \"You are a technical writer.\"}}, {\"name\": \"Test Generator\", \"description\": \"Writes unit tests for functions\", \"config\": {\"system_prompt\": \"You are a QA engineer.\"}}]}",
+          "is_active": true
+        },
+        {
+          "id": 3,
+          "name": "Content Creator Pack",
+          "description": "Agents for brainstorming, writing, and editing content",
+          "category": "creator",
+          "config": "{\"agents\": [{\"name\": \"Blog Post Writer\", \"description\": \"Writes engaging blog posts\", \"config\": {\"system_prompt\": \"You are a professional blogger.\"}}, {\"name\": \"SEO Optimizer\", \"description\": \"Suggests keywords and meta tags\", \"config\": {\"system_prompt\": \"You are an SEO specialist.\"}}, {\"name\": \"Script Writer\", \"description\": \"Writes scripts for YouTube videos\", \"config\": {\"system_prompt\": \"You are a scriptwriter.\"}}]}",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "path": "/deployment/templates/{template_id}/deploy",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 175.62,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "deployed",
+        "agents": [
+          "Customer Support Bot",
+          "Social Media Manager",
+          "Invoice Assistant"
+        ]
+      }
+    },
+    {
+      "path": "/growth/referrals",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 73.89,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/referrals/claim/{referral_id}",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 110.67,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "claimed",
+        "reward": 10.0
+      }
+    },
+    {
+      "path": "/growth/showcase/trending",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 42.51,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "name": "Edge Agent",
+          "description": "Auto-created for edge export",
+          "config": {},
+          "is_published": false,
+          "tags": null,
+          "category": null,
+          "version": "1.0.0",
+          "role": null,
+          "skills": null,
+          "ai_provider": "openai",
+          "model_name": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "id": 1,
+          "owner_id": null,
+          "created_at": "2026-03-15T14:30:25.460910",
+          "updated_at": "2026-03-15T14:30:25.460914"
+        },
+        {
+          "name": "Scan Agent",
+          "description": "Published by scan",
+          "config": {
+            "system_prompt": "Updated."
+          },
+          "is_published": true,
+          "tags": "scan",
+          "category": "general",
+          "version": "1.0.1",
+          "role": null,
+          "skills": null,
+          "ai_provider": "openai",
+          "model_name": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "id": 5,
+          "owner_id": 2,
+          "created_at": "2026-03-15T15:07:20.410110",
+          "updated_at": "2026-03-15T15:07:23.345739"
+        }
+      ]
+    },
+    {
+      "path": "/growth/showcase/popular",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 55.15,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "name": "Edge Agent",
+          "description": "Auto-created for edge export",
+          "config": {},
+          "is_published": false,
+          "tags": null,
+          "category": null,
+          "version": "1.0.0",
+          "role": null,
+          "skills": null,
+          "ai_provider": "openai",
+          "model_name": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "id": 1,
+          "owner_id": null,
+          "created_at": "2026-03-15T14:30:25.460910",
+          "updated_at": "2026-03-15T14:30:25.460914"
+        },
+        {
+          "name": "Scan Agent",
+          "description": "Published by scan",
+          "config": {
+            "system_prompt": "Updated."
+          },
+          "is_published": true,
+          "tags": "scan",
+          "category": "general",
+          "version": "1.0.1",
+          "role": null,
+          "skills": null,
+          "ai_provider": "openai",
+          "model_name": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "id": 5,
+          "owner_id": 2,
+          "created_at": "2026-03-15T15:07:20.410110",
+          "updated_at": "2026-03-15T15:07:23.345739"
+        }
+      ]
+    },
+    {
+      "path": "/growth/insights",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 179.0,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_executions": 1,
+        "total_time_saved": 5.0,
+        "productivity_score": 1.5,
+        "last_updated": "2026-03-15T15:07:29.313453"
+      }
+    },
+    {
+      "path": "/growth/community",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 59.18,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/community",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 91.31,
+      "success": true,
+      "error": null,
+      "response": {
+        "content": "Hello from health scan",
+        "agent_id": null,
+        "parent_id": null,
+        "type": "post",
+        "id": 1,
+        "user_id": 2,
+        "likes": 0,
+        "created_at": "2026-03-15T15:07:29.492560"
+      }
+    },
+    {
+      "path": "/growth/community/{post_id}/replies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 99.33,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/announcements",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 60.82,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/announcements",
+      "method": "POST",
+      "status_code": 403,
+      "response_time_ms": 42.99,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Operation not permitted"
+      }
+    },
+    {
+      "path": "/wallet/balance",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 56.92,
+      "success": true,
+      "error": null,
+      "response": {
+        "balance": 110.0,
+        "currency": "USD"
+      }
+    },
+    {
+      "path": "/wallet/recharge",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 108.51,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "Recharge successful",
+        "new_balance": 120.0
+      }
+    },
+    {
+      "path": "/wallet/transactions",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 46.91,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "wallet_id": 1,
+          "type": "recharge",
+          "reference_id": "pay_mock_1773587249",
+          "tenant_id": 2,
+          "amount": 10.0,
+          "id": 3,
+          "description": "Recharge of 10.0 USD",
+          "created_at": "2026-03-15T15:07:29.858598"
+        },
+        {
+          "wallet_id": 1,
+          "type": "referral_reward",
+          "reference_id": "1",
+          "tenant_id": 2,
+          "amount": 10.0,
+          "id": 2,
+          "description": "Referral reward credited",
+          "created_at": "2026-03-15T15:07:29.078018"
+        },
+        {
+          "wallet_id": 1,
+          "type": "recharge",
+          "reference_id": "pay_mock_1773587238",
+          "tenant_id": 2,
+          "amount": 100.0,
+          "id": 1,
+          "description": "Recharge of 100.0 USD",
+          "created_at": "2026-03-15T15:07:18.714055"
+        }
+      ]
+    },
+    {
+      "path": "/talent/opportunities",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 53.27,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/talent/match",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 37.38,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "No agent profiles available"
+      }
+    },
+    {
+      "path": "/talent/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.49,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/compliance/scan",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 39.75,
+      "success": true,
+      "error": null,
+      "response": {
+        "vulnerabilities": [
+          {
+            "id": "mock-1",
+            "severity": "info",
+            "category": "availability",
+            "title": "AI Client Unavailable",
+            "description": "Ollama Python client is not installed. Install it to enable full vulnerability scanning.",
+            "affected_component": "compliance-scanner"
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "Install ollama Python client in the backend image",
+            "priority": "high"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/compliance/scan/system",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 42.25,
+      "success": true,
+      "error": null,
+      "response": {
+        "scan_id": "scan-20260315150730",
+        "system_info": {
+          "system_type": "test_value",
+          "hostname": "Test Agent",
+          "ip_address": "test_value",
+          "environment": "production",
+          "description": "test_value",
+          "target": "test_value",
+          "scan_type": "quick",
+          "tech_stack": [
+            "test_value"
+          ]
+        },
+        "vulnerabilities": [],
+        "fixes": [],
+        "summary": {
+          "total_vulnerabilities": 0,
+          "severity_breakdown": {},
+          "system_type": "test_value",
+          "tech_stack": [
+            "test_value"
+          ]
+        },
+        "scan_time": "2026-03-15T15:07:30.161159",
+        "scan_duration": 7.8e-05
+      }
+    },
+    {
+      "path": "/compliance/scans",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.12,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/code/audit",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 48.87,
+      "success": true,
+      "error": null,
+      "response": {
+        "audit_id": "763f06c2-1840-4c2e-9c90-6a5b00509b49",
+        "code_input": {
+          "source_type": "snippet",
+          "content": "def hello():\n    return 'hi'\n",
+          "language": "python",
+          "audit_type": "quick"
+        },
+        "issues": [
+          {
+            "id": "mock-1",
+            "severity": "info",
+            "category": "availability",
+            "title": "AI Service Unavailable",
+            "description": "Ollama AI service is not running. Please start Ollama to enable full code auditing.",
+            "file_path": null,
+            "line_number": null,
+            "code_snippet": null,
+            "suggestion": "Start Ollama service: ollama serve"
+          }
+        ],
+        "fixes": [],
+        "summary": {
+          "total_issues": 1,
+          "by_severity": {
+            "info": 1
+          },
+          "by_category": {
+            "availability": 1
+          }
+        },
+        "audit_time": "2026-03-15T15:07:30.247219",
+        "audit_duration": 0.1
+      }
+    },
+    {
+      "path": "/wellness/analyze",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 33.3,
+      "success": true,
+      "error": null,
+      "response": {
+        "burnout_risk": "Unknown",
+        "insights": [
+          "GitPython or git executable not available - cannot analyze commit history"
+        ],
+        "recommendations": [
+          "Install git in the backend image or disable wellness analysis"
+        ]
+      }
+    },
+    {
+      "path": "/infra/analyze",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 38.83,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "success",
+        "infrastructure_model": "test",
+        "assessment": {
+          "hardware": {
+            "cpu": {
+              "cores": 4,
+              "threads": 8,
+              "frequency": 1800.0030000000002
+            },
+            "memory": {
+              "total_gb": 7.66,
+              "available_gb": 4.91,
+              "percent_used": 35.9
+            },
+            "gpu": []
+          },
+          "software": {},
+          "performance": {},
+          "bottlenecks": [
+            {
+              "type": "gpu",
+              "severity": "medium",
+              "description": "No GPU detected. GPU acceleration would significantly improve performance"
+            },
+            {
+              "type": "quantization",
+              "severity": "medium",
+              "description": "No quantization specified. Quantization can reduce memory usage and improve inference speed"
+            }
+          ]
+        },
+        "recommendations": [
+          "Consider GPU acceleration for better performance",
+          "Implement model quantization to reduce memory usage",
+          "Monitor resource utilization during inference"
+        ]
+      }
+    },
+    {
+      "path": "/infra/optimize",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 35.64,
+      "success": true,
+      "error": null,
+      "response": {
+        "plan_id": "opt-20260315150730",
+        "infrastructure_model": {
+          "model_name": "qwen2.5-coder:7b",
+          "model_type": "LLM",
+          "parameters": "7B",
+          "framework": "PyTorch",
+          "quantization": null,
+          "current_hardware": {
+            "cpu_cores": 8,
+            "memory_gb": 16
+          },
+          "workload_pattern": null,
+          "performance_requirements": {
+            "latency_ms": "<100",
+            "throughput_req": "high"
+          }
+        },
+        "current_assessment": {
+          "hardware": {
+            "cpu": {
+              "cores": 4,
+              "threads": 8,
+              "frequency": 1800.0030000000002
+            },
+            "memory": {
+              "total_gb": 7.66,
+              "available_gb": 4.91,
+              "percent_used": 35.9
+            },
+            "gpu": []
+          },
+          "software": {},
+          "performance": {},
+          "bottlenecks": [
+            {
+              "type": "memory",
+              "severity": "high",
+              "description": "Model requires approximately 14.0GB of memory, but only 7.66GB is available"
+            },
+            {
+              "type": "gpu",
+              "severity": "medium",
+              "description": "No GPU detected. GPU acceleration would significantly improve performance"
+            },
+            {
+              "type": "quantization",
+              "severity": "medium",
+              "description": "No quantization specified. Quantization can reduce memory usage and improve inference speed"
+            }
+          ]
+        },
+        "suggestions": [
+          {
+            "id": "opt-quantization",
+            "category": "configuration",
+            "priority": "high",
+            "title": "Implement Model Quantization",
+            "description": "Reduce memory usage and improve inference speed through quantization",
+            "expected_improvement": "30-50% reduction in memory usage, 2-3x faster inference",
+            "implementation_effort": "Low",
+            "steps": [
+              "Evaluate 4-bit and 8-bit quantization options",
+              "Test quantized model for accuracy degradation",
+              "Implement quantization in inference pipeline",
+              "Monitor performance improvements"
+            ]
+          },
+          {
+            "id": "opt-gpu-acceleration",
+            "category": "hardware",
+            "priority": "high",
+            "title": "Add GPU Acceleration",
+            "description": "GPU acceleration can significantly improve model inference speed",
+            "expected_improvement": "10-50x faster inference depending on workload",
+            "implementation_effort": "Medium",
+            "steps": [
+              "Evaluate GPU options (NVIDIA, AMD, etc.)",
+              "Consider cloud GPU services for flexibility",
+              "Update inference pipeline to use GPU",
+              "Optimize batch sizes for GPU utilization"
+            ]
+          },
+          {
+            "id": "opt-ai-unavailable",
+            "category": "configuration",
+            "priority": "medium",
+            "title": "AI suggestions unavailable",
+            "description": "Ollama client is not installed; using rule-based recommendations only.",
+            "expected_improvement": "Varies based on implementation",
+            "implementation_effort": "Low",
+            "steps": [
+              "Install the Ollama Python client in the backend image",
+              "Ensure the Ollama service is running",
+              "Retry optimization for AI-generated suggestions"
+            ]
+          }
+        ],
+        "summary": {
+          "total_suggestions": 3,
+          "critical_issues": 0,
+          "high_priority_issues": 2,
+          "medium_priority_issues": 1,
+          "low_priority_issues": 0,
+          "categories": {
+            "hardware": 1,
+            "software": 0,
+            "configuration": 2,
+            "scaling": 0
+          }
+        },
+        "generated_at": "2026-03-15T15:07:30.356650"
+      }
+    },
+    {
+      "path": "/infra/health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 1036.43,
+      "success": true,
+      "error": null,
+      "response": {
+        "cpu": {
+          "utilization_percent": 16.6,
+          "status": "healthy"
+        },
+        "memory": {
+          "total_gb": 7.66,
+          "used_gb": 2.75,
+          "percent_used": 35.9,
+          "status": "healthy"
+        },
+        "disk": {
+          "total_gb": 1006.85,
+          "used_gb": 44.1,
+          "percent_used": 4.6,
+          "status": "healthy"
+        },
+        "gpu": []
+      }
+    },
+    {
+      "path": "/ethics/scan",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 30.35,
+      "success": true,
+      "error": null,
+      "response": {
+        "audit_id": "ethics-scan-20260315150731",
+        "ai_config": {
+          "system_name": "Quick Scan",
+          "system_type": "chatbot",
+          "purpose": "Quick ethical assessment",
+          "target_users": [
+            "general"
+          ],
+          "data_sources": [
+            "Test content"
+          ],
+          "model_details": {
+            "type": "unknown"
+          },
+          "deployment_context": null,
+          "safeguards": []
+        },
+        "concerns": [
+          {
+            "id": "bias-no-mitigation",
+            "category": "bias",
+            "severity": "high",
+            "title": "No Explicit Bias Mitigation",
+            "description": "AI configuration does not include explicit bias mitigation strategies",
+            "impact": "Model may perpetuate or amplify existing biases in the data",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups",
+              "society"
+            ],
+            "evidence": "No bias-related safeguards found in configuration"
+          },
+          {
+            "id": "privacy-no-safeguards",
+            "category": "privacy",
+            "severity": "high",
+            "title": "No Explicit Privacy Safeguards",
+            "description": "AI configuration does not include explicit privacy protection measures",
+            "impact": "User data may be at risk of exposure or misuse",
+            "affected_stakeholders": [
+              "end_users"
+            ],
+            "evidence": "No privacy-related safeguards found in configuration"
+          },
+          {
+            "id": "bias-limited-data",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Data Source Diversity",
+            "description": "AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "impact": "Model may not generalize well to diverse populations or contexts",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups"
+            ],
+            "evidence": "Data sources: Test content"
+          },
+          {
+            "id": "bias-limited-users",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Target User Diversity",
+            "description": "AI system is designed for a narrow range of users, which may lead to exclusion",
+            "impact": "System may not work well for users outside the primary target group",
+            "affected_stakeholders": [
+              "excluded_users"
+            ],
+            "evidence": "Target users: general"
+          },
+          {
+            "id": "transparency-no-explainability",
+            "category": "transparency",
+            "severity": "medium",
+            "title": "No Explainability Mechanisms",
+            "description": "AI configuration does not include explainability or interpretability features",
+            "impact": "Users and developers cannot understand how decisions are made",
+            "affected_stakeholders": [
+              "end_users",
+              "developers",
+              "regulators"
+            ],
+            "evidence": "No explainability-related safeguards found in configuration"
+          }
+        ],
+        "recommendations": [
+          {
+            "concern_id": "bias-limited-data",
+            "priority": "medium",
+            "title": "Address Limited Data Source Diversity",
+            "description": "Implement measures to address: AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-limited-users",
+            "priority": "medium",
+            "title": "Address Limited Target User Diversity",
+            "description": "Implement measures to address: AI system is designed for a narrow range of users, which may lead to exclusion",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-no-mitigation",
+            "priority": "high",
+            "title": "Address No Explicit Bias Mitigation",
+            "description": "Implement measures to address: AI configuration does not include explicit bias mitigation strategies",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "privacy-no-safeguards",
+            "priority": "high",
+            "title": "Address No Explicit Privacy Safeguards",
+            "description": "Implement measures to address: AI configuration does not include explicit privacy protection measures",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "transparency-no-explainability",
+            "priority": "medium",
+            "title": "Address No Explainability Mechanisms",
+            "description": "Implement measures to address: AI configuration does not include explainability or interpretability features",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          }
+        ],
+        "summary": {
+          "total_concerns": 5,
+          "critical_concerns": 0,
+          "high_concerns": 2,
+          "medium_concerns": 3,
+          "low_concerns": 0,
+          "categories": [
+            "privacy",
+            "transparency",
+            "bias"
+          ],
+          "overall_risk_level": "high"
+        },
+        "audit_time": "2026-03-15T15:07:31.426490"
+      }
+    },
+    {
+      "path": "/ethics/audit",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 24.93,
+      "success": true,
+      "error": null,
+      "response": {
+        "audit_id": "ethics-20260315150731",
+        "ai_config": {
+          "system_name": "Scan Audit",
+          "system_type": "chatbot",
+          "purpose": "Testing",
+          "target_users": [
+            "general"
+          ],
+          "data_sources": [
+            "synthetic"
+          ],
+          "model_details": {
+            "type": "llm"
+          },
+          "deployment_context": null,
+          "safeguards": null
+        },
+        "concerns": [
+          {
+            "id": "bias-no-mitigation",
+            "category": "bias",
+            "severity": "high",
+            "title": "No Explicit Bias Mitigation",
+            "description": "AI configuration does not include explicit bias mitigation strategies",
+            "impact": "Model may perpetuate or amplify existing biases in the data",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups",
+              "society"
+            ],
+            "evidence": "No bias-related safeguards found in configuration"
+          },
+          {
+            "id": "privacy-no-safeguards",
+            "category": "privacy",
+            "severity": "high",
+            "title": "No Explicit Privacy Safeguards",
+            "description": "AI configuration does not include explicit privacy protection measures",
+            "impact": "User data may be at risk of exposure or misuse",
+            "affected_stakeholders": [
+              "end_users"
+            ],
+            "evidence": "No privacy-related safeguards found in configuration"
+          },
+          {
+            "id": "bias-limited-data",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Data Source Diversity",
+            "description": "AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "impact": "Model may not generalize well to diverse populations or contexts",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups"
+            ],
+            "evidence": "Data sources: synthetic"
+          },
+          {
+            "id": "bias-limited-users",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Target User Diversity",
+            "description": "AI system is designed for a narrow range of users, which may lead to exclusion",
+            "impact": "System may not work well for users outside the primary target group",
+            "affected_stakeholders": [
+              "excluded_users"
+            ],
+            "evidence": "Target users: general"
+          },
+          {
+            "id": "transparency-no-explainability",
+            "category": "transparency",
+            "severity": "medium",
+            "title": "No Explainability Mechanisms",
+            "description": "AI configuration does not include explainability or interpretability features",
+            "impact": "Users and developers cannot understand how decisions are made",
+            "affected_stakeholders": [
+              "end_users",
+              "developers",
+              "regulators"
+            ],
+            "evidence": "No explainability-related safeguards found in configuration"
+          }
+        ],
+        "recommendations": [
+          {
+            "concern_id": "bias-limited-data",
+            "priority": "medium",
+            "title": "Address Limited Data Source Diversity",
+            "description": "Implement measures to address: AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-limited-users",
+            "priority": "medium",
+            "title": "Address Limited Target User Diversity",
+            "description": "Implement measures to address: AI system is designed for a narrow range of users, which may lead to exclusion",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-no-mitigation",
+            "priority": "high",
+            "title": "Address No Explicit Bias Mitigation",
+            "description": "Implement measures to address: AI configuration does not include explicit bias mitigation strategies",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "privacy-no-safeguards",
+            "priority": "high",
+            "title": "Address No Explicit Privacy Safeguards",
+            "description": "Implement measures to address: AI configuration does not include explicit privacy protection measures",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "transparency-no-explainability",
+            "priority": "medium",
+            "title": "Address No Explainability Mechanisms",
+            "description": "Implement measures to address: AI configuration does not include explainability or interpretability features",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          }
+        ],
+        "summary": {
+          "total_concerns": 5,
+          "critical_concerns": 0,
+          "high_concerns": 2,
+          "medium_concerns": 3,
+          "low_concerns": 0,
+          "categories": [
+            "privacy",
+            "transparency",
+            "bias"
+          ],
+          "overall_risk_level": "high"
+        },
+        "audit_time": "2026-03-15T15:07:31.451273"
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/memory",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 46.05,
+      "success": true,
+      "error": null,
+      "response": {
+        "memories": [],
+        "total": 0,
+        "page": 1,
+        "page_size": 1
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/runs",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36.56,
+      "success": true,
+      "error": null,
+      "response": {
+        "runs": [],
+        "total": 0,
+        "page": 1,
+        "page_size": 1
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/feedback",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 3376.63,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "feedback recorded",
+        "agent_id": 5,
+        "agent_run_id": 1,
+        "rating": 1,
+        "learning_updated": true
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/learning-progress",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 142.15,
+      "success": true,
+      "error": null,
+      "response": {
+        "agent_id": 5,
+        "total_runs": 1,
+        "avg_feedback_rating": 1.0,
+        "feedback_count": 1,
+        "memory_count": 0,
+        "avg_success_rating": null
+      }
+    },
+    {
+      "path": "/observability/metrics",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54.05,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_requests": 124,
+        "error_requests": 12,
+        "avg_latency_ms": 169.03292940508933,
+        "min_latency_ms": 3.2825469970703125,
+        "max_latency_ms": 3364.7854328155518
+      }
+    },
+    {
+      "path": "/observability/system-health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39.04,
+      "success": true,
+      "error": null,
+      "response": {
+        "database": "ok",
+        "redis": "unknown",
+        "queue": "unknown"
+      }
+    },
+    {
+      "path": "/observability/execution-stats",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 105.79,
+      "success": true,
+      "error": null,
+      "response": {
+        "executions": 3,
+        "usage_logs": 0
+      }
+    },
+    {
+      "path": "/autonomy/agent-generation",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 72.87,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "workspace_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/autonomy/agents/{agent_id}/optimize",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 120.45,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "queued",
+        "task_id": "234a25a2-4fa6-4daf-a852-3df478049921"
+      }
+    },
+    {
+      "path": "/autonomy/agents/{agent_id}/tools",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 1818.33,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "updated",
+        "agent_id": 5,
+        "tools": [
+          "test_value"
+        ]
+      }
+    },
+    {
+      "path": "/autonomy/products/generate",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 63.62,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "workspace_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/autonomy/workflows/generate",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 28.06,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "workspace_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/autonomy/company/run",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 80.12,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "workspace_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/autonomy/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 72.4,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/autonomy/templates",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 34.72,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "base_config"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          },
+          {
+            "type": "list_type",
+            "loc": [
+              "body",
+              "tools"
+            ],
+            "msg": "Input should be a valid list",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/analytics/agents/{agent_id}/success-rate",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45.82,
+      "success": true,
+      "error": null,
+      "response": {
+        "agent_id": 5,
+        "total": 1,
+        "success": 0,
+        "success_rate": 0.0
+      }
+    },
+    {
+      "path": "/analytics/agents/{agent_id}/tool-performance",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 35.12,
+      "success": true,
+      "error": null,
+      "response": {
+        "agent_id": 5,
+        "tools": []
+      }
+    },
+    {
+      "path": "/analytics/agents/{agent_id}/prompt-performance",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 50.43,
+      "success": true,
+      "error": null,
+      "response": {
+        "agent_id": 5,
+        "prompts": [
+          {
+            "id": 2,
+            "agent_id": 5,
+            "prompt_text": "Updated.",
+            "success_rate": 0.0,
+            "total_runs": 0,
+            "avg_latency_ms": 0.0,
+            "is_active": true,
+            "source": "seed",
+            "notes": null,
+            "created_at": "2026-03-15T15:07:24.811922",
+            "last_evaluated_at": null
+          }
+        ]
+      }
+    },
+    {
+      "path": "/analytics/summary",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 63.23,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_executions": 3,
+        "completed": 0,
+        "completion_rate": 0.0
+      }
+    },
+    {
+      "path": "/analytics/founder-runs",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 447.34,
+      "success": true,
+      "error": null,
+      "response": {
+        "count": 0,
+        "runs": []
+      }
+    },
+    {
+      "path": "/analytics/founder-runs/{run_id}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 71.45,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Founder run not found"
+      }
+    },
+    {
+      "path": "/metrics",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 58.37,
+      "success": true,
+      "error": null,
+      "response": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 9229.0\npython_gc_objects_collect"
+    },
+    {
+      "path": "/storage/upload",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 20.54,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Missing boundary in multipart."
+      }
+    },
+    {
+      "path": "/storage/download/{object_name}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 5543.05,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "S3 operation failed; code: NoSuchKey, message: The specified key does not exist., resource: /ai-agent-builder/test, request_id: 189D0C36F1D3F044, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: ai-agent-builder, object_name: test"
+      }
+    },
+    {
+      "path": "/trending/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 66.11,
+      "success": true,
+      "error": null,
+      "response": {
+        "agents": [
+          {
+            "agent_id": 1,
+            "name": "Edge Agent",
+            "description": "Auto-created for edge export",
+            "executions": 2
+          },
+          {
+            "agent_id": 5,
+            "name": "Scan Agent",
+            "description": "Published by scan",
+            "executions": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "/trending/workflows",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18.49,
+      "success": true,
+      "error": null,
+      "response": {
+        "workflows": [
+          {
+            "workflow_id": 1,
+            "name": "Scan Workflow",
+            "description": null,
+            "clone_count": 1,
+            "install_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "/trending/plugins",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 17.66,
+      "success": true,
+      "error": null,
+      "response": {
+        "plugins": []
+      }
+    },
+    {
+      "path": "/trending/summary",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18.81,
+      "success": true,
+      "error": null,
+      "response": {
+        "agents": [
+          {
+            "agent_id": 1,
+            "name": "Edge Agent",
+            "description": "Auto-created for edge export",
+            "executions": 2
+          },
+          {
+            "agent_id": 5,
+            "name": "Scan Agent",
+            "description": "Published by scan",
+            "executions": 1
+          }
+        ],
+        "workflows": [
+          {
+            "workflow_id": 1,
+            "name": "Scan Workflow",
+            "description": null,
+            "clone_count": 1,
+            "install_count": 1
+          }
+        ],
+        "plugins": []
+      }
+    },
+    {
+      "path": "/templates/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 47.09,
+      "success": true,
+      "error": null,
+      "response": {
+        "agents": [],
+        "workflows": [],
+        "tools": []
+      }
+    },
+    {
+      "path": "/templates/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 16.79,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/templates/agents",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 36.7,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "base_config"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          },
+          {
+            "type": "list_type",
+            "loc": [
+              "body",
+              "tools"
+            ],
+            "msg": "Input should be a valid list",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/templates/workflows",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 16.82,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/templates/workflows",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 17.94,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "config_json"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/templates/tools",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 19.18,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/templates/tools",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 20.19,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "tool_config"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/referral/redeem",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 29.52,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "referral_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/founder/run",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 24.39,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "workspace_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36.89,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "AI Agent Builder running \u2705",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "path": "/health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 1038.36,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "healthy",
+        "app": "AI Agent Builder",
+        "debug": false,
+        "version": "1.0.0",
+        "database": "healthy",
+        "redis": "healthy",
+        "celery": "healthy",
+        "ollama": "healthy",
+        "minio": "healthy"
+      }
+    }
+  ],
+  "summary": {
+    "total": 160,
+    "success": 134,
+    "failed": 26,
+    "error": 0
+  }
+}

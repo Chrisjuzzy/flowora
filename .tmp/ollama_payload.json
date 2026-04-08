@@ -1,0 +1,1 @@
+{"model":"qwen2.5:7b-instruct","prompt":"Hello from Flowora. Reply in one short sentence.","stream":false,"options":{"num_predict":32}}

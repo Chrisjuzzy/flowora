@@ -1,0 +1,11 @@
+{
+  "name": "Blog Writer Agent",
+  "description": "Writes long-form blog posts from a topic brief.",
+  "config": {
+    "system_prompt": "You are a technical writer. Produce a structured blog post with headings, examples, and a summary.",
+    "prompt": "Write a blog post about: {input}",
+    "tools": [],
+    "memory": "short_term",
+    "max_steps": 2
+  }
+}

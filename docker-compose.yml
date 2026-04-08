@@ -1,0 +1,310 @@
+services:
+  traefik:
+    image: traefik:v3.0
+    container_name: flowora-traefik
+    command:
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --providers.docker=false
+      - --providers.file.filename=/etc/traefik/dynamic.yml
+      - --providers.file.watch=true
+      - --entrypoints.web.address=0.0.0.0:80
+      - --entrypoints.traefik.address=0.0.0.0:8080
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./infra/traefik/dynamic.yml:/etc/traefik/dynamic.yml:ro
+    restart: unless-stopped
+
+  postgres:
+    image: ankane/pgvector:latest
+    container_name: flowora-postgres
+    environment:
+      POSTGRES_USER: ${DB_USER:-flowora}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+      POSTGRES_DB: ${DB_NAME:-flowora}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-flowora}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgbouncer:
+    image: edoburu/pgbouncer:latest
+    container_name: flowora-pgbouncer
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: ${DB_USER:-flowora}
+      DB_PASSWORD: ${DB_PASSWORD:-changeme}
+      DB_NAME: ${DB_NAME:-flowora}
+      POOL_MODE: transaction
+      MAX_CLIENT_CONN: 50
+      DEFAULT_POOL_SIZE: 20
+    ports:
+      - "6432:5432"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: flowora-redis
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  minio:
+    image: minio/minio:latest
+    container_name: flowora-minio
+    command: server --console-address ":9001" /data
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-minioadmin}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: flowora-ollama
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "OLLAMA_HOST=http://127.0.0.1:11434 ollama list >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 20s
+
+  ollama-init:
+    image: ollama/ollama:latest
+    container_name: flowora-ollama-init
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_PRELOAD_MODEL: ${OLLAMA_PRELOAD_MODEL:-qwen2.5:7b-instruct}
+    depends_on:
+      ollama:
+        condition: service_healthy
+    volumes:
+      - ./infra/ollama/init-ollama.sh:/init-ollama.sh:ro
+    entrypoint: ["/bin/sh", "/init-ollama.sh"]
+    restart: "no"
+
+  backend:
+    build: ./apps/backend
+    container_name: flowora-backend
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-flowora}:${DB_PASSWORD:-changeme}@postgres:5432/${DB_NAME:-flowora}
+      SECRET_KEY: ${SECRET_KEY}
+      DEBUG: "false"
+      EMAIL_VERIFICATION_REQUIRED: ${EMAIL_VERIFICATION_REQUIRED:-false}
+      AUTO_VERIFY_EMAIL: ${AUTO_VERIFY_EMAIL:-true}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/1}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/2}
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT:-minio:9000}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      MINIO_BUCKET: ${MINIO_BUCKET:-flowora}
+      DEFAULT_AI_PROVIDER: ${DEFAULT_AI_PROVIDER:-local}
+      DEFAULT_AI_MODEL: ${DEFAULT_AI_MODEL:-qwen2.5:7b-instruct}
+      OLLAMA_PRELOAD_MODEL: ${OLLAMA_PRELOAD_MODEL:-qwen2.5:7b-instruct}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+      OLLAMA_TIMEOUT_SECONDS: ${OLLAMA_TIMEOUT_SECONDS:-110}
+      REQUEST_TIMEOUT_SECONDS: ${REQUEST_TIMEOUT_SECONDS:-120}
+      TIMEOUT_BUFFER_SECONDS: ${TIMEOUT_BUFFER_SECONDS:-10}
+      OLLAMA_CONNECT_TIMEOUT_SECONDS: ${OLLAMA_CONNECT_TIMEOUT_SECONDS:-5}
+      OLLAMA_HEALTH_TIMEOUT_SECONDS: ${OLLAMA_HEALTH_TIMEOUT_SECONDS:-5}
+      OLLAMA_RETRY_ATTEMPTS: ${OLLAMA_RETRY_ATTEMPTS:-6}
+      OLLAMA_RETRY_BACKOFF_SECONDS: ${OLLAMA_RETRY_BACKOFF_SECONDS:-2}
+      OLLAMA_WARMUP_TIMEOUT_SECONDS: ${OLLAMA_WARMUP_TIMEOUT_SECONDS:-15}
+      OLLAMA_MAX_CONCURRENCY: ${OLLAMA_MAX_CONCURRENCY:-1}
+      OLLAMA_QUEUE_MAX: ${OLLAMA_QUEUE_MAX:-4}
+      AGENT_RUN_TIMEOUT_SECONDS: ${AGENT_RUN_TIMEOUT_SECONDS:-120}
+      OLLAMA_NUM_CTX: ${OLLAMA_NUM_CTX:-2048}
+      OLLAMA_NUM_PREDICT: ${OLLAMA_NUM_PREDICT:-128}
+      OLLAMA_NUM_THREADS: ${OLLAMA_NUM_THREADS:-4}
+      OLLAMA_KEEP_ALIVE: ${OLLAMA_KEEP_ALIVE:-30m}
+      OLLAMA_TEMPERATURE: ${OLLAMA_TEMPERATURE:-0.2}
+      ALLOW_LLM_MOCK_FALLBACK: ${ALLOW_LLM_MOCK_FALLBACK:-false}
+      LOG_LEVEL: ${LOG_LEVEL:-DEBUG}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      pgbouncer:
+        condition: service_started
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_started
+      ollama:
+        condition: service_healthy
+      ollama-init:
+        condition: service_completed_successfully
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.backend.rule=(Host(`localhost`) || Host(`127.0.0.1`)) && PathPrefix(`/api`)
+      - traefik.http.routers.backend.entrypoints=web
+      - traefik.http.routers.backend.priority=20
+      - traefik.http.middlewares.backend-strip.stripprefix.prefixes=/api
+      - traefik.http.routers.backend.middlewares=backend-strip
+      - traefik.http.services.backend.loadbalancer.server.port=8000
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    mem_limit: 2g
+    mem_reservation: 1g
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()\""]
+      interval: 30s
+      timeout: 20s
+      retries: 5
+
+  celery-worker:
+    build: ./apps/backend
+    container_name: flowora-celery-worker
+    command: celery -A celery_app.celery_app worker --loglevel=INFO --queues=celery,agent_executions,workflows,optimization,scheduled,swarm,compliance,ethics,simulation
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-flowora}:${DB_PASSWORD:-changeme}@postgres:5432/${DB_NAME:-flowora}
+      SECRET_KEY: ${SECRET_KEY}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/1}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/2}
+      DEFAULT_AI_PROVIDER: ${DEFAULT_AI_PROVIDER:-local}
+      DEFAULT_AI_MODEL: ${DEFAULT_AI_MODEL:-qwen2.5:7b-instruct}
+      OLLAMA_PRELOAD_MODEL: ${OLLAMA_PRELOAD_MODEL:-qwen2.5:7b-instruct}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+      OLLAMA_TIMEOUT_SECONDS: ${OLLAMA_TIMEOUT_SECONDS:-110}
+      REQUEST_TIMEOUT_SECONDS: ${REQUEST_TIMEOUT_SECONDS:-120}
+      TIMEOUT_BUFFER_SECONDS: ${TIMEOUT_BUFFER_SECONDS:-10}
+      OLLAMA_CONNECT_TIMEOUT_SECONDS: ${OLLAMA_CONNECT_TIMEOUT_SECONDS:-5}
+      OLLAMA_HEALTH_TIMEOUT_SECONDS: ${OLLAMA_HEALTH_TIMEOUT_SECONDS:-5}
+      OLLAMA_RETRY_ATTEMPTS: ${OLLAMA_RETRY_ATTEMPTS:-6}
+      OLLAMA_RETRY_BACKOFF_SECONDS: ${OLLAMA_RETRY_BACKOFF_SECONDS:-2}
+      OLLAMA_WARMUP_TIMEOUT_SECONDS: ${OLLAMA_WARMUP_TIMEOUT_SECONDS:-15}
+      OLLAMA_MAX_CONCURRENCY: ${OLLAMA_MAX_CONCURRENCY:-1}
+      OLLAMA_QUEUE_MAX: ${OLLAMA_QUEUE_MAX:-4}
+      AGENT_RUN_TIMEOUT_SECONDS: ${AGENT_RUN_TIMEOUT_SECONDS:-120}
+      OLLAMA_NUM_CTX: ${OLLAMA_NUM_CTX:-2048}
+      OLLAMA_NUM_PREDICT: ${OLLAMA_NUM_PREDICT:-128}
+      OLLAMA_NUM_THREADS: ${OLLAMA_NUM_THREADS:-4}
+      OLLAMA_KEEP_ALIVE: ${OLLAMA_KEEP_ALIVE:-30m}
+      OLLAMA_TEMPERATURE: ${OLLAMA_TEMPERATURE:-0.2}
+      ALLOW_LLM_MOCK_FALLBACK: ${ALLOW_LLM_MOCK_FALLBACK:-false}
+      EMAIL_VERIFICATION_REQUIRED: ${EMAIL_VERIFICATION_REQUIRED:-false}
+      AUTO_VERIFY_EMAIL: ${AUTO_VERIFY_EMAIL:-true}
+    depends_on:
+      backend:
+        condition: service_healthy
+      pgbouncer:
+        condition: service_started
+      redis:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+      ollama-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    healthcheck:
+      disable: true
+
+  celery-beat:
+    build: ./apps/backend
+    container_name: flowora-celery-beat
+    command: celery -A celery_app.celery_app beat --loglevel=INFO
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-flowora}:${DB_PASSWORD:-changeme}@postgres:5432/${DB_NAME:-flowora}
+      SECRET_KEY: ${SECRET_KEY}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/1}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/2}
+    depends_on:
+      - backend
+      - pgbouncer
+      - redis
+    restart: unless-stopped
+    healthcheck:
+      disable: true
+
+  frontend:
+    build: ./apps/frontend
+    container_name: flowora-frontend
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost/api}
+      NEXT_PUBLIC_DEMO_AGENT_ID: ${NEXT_PUBLIC_DEMO_AGENT_ID:-}
+    depends_on:
+      - backend
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.frontend.rule=(Host(`localhost`) || Host(`127.0.0.1`)) && PathPrefix(`/`)
+      - traefik.http.routers.frontend.entrypoints=web
+      - traefik.http.routers.frontend.priority=1
+      - traefik.http.services.frontend.loadbalancer.server.port=3000
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"const http=require('http');const req=http.get('http://localhost:3000',res=>process.exit(res.statusCode===200?0:1));req.on('error',()=>process.exit(1));\""]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: flowora-prometheus
+    volumes:
+      - ./infra/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: flowora-grafana
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+    volumes:
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3001:3000"
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:
+  grafana_data:
+  ollama_data:

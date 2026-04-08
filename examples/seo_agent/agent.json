@@ -1,0 +1,11 @@
+{
+  "name": "SEO Audit Agent",
+  "description": "Analyzes a website and produces an SEO audit report.",
+  "config": {
+    "system_prompt": "You are an SEO specialist. Analyze the provided URL and return an SEO audit with technical issues, content gaps, and quick wins.",
+    "prompt": "Audit this website: {input}",
+    "tools": ["web_search", "http_tool"],
+    "memory": "vector",
+    "max_steps": 4
+  }
+}

@@ -1,0 +1,2406 @@
+{
+  "scan_time": "2026-03-12T00:46:30.464092+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "swagger_loaded": true,
+  "endpoints": [
+    {
+      "path": "/agents/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 29.4,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 31.45,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 17.38,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "PUT",
+      "status_code": 401,
+      "response_time_ms": 33.95,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "DELETE",
+      "status_code": 401,
+      "response_time_ms": 6.75,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/run",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 8.22,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/clone",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 6.19,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/versions",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 22.03,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/versions",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 17.07,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/{agent_id}/rollback/{version_id}",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 15.77,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/agents/test",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 15.96,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/executions/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 4.9,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/executions/{agent_id}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 27.72,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/workflows/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 33.66,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/workflows/",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 32.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 30.58,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/run",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 34.18,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/marketplace/agents",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 156.55,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/marketplace/templates",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 30.95,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/marketplace/listings",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 25.48,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/marketplace/listings",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 34.59,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\errors.py\", line 164, in __call__\n    await"
+    },
+    {
+      "path": "/marketplace/listings/{listing_id}/buy",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 14.17,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/marketplace/{agent_id}/install",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 5.79,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/reviews",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 25.22,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/reviews",
+      "method": "GET",
+      "status_code": 422,
+      "response_time_ms": 17.42,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "agent_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "{agent_id}"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/publish",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 34.02,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/marketplace/system",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 13.49,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Failed to load system agents"
+      }
+    },
+    {
+      "path": "/marketplace/system/{slug}",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 6.19,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/marketplace/system/{slug}/execute",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 9.91,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/marketplace/system/category/{category}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 11.02,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "No agents found in category '{category}'"
+      }
+    },
+    {
+      "path": "/schedules/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 5.55,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/schedules/",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 8.63,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/schedules/{schedule_id}",
+      "method": "DELETE",
+      "status_code": 401,
+      "response_time_ms": 6.75,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/intelligence/insights",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 26.22,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_memories": 24,
+        "total_reflections": 22,
+        "avg_confidence": 0.8,
+        "flagged_executions": 0,
+        "pending_evolutions": 6
+      }
+    },
+    {
+      "path": "/intelligence/dashboard",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29.69,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_memories": 24,
+        "total_reflections": 22,
+        "avg_confidence": 0.8,
+        "flagged_executions": 0,
+        "pending_evolutions": 6
+      }
+    },
+    {
+      "path": "/intelligence/reflections",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25.44,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 22,
+          "execution_id": 58,
+          "agent_id": 2,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-25T07:46:59.793000"
+        },
+        {
+          "id": 21,
+          "execution_id": 57,
+          "agent_id": 1,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-25T07:46:59.708298"
+        },
+        {
+          "id": 20,
+          "execution_id": 56,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:13:11.030051"
+        },
+        {
+          "id": 19,
+          "execution_id": 55,
+          "agent_id": 2,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:11:41.691843"
+        },
+        {
+          "id": 18,
+          "execution_id": 54,
+          "agent_id": 1,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:11:40.749811"
+        },
+        {
+          "id": 17,
+          "execution_id": 53,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:11:28.611148"
+        },
+        {
+          "id": 16,
+          "execution_id": 52,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:09:34.993379"
+        },
+        {
+          "id": 15,
+          "execution_id": 51,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:09:04.613403"
+        },
+        {
+          "id": 14,
+          "execution_id": 50,
+          "agent_id": 102,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:47:25.472922"
+        },
+        {
+          "id": 13,
+          "execution_id": 49,
+          "agent_id": 101,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:46:58.316674"
+        },
+        {
+          "id": 12,
+          "execution_id": 48,
+          "agent_id": 92,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:20:53.147604"
+        },
+        {
+          "id": 11,
+          "execution_id": 47,
+          "agent_id": 91,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:20:18.677287"
+        },
+        {
+          "id": 10,
+          "execution_id": 46,
+          "agent_id": 90,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:19:20.001639"
+        },
+        {
+          "id": 9,
+          "execution_id": 45,
+          "agent_id": 89,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:18:54.011350"
+        },
+        {
+          "id": 8,
+          "execution_id": 44,
+          "agent_id": 76,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:09:57.054578"
+        },
+        {
+          "id": 7,
+          "execution_id": 43,
+          "agent_id": 74,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:09:20.667187"
+        },
+        {
+          "id": 6,
+          "execution_id": 22,
+          "agent_id": 38,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T09:10:17.402378"
+        },
+        {
+          "id": 5,
+          "execution_id": 21,
+          "agent_id": 38,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T09:10:07.099696"
+        },
+        {
+          "id": 4,
+          "execution_id": 20,
+          "agent_id": 38,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T09:09:35.122172"
+        },
+        {
+          "id": 3,
+          "execution_id": 19,
+          "agent_id": 38,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T09:09:23.393977"
+        },
+        {
+          "id": 2,
+          "execution_id": 18,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable or Error] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T08:38:16.301382"
+        },
+        {
+          "id": 1,
+          "execution_id": 17,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable or Error] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T08:37:53.547926"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/knowledge",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 32.5,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "topic": "test",
+          "content": "test",
+          "category": "test",
+          "source_agent_id": 1,
+          "created_at": "2026-03-12T00:14:21.878872"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/knowledge",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 29.91,
+      "success": true,
+      "error": null,
+      "response": {
+        "content": "test",
+        "id": 1,
+        "usage_count": 0,
+        "topic": "test",
+        "source_agent_id": 1,
+        "category": "test",
+        "created_at": "2026-03-12T00:14:21.878872"
+      }
+    },
+    {
+      "path": "/intelligence/knowledge/{knowledge_id}/reinforce",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 6.15,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "knowledge_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "{knowledge_id}"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/intelligence/patterns/{agent_id}",
+      "method": "GET",
+      "status_code": 422,
+      "response_time_ms": 8.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "agent_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "{agent_id}"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/intelligence/evolutions",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 8.21,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/evolutions/{evo_id}/apply",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 7.85,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "evo_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "{evo_id}"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/intelligence/messages",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 6.37,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "sender_agent_id"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "receiver_agent_id"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "content"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/intelligence/messages",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 11.84,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 8,
+          "sender_agent_id": 2,
+          "receiver_agent_id": 1,
+          "content": "[Mock LLM Response - Local Provider Unavailable] processed: Act as an agent with the following description: Cr...",
+          "status": "delivered",
+          "created_at": "2026-02-25T07:46:59.817256"
+        },
+        {
+          "id": 7,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "[Mock LLM Response - Local Provider Unavailable] processed: Act as an agent with the following description: Cr...",
+          "status": "delivered",
+          "created_at": "2026-02-25T07:46:59.740448"
+        },
+        {
+          "id": 6,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 2,
+          "content": "Sync-up: propose next step for market analysis.",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:14:12.440792"
+        },
+        {
+          "id": 5,
+          "sender_agent_id": 2,
+          "receiver_agent_id": 1,
+          "content": "[Mock LLM Response - Local Provider Unavailable] processed: Act as an agent with the following description: Cr...",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:11:41.973843"
+        },
+        {
+          "id": 4,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "[Mock LLM Response - Local Provider Unavailable] processed: Act as an agent with the following description: Cr...",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:11:41.240793"
+        },
+        {
+          "id": 3,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 2,
+          "content": "Sync-up: propose next step for market analysis.",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:11:32.670249"
+        },
+        {
+          "id": 2,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 2,
+          "content": "Sync-up: propose next step for market analysis.",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:09:39.746446"
+        },
+        {
+          "id": 1,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 2,
+          "content": "Sync-up: propose next step for market analysis.",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:09:10.279660"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/delegations",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 8.29,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "parent_agent_id"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "child_agent_id"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "goal"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/intelligence/delegations/{task_id}/status",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 18.68,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "task_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "{task_id}"
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "status"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/intelligence/workspace_memory",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 42.66,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "workspace_id"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "key"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "value"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/intelligence/workspace_memory",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 26.57,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 4,
+          "workspace_id": 1,
+          "key": "greeting",
+          "value": "Hello, team!",
+          "author_agent_id": 1,
+          "created_at": "2026-02-24T19:14:12.475544"
+        },
+        {
+          "id": 3,
+          "workspace_id": 1,
+          "key": "greeting",
+          "value": "Hello, team!",
+          "author_agent_id": 1,
+          "created_at": "2026-02-24T19:11:33.409466"
+        },
+        {
+          "id": 2,
+          "workspace_id": 1,
+          "key": "greeting",
+          "value": "Hello, team!",
+          "author_agent_id": 1,
+          "created_at": "2026-02-24T19:09:44.231694"
+        },
+        {
+          "id": 1,
+          "workspace_id": 1,
+          "key": "greeting",
+          "value": "Hello, team!",
+          "author_agent_id": 1,
+          "created_at": "2026-02-24T19:09:10.535886"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/swarm",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 28.06,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "agent_ids"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "goal"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/workspaces/",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 16.39,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/workspaces/",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 7.95,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/workspaces/{workspace_id}/members",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 7.06,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/workspaces/{workspace_id}/members",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 27.63,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/billing/invoices",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 5.18,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/billing/subscription",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 5.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/billing/checkout-session",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 6.32,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/billing/upgrade",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 15.41,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/billing/usage",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 5.41,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/billing/webhook",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 23.87,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "received"
+      }
+    },
+    {
+      "path": "/innovation/goals",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 7.6,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 2,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 3,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 4,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 5,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 10,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 15,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 20,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 25,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 30,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 35,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 40,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 45,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 50,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        }
+      ]
+    },
+    {
+      "path": "/innovation/goals",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 24.39,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "title"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "description"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/innovation/simulations",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 5.31,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "agent_id"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "scenario"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/innovation/digital-twin",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 15.52,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/innovation/digital-twin",
+      "method": "PUT",
+      "status_code": 422,
+      "response_time_ms": 27.44,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "preferences"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/innovation/opportunities",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 7.63,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 2,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 3,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 4,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 5,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 6,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 7,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 8,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 9,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 10,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 11,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 12,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 13,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 14,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 15,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 16,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 17,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 18,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 19,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 20,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        }
+      ]
+    },
+    {
+      "path": "/deployment/edge/export/{agent_id}",
+      "method": "GET",
+      "status_code": 422,
+      "response_time_ms": 10.76,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "agent_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "{agent_id}"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/deployment/resources/config",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 28.95,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "max_cpu_percent"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "max_memory_mb"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "auto_scale"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/deployment/shards",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.17,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "shard_id": "shard-001",
+          "region": "us-east-1",
+          "status": "active",
+          "capacity": 45.0
+        },
+        {
+          "shard_id": "shard-002",
+          "region": "eu-west-1",
+          "status": "active",
+          "capacity": 32.5
+        }
+      ]
+    },
+    {
+      "path": "/deployment/metrics",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 6.54,
+      "success": true,
+      "error": null,
+      "response": {
+        "cpu_usage": 0.0,
+        "memory_usage": 143.8359375,
+        "cost_forecast_daily": 1.25,
+        "active_shards": 1,
+        "shard_details": []
+      }
+    },
+    {
+      "path": "/deployment/resource-limits",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 8.22,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "agent_id"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "cpu_limit"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "memory_limit"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "priority"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/deployment/feedback",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 33.31,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/deployment/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 13.65,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "name": "Small Business Starter",
+          "description": "Essential agents for running a small business (Email, Social, Invoicing)",
+          "category": "business",
+          "is_active": true
+        },
+        {
+          "id": 2,
+          "name": "Developer Toolkit",
+          "description": "Agents to help with coding, debugging, and documentation",
+          "category": "developer",
+          "is_active": true
+        },
+        {
+          "id": 3,
+          "name": "Content Creator Pack",
+          "description": "Agents for brainstorming, writing, and editing content",
+          "category": "creator",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "path": "/deployment/templates/{template_id}/deploy",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 22.87,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "template_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "{template_id}"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/growth/referrals",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 26.57,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/growth/referrals/claim/{referral_id}",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 33.69,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/growth/showcase/trending",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 39.35,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/growth/showcase/popular",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 23.8,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/growth/insights",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 16.02,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/growth/community",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.07,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "content": "This agent is amazing!",
+          "agent_id": 58,
+          "parent_id": null,
+          "type": "comment",
+          "id": 7,
+          "user_id": 70,
+          "likes": 0,
+          "created_at": "2026-02-21T19:20:17.864052"
+        },
+        {
+          "content": "This agent is amazing!",
+          "agent_id": 57,
+          "parent_id": null,
+          "type": "comment",
+          "id": 5,
+          "user_id": 68,
+          "likes": 0,
+          "created_at": "2026-02-21T19:19:38.971650"
+        },
+        {
+          "content": "This agent is amazing!",
+          "agent_id": 56,
+          "parent_id": null,
+          "type": "comment",
+          "id": 3,
+          "user_id": 66,
+          "likes": 0,
+          "created_at": "2026-02-21T19:19:04.170727"
+        },
+        {
+          "content": "This agent is amazing!",
+          "agent_id": 55,
+          "parent_id": null,
+          "type": "comment",
+          "id": 1,
+          "user_id": 64,
+          "likes": 0,
+          "created_at": "2026-02-21T19:18:53.255582"
+        }
+      ]
+    },
+    {
+      "path": "/growth/community",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 29.3,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/growth/community/{post_id}/replies",
+      "method": "GET",
+      "status_code": 422,
+      "response_time_ms": 5.08,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "path",
+              "post_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "{post_id}"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/growth/announcements",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 17.29,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "title": "New Features!",
+          "content": "We launched Growth features.",
+          "type": "news",
+          "id": 2,
+          "created_at": "2026-02-21T19:20:18.723747",
+          "is_active": true
+        },
+        {
+          "title": "New Features!",
+          "content": "We launched Growth features.",
+          "type": "news",
+          "id": 1,
+          "created_at": "2026-02-21T19:19:40.073501",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "path": "/growth/announcements",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 27.32,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/wallet/balance",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 32.46,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/wallet/recharge",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 29.65,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/wallet/transactions",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 18.77,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/talent/opportunities",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 5.91,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/talent/match",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 37.4,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/talent/agents",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 29.25,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/compliance/scan",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 20.65,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "target"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/compliance/scans",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 14.3,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/code/audit",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 34.99,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "source_type"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "content"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/wellness/analyze",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 31.37,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "repo_path"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "developer_email"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/infra/analyze",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36.6,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "success",
+        "infrastructure_model": "test",
+        "assessment": {
+          "hardware": {
+            "cpu": {
+              "cores": 4,
+              "threads": 8,
+              "frequency": 1600.0
+            },
+            "memory": {
+              "total_gb": 15.81,
+              "available_gb": 2.74,
+              "percent_used": 82.7
+            },
+            "gpu": []
+          },
+          "software": {},
+          "performance": {},
+          "bottlenecks": [
+            {
+              "type": "gpu",
+              "severity": "medium",
+              "description": "No GPU detected. GPU acceleration would significantly improve performance"
+            },
+            {
+              "type": "quantization",
+              "severity": "medium",
+              "description": "No quantization specified. Quantization can reduce memory usage and improve inference speed"
+            }
+          ]
+        },
+        "recommendations": [
+          "Consider GPU acceleration for better performance",
+          "Implement model quantization to reduce memory usage",
+          "Monitor resource utilization during inference"
+        ]
+      }
+    },
+    {
+      "path": "/infra/optimize",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 30.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "model_name"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "model_type"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "parameters"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "framework"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "current_hardware"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "performance_requirements"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/infra/health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 1033.11,
+      "success": true,
+      "error": null,
+      "response": {
+        "cpu": {
+          "utilization_percent": 20.0,
+          "status": "healthy"
+        },
+        "memory": {
+          "total_gb": 15.81,
+          "used_gb": 13.08,
+          "percent_used": 82.7,
+          "status": "warning"
+        },
+        "disk": {
+          "total_gb": 237.33,
+          "used_gb": 199.92,
+          "percent_used": 84.2,
+          "status": "warning"
+        },
+        "gpu": []
+      }
+    },
+    {
+      "path": "/ethics/scan",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 25.82,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "content"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/ethics/audit",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 19.16,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "system_name"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "system_type"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "purpose"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "target_users"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "data_sources"
+            ],
+            "msg": "Field required",
+            "input": {}
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "model_details"
+            ],
+            "msg": "Field required",
+            "input": {}
+          }
+        ]
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/memory",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 5.54,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/runs",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 24.66,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/feedback",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 17.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/learning-progress",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 15.3,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 4.37,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "AI Agent Builder running \u2705",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "path": "/health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28.18,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "unhealthy",
+        "app": "AI Agent Builder",
+        "debug": true,
+        "version": "1.0.0",
+        "database": "unhealthy",
+        "redis": "error: 'NoneType' object has no attribute 'client'",
+        "celery": "error: No module named 'celery'"
+      }
+    }
+  ],
+  "summary": {
+    "total": 104,
+    "success": 21,
+    "failed": 83,
+    "error": 0
+  }
+}

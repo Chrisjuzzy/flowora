@@ -1,0 +1,2431 @@
+{
+  "scan_time": "2026-03-12T07:24:48.042549+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "swagger_loaded": true,
+  "endpoints": [
+    {
+      "path": "/auth/register",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 12.93,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Email already registered"
+      }
+    },
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 630.58,
+      "success": true,
+      "error": null,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0KzE3NzMzMDAyOTVAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc3MzMwMzg5N30.-CVHoRzY1MiY4WW5WnB1ZZdgP-Sef86e_pdSkNtNuxA",
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0KzE3NzMzMDAyOTVAZXhhbXBsZS5jb20iLCJ0eXBlIjoicmVmcmVzaCIsImV4cCI6MTc3NTg5MjI5N30.YctSBPz7MgNGjUJhEi9TPnNfoTXwBepkC8sP4_MtIlI",
+        "token_type": "bearer",
+        "role": "user"
+      }
+    },
+    {
+      "path": "/auth/refresh",
+      "method": "POST",
+      "status_code": 401,
+      "response_time_ms": 24.59,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid refresh token"
+      }
+    },
+    {
+      "path": "/auth/logout",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 49.58,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "Logged out successfully"
+      }
+    },
+    {
+      "path": "/auth/verify-email",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 28.3,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid verification code"
+      }
+    },
+    {
+      "path": "/auth/resend-verification-code",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 89.23,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "Verification code sent to your email"
+      }
+    },
+    {
+      "path": "/auth/forgot-password",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 607.57,
+      "success": true,
+      "error": null,
+      "response": {
+        "message": "If email exists, password reset link has been sent"
+      }
+    },
+    {
+      "path": "/auth/reset-password",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 924.67,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid reset token"
+      }
+    },
+    {
+      "path": "/auth/token",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 712.74,
+      "success": true,
+      "error": null,
+      "response": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0KzE3NzMzMDAyOTVAZXhhbXBsZS5jb20iLCJleHAiOjE3NzMzMDM4OTl9.UIwyX13MTWIGZf4DQjaqFl3Qnb9TX4bDdVvnqn_hY9E",
+        "refresh_token": null,
+        "token_type": "bearer",
+        "role": "user"
+      }
+    },
+    {
+      "path": "/auth/me",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 22.41,
+      "success": true,
+      "error": null,
+      "response": {
+        "email": "test+1773300295@example.com",
+        "id": 131,
+        "created_at": "2026-03-12T07:24:55.869343",
+        "referral_code": "3YF36H4H",
+        "executions_this_month": 0,
+        "tokens_used_this_month": 0,
+        "subscription_tier": "free",
+        "subscription_status": "active",
+        "is_email_verified": false
+      }
+    },
+    {
+      "path": "/agents/",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 86.43,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/agents/",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 62.09,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "config"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          },
+          {
+            "type": "list_type",
+            "loc": [
+              "body",
+              "skills"
+            ],
+            "msg": "Input should be a valid list",
+            "input": "test_value"
+          },
+          {
+            "type": "float_parsing",
+            "loc": [
+              "body",
+              "temperature"
+            ],
+            "msg": "Input should be a valid number, unable to parse string as a number",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 51.15,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "PUT",
+      "status_code": 422,
+      "response_time_ms": 51.42,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "config"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          },
+          {
+            "type": "bool_parsing",
+            "loc": [
+              "body",
+              "is_published"
+            ],
+            "msg": "Input should be a valid boolean, unable to interpret input",
+            "input": "test_value"
+          },
+          {
+            "type": "list_type",
+            "loc": [
+              "body",
+              "skills"
+            ],
+            "msg": "Input should be a valid list",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/agents/{agent_id}",
+      "method": "DELETE",
+      "status_code": 500,
+      "response_time_ms": 58.23,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/agents/{agent_id}/run",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 67.97,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/agents/{agent_id}/clone",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 61.32,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/agents/{agent_id}/versions",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 60.33,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/agents/{agent_id}/versions",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 98.19,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/agents/{agent_id}/rollback/{version_id}",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 86.72,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/agents/test",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 51.73,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/executions/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 38.14,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/executions/{agent_id}",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 39.44,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/workflows/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 49.64,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/workflows/",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 17.66,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "config_json"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}",
+      "method": "GET",
+      "status_code": 403,
+      "response_time_ms": 17.85,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authorized to access this workflow"
+      }
+    },
+    {
+      "path": "/workflows/{workflow_id}/run",
+      "method": "POST",
+      "status_code": 403,
+      "response_time_ms": 16.73,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authorized to run this workflow"
+      }
+    },
+    {
+      "path": "/marketplace/agents",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 32.99,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34.89,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/listings",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 50.31,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Internal Error: (sqlite3.OperationalError) no such column: agents.ai_provider\n[SQL: SELECT agents.id AS agents_id, agents.name AS agents_name, agents.description AS agents_description, agents.config AS agents_config, agents.owner_id AS agents_owner_id, agents.is_published AS agents_is_published, agents.tags AS agents_tags, agents.category AS agents_category, agents.version AS agents_version, agents.workspace_id AS agents_workspace_id, agents.edge_enabled AS agents_edge_enabled, agents.resource_priority AS agents_resource_priority, agents.performance_rating AS agents_performance_rating, agents.execution_count AS agents_execution_count, agents.created_at AS agents_created_at, agents.updated_at AS agents_updated_at, agents.role AS agents_role, agents.skills AS agents_skills, agents.ai_provider AS agents_ai_provider, agents.model_name AS agents_model_name, agents.temperature AS agents_temperature \nFROM agents \nWHERE agents.id = ?\n LIMIT ? OFFSET ?]\n[parameters: (1, 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"
+      }
+    },
+    {
+      "path": "/marketplace/listings",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 119.62,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\errors.py\", line 164, in __call__\n    await"
+    },
+    {
+      "path": "/marketplace/listings/{listing_id}/buy",
+      "method": "POST",
+      "status_code": 402,
+      "response_time_ms": 90.12,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Insufficient funds"
+      }
+    },
+    {
+      "path": "/marketplace/{agent_id}/install",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 39.47,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/reviews",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 56.46,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/reviews",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 57.55,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/marketplace/agents/{agent_id}/publish",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 45.59,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/marketplace/system",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 40.17,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_agents": 0,
+        "categories": {}
+      }
+    },
+    {
+      "path": "/marketplace/system/{slug}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 20.49,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "System agent 'sample-slug' not found"
+      }
+    },
+    {
+      "path": "/marketplace/system/{slug}/execute",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 27.78,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "System agent 'sample-slug' not found"
+      }
+    },
+    {
+      "path": "/marketplace/system/category/{category}",
+      "method": "GET",
+      "status_code": 404,
+      "response_time_ms": 16.46,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "No agents found in category 'general'"
+      }
+    },
+    {
+      "path": "/schedules/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 17.04,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/schedules/",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 38.73,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/schedules/{schedule_id}",
+      "method": "DELETE",
+      "status_code": 404,
+      "response_time_ms": 39.68,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Schedule not found"
+      }
+    },
+    {
+      "path": "/intelligence/insights",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 92.5,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_memories": 24,
+        "total_reflections": 22,
+        "avg_confidence": 0.8,
+        "flagged_executions": 0,
+        "pending_evolutions": 6
+      }
+    },
+    {
+      "path": "/intelligence/dashboard",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29.99,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_memories": 24,
+        "total_reflections": 22,
+        "avg_confidence": 0.8,
+        "flagged_executions": 0,
+        "pending_evolutions": 6
+      }
+    },
+    {
+      "path": "/intelligence/reflections",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 17.01,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 22,
+          "execution_id": 58,
+          "agent_id": 2,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-25T07:46:59.793000"
+        },
+        {
+          "id": 21,
+          "execution_id": 57,
+          "agent_id": 1,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-25T07:46:59.708298"
+        },
+        {
+          "id": 20,
+          "execution_id": 56,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:13:11.030051"
+        },
+        {
+          "id": 19,
+          "execution_id": 55,
+          "agent_id": 2,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:11:41.691843"
+        },
+        {
+          "id": 18,
+          "execution_id": 54,
+          "agent_id": 1,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:11:40.749811"
+        },
+        {
+          "id": 17,
+          "execution_id": 53,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:11:28.611148"
+        },
+        {
+          "id": 16,
+          "execution_id": 52,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:09:34.993379"
+        },
+        {
+          "id": 15,
+          "execution_id": 51,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-24T19:09:04.613403"
+        },
+        {
+          "id": 14,
+          "execution_id": 50,
+          "agent_id": 102,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:47:25.472922"
+        },
+        {
+          "id": 13,
+          "execution_id": 49,
+          "agent_id": 101,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:46:58.316674"
+        },
+        {
+          "id": 12,
+          "execution_id": 48,
+          "agent_id": 92,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:20:53.147604"
+        },
+        {
+          "id": 11,
+          "execution_id": 47,
+          "agent_id": 91,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:20:18.677287"
+        },
+        {
+          "id": 10,
+          "execution_id": 46,
+          "agent_id": 90,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:19:20.001639"
+        },
+        {
+          "id": 9,
+          "execution_id": 45,
+          "agent_id": 89,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:18:54.011350"
+        },
+        {
+          "id": 8,
+          "execution_id": 44,
+          "agent_id": 76,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:09:57.054578"
+        },
+        {
+          "id": 7,
+          "execution_id": 43,
+          "agent_id": 74,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-22T08:09:20.667187"
+        },
+        {
+          "id": 6,
+          "execution_id": 22,
+          "agent_id": 38,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T09:10:17.402378"
+        },
+        {
+          "id": 5,
+          "execution_id": 21,
+          "agent_id": 38,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T09:10:07.099696"
+        },
+        {
+          "id": 4,
+          "execution_id": 20,
+          "agent_id": 38,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T09:09:35.122172"
+        },
+        {
+          "id": 3,
+          "execution_id": 19,
+          "agent_id": 38,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T09:09:23.393977"
+        },
+        {
+          "id": 2,
+          "execution_id": 18,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable or Error] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T08:38:16.301382"
+        },
+        {
+          "id": 1,
+          "execution_id": 17,
+          "agent_id": 28,
+          "confidence_score": 0.8,
+          "critique": "[Mock LLM Response - Local Provider Unavailable or Error] processed: \n        Analyze the following AI agent execution....",
+          "suggestions": "None.",
+          "is_flagged": false,
+          "created_at": "2026-02-21T08:37:53.547926"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/knowledge",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 15.69,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "topic": "test",
+          "content": "test",
+          "category": "test",
+          "source_agent_id": 1,
+          "created_at": "2026-03-12T00:14:21.878872"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/knowledge",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 16.61,
+      "success": true,
+      "error": null,
+      "response": {
+        "content": "test",
+        "id": 1,
+        "usage_count": 0,
+        "topic": "test",
+        "source_agent_id": 1,
+        "category": "test",
+        "created_at": "2026-03-12T00:14:21.878872"
+      }
+    },
+    {
+      "path": "/intelligence/knowledge/{knowledge_id}/reinforce",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 35.03,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\errors.py\", line 164, in __call__\n    await"
+    },
+    {
+      "path": "/intelligence/patterns/{agent_id}",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 202.61,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/evolutions",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 171.82,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/intelligence/evolutions/{evo_id}/apply",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 49.94,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/intelligence/messages",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 120.34,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 11,
+        "sender_agent_id": 1,
+        "receiver_agent_id": 1,
+        "content": "test_value",
+        "status": "delivered",
+        "created_at": "2026-03-12T07:25:02.117066"
+      }
+    },
+    {
+      "path": "/intelligence/messages",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28.09,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 11,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "test_value",
+          "status": "delivered",
+          "created_at": "2026-03-12T07:25:02.117066"
+        },
+        {
+          "id": 10,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "test_value",
+          "status": "delivered",
+          "created_at": "2026-03-12T07:19:56.244327"
+        },
+        {
+          "id": 9,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "test_value",
+          "status": "delivered",
+          "created_at": "2026-03-12T07:04:59.661637"
+        },
+        {
+          "id": 8,
+          "sender_agent_id": 2,
+          "receiver_agent_id": 1,
+          "content": "[Mock LLM Response - Local Provider Unavailable] processed: Act as an agent with the following description: Cr...",
+          "status": "delivered",
+          "created_at": "2026-02-25T07:46:59.817256"
+        },
+        {
+          "id": 7,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "[Mock LLM Response - Local Provider Unavailable] processed: Act as an agent with the following description: Cr...",
+          "status": "delivered",
+          "created_at": "2026-02-25T07:46:59.740448"
+        },
+        {
+          "id": 6,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 2,
+          "content": "Sync-up: propose next step for market analysis.",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:14:12.440792"
+        },
+        {
+          "id": 5,
+          "sender_agent_id": 2,
+          "receiver_agent_id": 1,
+          "content": "[Mock LLM Response - Local Provider Unavailable] processed: Act as an agent with the following description: Cr...",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:11:41.973843"
+        },
+        {
+          "id": 4,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 1,
+          "content": "[Mock LLM Response - Local Provider Unavailable] processed: Act as an agent with the following description: Cr...",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:11:41.240793"
+        },
+        {
+          "id": 3,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 2,
+          "content": "Sync-up: propose next step for market analysis.",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:11:32.670249"
+        },
+        {
+          "id": 2,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 2,
+          "content": "Sync-up: propose next step for market analysis.",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:09:39.746446"
+        },
+        {
+          "id": 1,
+          "sender_agent_id": 1,
+          "receiver_agent_id": 2,
+          "content": "Sync-up: propose next step for market analysis.",
+          "status": "delivered",
+          "created_at": "2026-02-24T19:09:10.279660"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/delegations",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 70.45,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 11,
+        "parent_agent_id": 1,
+        "child_agent_id": 1,
+        "goal": "test_value",
+        "input_payload": "test_value",
+        "status": "pending",
+        "priority": 1,
+        "result": null,
+        "created_at": "2026-03-12T07:25:02.230384"
+      }
+    },
+    {
+      "path": "/intelligence/delegations/{task_id}/status",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 17.87,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 1,
+        "parent_agent_id": 1,
+        "child_agent_id": 2,
+        "goal": "Draft a short friendly greeting",
+        "input_payload": "Keep it under 20 words.",
+        "status": "test_value",
+        "priority": 5,
+        "result": "test_value",
+        "created_at": "2026-02-24T19:09:10.405509"
+      }
+    },
+    {
+      "path": "/intelligence/workspace_memory",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 20.94,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "author_agent_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/intelligence/workspace_memory",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 20.13,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 4,
+          "workspace_id": 1,
+          "key": "greeting",
+          "value": "Hello, team!",
+          "author_agent_id": 1,
+          "created_at": "2026-02-24T19:14:12.475544"
+        },
+        {
+          "id": 3,
+          "workspace_id": 1,
+          "key": "greeting",
+          "value": "Hello, team!",
+          "author_agent_id": 1,
+          "created_at": "2026-02-24T19:11:33.409466"
+        },
+        {
+          "id": 2,
+          "workspace_id": 1,
+          "key": "greeting",
+          "value": "Hello, team!",
+          "author_agent_id": 1,
+          "created_at": "2026-02-24T19:09:44.231694"
+        },
+        {
+          "id": 1,
+          "workspace_id": 1,
+          "key": "greeting",
+          "value": "Hello, team!",
+          "author_agent_id": 1,
+          "created_at": "2026-02-24T19:09:10.535886"
+        }
+      ]
+    },
+    {
+      "path": "/intelligence/swarm",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 30.13,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "workspace_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/workspaces/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24.77,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/workspaces/",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 150.97,
+      "success": true,
+      "error": null,
+      "response": {
+        "name": "Test Agent",
+        "type": "test_value",
+        "id": 6,
+        "owner_id": 131,
+        "created_at": "2026-03-12T07:25:02.404331"
+      }
+    },
+    {
+      "path": "/workspaces/{workspace_id}/members",
+      "method": "GET",
+      "status_code": 403,
+      "response_time_ms": 29.03,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not a member of this workspace"
+      }
+    },
+    {
+      "path": "/workspaces/{workspace_id}/members",
+      "method": "POST",
+      "status_code": 403,
+      "response_time_ms": 25.09,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not a member of this workspace"
+      }
+    },
+    {
+      "path": "/billing/invoices",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.19,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/billing/subscription",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 92.5,
+      "success": true,
+      "error": null,
+      "response": {
+        "tier": "free",
+        "status": "active",
+        "start_date": "2026-03-12T07:25:02.660111",
+        "end_date": null,
+        "limits": {
+          "agents": 5,
+          "runs_per_month": 100
+        }
+      }
+    },
+    {
+      "path": "/billing/checkout-session",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 19.77,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid tier"
+      }
+    },
+    {
+      "path": "/billing/upgrade",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 19.77,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid tier"
+      }
+    },
+    {
+      "path": "/billing/usage",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29.07,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_executions": 0,
+        "total_tokens": 0,
+        "estimated_cost": 0.0,
+        "remaining_credits": 0.0,
+        "monthly_executions": 0
+      }
+    },
+    {
+      "path": "/billing/webhook",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 20.88,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "received"
+      }
+    },
+    {
+      "path": "/innovation/goals",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 63.78,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 2,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 3,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 4,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 5,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 10,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 15,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 20,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 25,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 30,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 35,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 40,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 45,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 50,
+          "title": "Launch Marketing Campaign",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 55,
+          "title": "test_value",
+          "status": "pending",
+          "progress": 0
+        },
+        {
+          "id": 60,
+          "title": "test_value",
+          "status": "pending",
+          "progress": 0
+        }
+      ]
+    },
+    {
+      "path": "/innovation/goals",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 1726.64,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": 65,
+        "title": "test_value",
+        "status": "pending",
+        "progress": 0
+      }
+    },
+    {
+      "path": "/innovation/simulations",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 1606.94,
+      "success": true,
+      "error": null,
+      "response": {
+        "agent_id": 1,
+        "scenario": "test_value",
+        "predicted_outcome": "Outcome: The customer will likely be satisfied if responded to promptly.\nScore: 85",
+        "score": 85,
+        "id": 15,
+        "created_at": "2026-03-12T07:25:06.197362"
+      }
+    },
+    {
+      "path": "/innovation/digital-twin",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33.56,
+      "success": true,
+      "error": null,
+      "response": {
+        "id": null,
+        "user_id": 1,
+        "preferences": {},
+        "behavior_model": {},
+        "proactive_enabled": false,
+        "predicted_needs": [],
+        "automated_tasks": [],
+        "last_updated": null
+      }
+    },
+    {
+      "path": "/innovation/digital-twin",
+      "method": "PUT",
+      "status_code": 422,
+      "response_time_ms": 11.5,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "preferences"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/innovation/opportunities",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 13.6,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 2,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 3,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 4,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 5,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 6,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 7,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 8,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 9,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 10,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 11,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 12,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 13,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 14,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 15,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 16,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 17,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 18,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 19,
+          "title": "AI Personal Shopper",
+          "description": "Automated shopping assistant",
+          "type": "business_idea",
+          "confidence_score": 0.85,
+          "source": "AI Market Scan"
+        },
+        {
+          "id": 20,
+          "title": "Code Review Bot",
+          "description": "Auto-fix pull requests",
+          "type": "automation",
+          "confidence_score": 0.92,
+          "source": "AI Market Scan"
+        }
+      ]
+    },
+    {
+      "path": "/deployment/edge/export/{agent_id}",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 64.29,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/deployment/resources/config",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 36.19,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "updated",
+        "config": {
+          "max_cpu_percent": 1.0,
+          "max_memory_mb": 1,
+          "auto_scale": true
+        }
+      }
+    },
+    {
+      "path": "/deployment/shards",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 16.08,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "shard_id": "shard-001",
+          "region": "us-east-1",
+          "status": "active",
+          "capacity": 45.0
+        },
+        {
+          "shard_id": "shard-002",
+          "region": "eu-west-1",
+          "status": "active",
+          "capacity": 32.5
+        }
+      ]
+    },
+    {
+      "path": "/deployment/metrics",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 32.0,
+      "success": true,
+      "error": null,
+      "response": {
+        "cpu_usage": 0.0,
+        "memory_usage": 150.7421875,
+        "cost_forecast_daily": 1.25,
+        "active_shards": 1,
+        "shard_details": []
+      }
+    },
+    {
+      "path": "/deployment/resource-limits",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 40.3,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/deployment/feedback",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 52.39,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "rating"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/deployment/templates",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39.84,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "id": 1,
+          "name": "Small Business Starter",
+          "description": "Essential agents for running a small business (Email, Social, Invoicing)",
+          "category": "business",
+          "is_active": true
+        },
+        {
+          "id": 2,
+          "name": "Developer Toolkit",
+          "description": "Agents to help with coding, debugging, and documentation",
+          "category": "developer",
+          "is_active": true
+        },
+        {
+          "id": 3,
+          "name": "Content Creator Pack",
+          "description": "Agents for brainstorming, writing, and editing content",
+          "category": "creator",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "path": "/deployment/templates/{template_id}/deploy",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 34.79,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Deployment failed: (sqlite3.OperationalError) table agents has no column named ai_provider\n[SQL: INSERT INTO agents (name, description, config, owner_id, is_published, tags, category, version, workspace_id, edge_enabled, resource_priority, performance_rating, execution_count, created_at, updated_at, role, ai_provider, model_name, temperature) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]\n[parameters: ('Customer Support Bot', 'Handles common customer queries via email', '{\"system_prompt\": \"You are a polite customer service agent.\"}', 1, 0, 'template:Small Business Starter', None, '1.0.0', None, 0, 'normal', 0.0, 0, '2026-03-12 07:25:06.589909', '2026-03-12 07:25:06.589919', None, 'openai', 'gpt-3.5-turbo', 0.7)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"
+      }
+    },
+    {
+      "path": "/growth/referrals",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 35.52,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/referrals/claim/{referral_id}",
+      "method": "POST",
+      "status_code": 404,
+      "response_time_ms": 39.7,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Referral not found"
+      }
+    },
+    {
+      "path": "/growth/showcase/trending",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 46.84,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/showcase/popular",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54.43,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/growth/insights",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 104.12,
+      "success": true,
+      "error": null,
+      "response": {
+        "total_executions": 0,
+        "total_time_saved": 0.0,
+        "productivity_score": 0.0,
+        "last_updated": "2026-03-12T07:25:06.806791"
+      }
+    },
+    {
+      "path": "/growth/community",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29.47,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "content": "This agent is amazing!",
+          "agent_id": 58,
+          "parent_id": null,
+          "type": "comment",
+          "id": 7,
+          "user_id": 70,
+          "likes": 0,
+          "created_at": "2026-02-21T19:20:17.864052"
+        },
+        {
+          "content": "This agent is amazing!",
+          "agent_id": 57,
+          "parent_id": null,
+          "type": "comment",
+          "id": 5,
+          "user_id": 68,
+          "likes": 0,
+          "created_at": "2026-02-21T19:19:38.971650"
+        },
+        {
+          "content": "This agent is amazing!",
+          "agent_id": 56,
+          "parent_id": null,
+          "type": "comment",
+          "id": 3,
+          "user_id": 66,
+          "likes": 0,
+          "created_at": "2026-02-21T19:19:04.170727"
+        },
+        {
+          "content": "This agent is amazing!",
+          "agent_id": 55,
+          "parent_id": null,
+          "type": "comment",
+          "id": 1,
+          "user_id": 64,
+          "likes": 0,
+          "created_at": "2026-02-21T19:18:53.255582"
+        }
+      ]
+    },
+    {
+      "path": "/growth/community",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 20.62,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "agent_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          },
+          {
+            "type": "int_parsing",
+            "loc": [
+              "body",
+              "parent_id"
+            ],
+            "msg": "Input should be a valid integer, unable to parse string as an integer",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/growth/community/{post_id}/replies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24.42,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "content": "I agree!",
+          "agent_id": null,
+          "parent_id": 1,
+          "type": "comment",
+          "id": 2,
+          "user_id": 64,
+          "likes": 0,
+          "created_at": "2026-02-21T19:18:53.389735"
+        }
+      ]
+    },
+    {
+      "path": "/growth/announcements",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 35.67,
+      "success": true,
+      "error": null,
+      "response": [
+        {
+          "title": "New Features!",
+          "content": "We launched Growth features.",
+          "type": "news",
+          "id": 2,
+          "created_at": "2026-02-21T19:20:18.723747",
+          "is_active": true
+        },
+        {
+          "title": "New Features!",
+          "content": "We launched Growth features.",
+          "type": "news",
+          "id": 1,
+          "created_at": "2026-02-21T19:19:40.073501",
+          "is_active": true
+        }
+      ]
+    },
+    {
+      "path": "/growth/announcements",
+      "method": "POST",
+      "status_code": 403,
+      "response_time_ms": 19.21,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Operation not permitted"
+      }
+    },
+    {
+      "path": "/wallet/balance",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 53.21,
+      "success": true,
+      "error": null,
+      "response": {
+        "balance": 0.0,
+        "currency": "USD"
+      }
+    },
+    {
+      "path": "/wallet/recharge",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 32.18,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "missing",
+            "loc": [
+              "query",
+              "amount"
+            ],
+            "msg": "Field required",
+            "input": null
+          }
+        ]
+      }
+    },
+    {
+      "path": "/wallet/transactions",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 22.37,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/talent/opportunities",
+      "method": "GET",
+      "status_code": 401,
+      "response_time_ms": 13.98,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Not authenticated"
+      }
+    },
+    {
+      "path": "/talent/match",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 43.06,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "list_type",
+            "loc": [
+              "body",
+              "skills_required"
+            ],
+            "msg": "Input should be a valid list",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/talent/agents",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 17.88,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "An error occurred while listing agents"
+      }
+    },
+    {
+      "path": "/compliance/scan",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 225.57,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Compliance scan failed: Client.chat() got an unexpected keyword argument 'timeout'"
+      }
+    },
+    {
+      "path": "/compliance/scans",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 12.34,
+      "success": true,
+      "error": null,
+      "response": []
+    },
+    {
+      "path": "/code/audit",
+      "method": "POST",
+      "status_code": 400,
+      "response_time_ms": 60.86,
+      "success": false,
+      "error": null,
+      "response": {
+        "detail": "Invalid source_type. Use 'repo_url' or 'snippet'"
+      }
+    },
+    {
+      "path": "/wellness/analyze",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 4143.63,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\routers\\wellness.py\", line 55, in analyze_wellness\n    repo = Repo(input_data.repo_path)"
+    },
+    {
+      "path": "/infra/analyze",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 47.72,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "success",
+        "infrastructure_model": "test",
+        "assessment": {
+          "hardware": {
+            "cpu": {
+              "cores": 4,
+              "threads": 8,
+              "frequency": 1500.0
+            },
+            "memory": {
+              "total_gb": 15.81,
+              "available_gb": 3.29,
+              "percent_used": 79.2
+            },
+            "gpu": []
+          },
+          "software": {},
+          "performance": {},
+          "bottlenecks": [
+            {
+              "type": "gpu",
+              "severity": "medium",
+              "description": "No GPU detected. GPU acceleration would significantly improve performance"
+            },
+            {
+              "type": "quantization",
+              "severity": "medium",
+              "description": "No quantization specified. Quantization can reduce memory usage and improve inference speed"
+            }
+          ]
+        },
+        "recommendations": [
+          "Consider GPU acceleration for better performance",
+          "Implement model quantization to reduce memory usage",
+          "Monitor resource utilization during inference"
+        ]
+      }
+    },
+    {
+      "path": "/infra/optimize",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 22.58,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "current_hardware"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          },
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "performance_requirements"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/infra/health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 1017.96,
+      "success": true,
+      "error": null,
+      "response": {
+        "cpu": {
+          "utilization_percent": 68.5,
+          "status": "healthy"
+        },
+        "memory": {
+          "total_gb": 15.81,
+          "used_gb": 12.51,
+          "percent_used": 79.1,
+          "status": "healthy"
+        },
+        "disk": {
+          "total_gb": 237.33,
+          "used_gb": 197.26,
+          "percent_used": 83.1,
+          "status": "warning"
+        },
+        "gpu": []
+      }
+    },
+    {
+      "path": "/ethics/scan",
+      "method": "POST",
+      "status_code": 200,
+      "response_time_ms": 105.18,
+      "success": true,
+      "error": null,
+      "response": {
+        "audit_id": "ethics-scan-20260312072512",
+        "ai_config": {
+          "system_name": "Quick Scan",
+          "system_type": "test_value",
+          "purpose": "Quick ethical assessment",
+          "target_users": [
+            "general"
+          ],
+          "data_sources": [
+            "test_value"
+          ],
+          "model_details": {
+            "type": "unknown"
+          },
+          "deployment_context": null,
+          "safeguards": []
+        },
+        "concerns": [
+          {
+            "id": "bias-no-mitigation",
+            "category": "bias",
+            "severity": "high",
+            "title": "No Explicit Bias Mitigation",
+            "description": "AI configuration does not include explicit bias mitigation strategies",
+            "impact": "Model may perpetuate or amplify existing biases in the data",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups",
+              "society"
+            ],
+            "evidence": "No bias-related safeguards found in configuration"
+          },
+          {
+            "id": "privacy-no-safeguards",
+            "category": "privacy",
+            "severity": "high",
+            "title": "No Explicit Privacy Safeguards",
+            "description": "AI configuration does not include explicit privacy protection measures",
+            "impact": "User data may be at risk of exposure or misuse",
+            "affected_stakeholders": [
+              "end_users"
+            ],
+            "evidence": "No privacy-related safeguards found in configuration"
+          },
+          {
+            "id": "bias-limited-data",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Data Source Diversity",
+            "description": "AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "impact": "Model may not generalize well to diverse populations or contexts",
+            "affected_stakeholders": [
+              "end_users",
+              "minority_groups"
+            ],
+            "evidence": "Data sources: test_value"
+          },
+          {
+            "id": "bias-limited-users",
+            "category": "bias",
+            "severity": "medium",
+            "title": "Limited Target User Diversity",
+            "description": "AI system is designed for a narrow range of users, which may lead to exclusion",
+            "impact": "System may not work well for users outside the primary target group",
+            "affected_stakeholders": [
+              "excluded_users"
+            ],
+            "evidence": "Target users: general"
+          },
+          {
+            "id": "transparency-no-explainability",
+            "category": "transparency",
+            "severity": "medium",
+            "title": "No Explainability Mechanisms",
+            "description": "AI configuration does not include explainability or interpretability features",
+            "impact": "Users and developers cannot understand how decisions are made",
+            "affected_stakeholders": [
+              "end_users",
+              "developers",
+              "regulators"
+            ],
+            "evidence": "No explainability-related safeguards found in configuration"
+          }
+        ],
+        "recommendations": [
+          {
+            "concern_id": "bias-limited-data",
+            "priority": "medium",
+            "title": "Address Limited Data Source Diversity",
+            "description": "Implement measures to address: AI system uses only 1 data source(s), which may lead to biased outcomes",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-limited-users",
+            "priority": "medium",
+            "title": "Address Limited Target User Diversity",
+            "description": "Implement measures to address: AI system is designed for a narrow range of users, which may lead to exclusion",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "bias-no-mitigation",
+            "priority": "high",
+            "title": "Address No Explicit Bias Mitigation",
+            "description": "Implement measures to address: AI configuration does not include explicit bias mitigation strategies",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "privacy-no-safeguards",
+            "priority": "high",
+            "title": "Address No Explicit Privacy Safeguards",
+            "description": "Implement measures to address: AI configuration does not include explicit privacy protection measures",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          },
+          {
+            "concern_id": "transparency-no-explainability",
+            "priority": "medium",
+            "title": "Address No Explainability Mechanisms",
+            "description": "Implement measures to address: AI configuration does not include explainability or interpretability features",
+            "implementation_steps": [
+              "Review the ethical concern",
+              "Consult with stakeholders",
+              "Implement appropriate safeguards",
+              "Monitor effectiveness"
+            ],
+            "expected_outcome": "Reduced ethical risk",
+            "references": []
+          }
+        ],
+        "summary": {
+          "total_concerns": 5,
+          "critical_concerns": 0,
+          "high_concerns": 2,
+          "medium_concerns": 3,
+          "low_concerns": 0,
+          "categories": [
+            "bias",
+            "privacy",
+            "transparency"
+          ],
+          "overall_risk_level": "high"
+        },
+        "audit_time": "2026-03-12T07:25:12.829972"
+      }
+    },
+    {
+      "path": "/ethics/audit",
+      "method": "POST",
+      "status_code": 422,
+      "response_time_ms": 29.37,
+      "success": false,
+      "error": null,
+      "response": {
+        "success": false,
+        "error": "Validation error",
+        "code": 422,
+        "details": [
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "model_details"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          },
+          {
+            "type": "dict_type",
+            "loc": [
+              "body",
+              "deployment_context"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": "test_value"
+          },
+          {
+            "type": "list_type",
+            "loc": [
+              "body",
+              "safeguards"
+            ],
+            "msg": "Input should be a valid list",
+            "input": "test_value"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/memory",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 46.46,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/runs",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 66.77,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/feedback",
+      "method": "POST",
+      "status_code": 500,
+      "response_time_ms": 81.51,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/self-improvement/agents/{agent_id}/learning-progress",
+      "method": "GET",
+      "status_code": 500,
+      "response_time_ms": 83.83,
+      "success": false,
+      "error": null,
+      "response": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n "
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 50.9,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "AI Agent Builder running \u2705",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "path": "/health",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24.1,
+      "success": true,
+      "error": null,
+      "response": {
+        "status": "unhealthy",
+        "app": "AI Agent Builder",
+        "debug": true,
+        "version": "1.0.0",
+        "database": "healthy",
+        "redis": "error: 'NoneType' object has no attribute 'client'",
+        "celery": "error: No module named 'celery'"
+      }
+    }
+  ],
+  "summary": {
+    "total": 114,
+    "success": 55,
+    "failed": 59,
+    "error": 0
+  }
+}

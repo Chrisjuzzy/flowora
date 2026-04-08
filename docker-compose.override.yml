@@ -1,0 +1,18 @@
+services:
+  backend:
+    volumes:
+      - ./apps/backend:/app
+    environment:
+      GIT_PYTHON_REFRESH: quiet
+
+  celery-worker:
+    volumes:
+      - ./apps/backend:/app
+    environment:
+      GIT_PYTHON_REFRESH: quiet
+
+  celery-beat:
+    volumes:
+      - ./apps/backend:/app
+    environment:
+      GIT_PYTHON_REFRESH: quiet

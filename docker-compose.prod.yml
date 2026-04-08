@@ -1,0 +1,247 @@
+services:
+  traefik:
+    image: traefik:v3.0
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --api.dashboard=${TRAEFIK_DASHBOARD_ENABLED:-false}
+      - --ping=true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    depends_on:
+      backend:
+        condition: service_healthy
+      frontend:
+        condition: service_healthy
+    restart: unless-stopped
+
+  backend:
+    image: ${FLOWORA_BACKEND_IMAGE:-flowora-backend:latest}
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile.production
+    ports:
+      - "8000:8000"
+    environment:
+      ENVIRONMENT: production
+      HOST: 0.0.0.0
+      PORT: 8000
+      DEBUG: "false"
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      SECRET_KEY: ${SECRET_KEY}
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost,http://localhost:3000,http://localhost:8000}
+      DEFAULT_AI_PROVIDER: ${DEFAULT_AI_PROVIDER:-openai}
+      DEFAULT_AI_MODEL: ${DEFAULT_AI_MODEL:-gpt-4.1-mini}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+      OLLAMA_TIMEOUT_SECONDS: ${OLLAMA_TIMEOUT_SECONDS:-110}
+      REQUEST_TIMEOUT_SECONDS: ${REQUEST_TIMEOUT_SECONDS:-120}
+      TIMEOUT_BUFFER_SECONDS: ${TIMEOUT_BUFFER_SECONDS:-10}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT:-}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-}
+      MINIO_BUCKET: ${MINIO_BUCKET:-flowora}
+      MINIO_SECURE: ${MINIO_SECURE:-true}
+      EMAIL_VERIFICATION_REQUIRED: ${EMAIL_VERIFICATION_REQUIRED:-true}
+      AUTO_VERIFY_EMAIL: ${AUTO_VERIFY_EMAIL:-false}
+      ALLOW_LLM_MOCK_FALLBACK: "false"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=10)"]
+      interval: 30s
+      timeout: 20s
+      retries: 5
+      start_period: 40s
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.flowora-api.rule: Host(`${TRAEFIK_DOMAIN:-localhost}`) && PathPrefix(`/api`)
+      traefik.http.routers.flowora-api.entrypoints: web
+      traefik.http.routers.flowora-api.priority: "20"
+      traefik.http.middlewares.flowora-api-strip.stripprefix.prefixes: /api
+      traefik.http.routers.flowora-api.middlewares: flowora-api-strip
+      traefik.http.services.flowora-api.loadbalancer.server.port: "8000"
+    restart: unless-stopped
+
+  celery-worker:
+    image: ${FLOWORA_BACKEND_IMAGE:-flowora-backend:latest}
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile.production
+    command: celery -A celery_app.celery_app worker --loglevel=INFO --queues=celery,agent_executions,workflows,optimization,scheduled,swarm,compliance,ethics,simulation
+    environment:
+      ENVIRONMENT: production
+      DEBUG: "false"
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      SECRET_KEY: ${SECRET_KEY}
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND}
+      DEFAULT_AI_PROVIDER: ${DEFAULT_AI_PROVIDER:-openai}
+      DEFAULT_AI_MODEL: ${DEFAULT_AI_MODEL:-gpt-4.1-mini}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+      OLLAMA_TIMEOUT_SECONDS: ${OLLAMA_TIMEOUT_SECONDS:-110}
+      REQUEST_TIMEOUT_SECONDS: ${REQUEST_TIMEOUT_SECONDS:-120}
+      TIMEOUT_BUFFER_SECONDS: ${TIMEOUT_BUFFER_SECONDS:-10}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT:-}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-}
+      MINIO_BUCKET: ${MINIO_BUCKET:-flowora}
+      MINIO_SECURE: ${MINIO_SECURE:-true}
+      ALLOW_LLM_MOCK_FALLBACK: "false"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+  celery-beat:
+    image: ${FLOWORA_BACKEND_IMAGE:-flowora-backend:latest}
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile.production
+    command: celery -A celery_app.celery_app beat --loglevel=INFO
+    environment:
+      ENVIRONMENT: production
+      DEBUG: "false"
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      SECRET_KEY: ${SECRET_KEY}
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND}
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    image: ${FLOWORA_FRONTEND_IMAGE:-flowora-frontend:latest}
+    build:
+      context: ./apps/frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost/api}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost}
+      NEXT_PUBLIC_DEMO_AGENT_ID: ${NEXT_PUBLIC_DEMO_AGENT_ID:-1}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:3000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.flowora-frontend.rule: Host(`${TRAEFIK_DOMAIN:-localhost}`)
+      traefik.http.routers.flowora-frontend.entrypoints: web
+      traefik.http.routers.flowora-frontend.priority: "1"
+      traefik.http.services.flowora-frontend.loadbalancer.server.port: "3000"
+    restart: unless-stopped
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    profiles:
+      - local
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-flowora}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-flowora}
+      POSTGRES_DB: ${POSTGRES_DB:-flowora}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-flowora} -d ${POSTGRES_DB:-flowora}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    profiles:
+      - local
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio:latest
+    profiles:
+      - local
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-minioadmin}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles:
+      - local-ai
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    profiles:
+      - observability
+    volumes:
+      - ./infra/prometheus-prod.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    profiles:
+      - observability
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-change-me}
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  minio_data:
+  ollama_data:
+  prometheus_data:
+  grafana_data:

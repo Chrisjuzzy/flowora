@@ -1,0 +1,11 @@
+{
+  "name": "Lead Generation Agent",
+  "description": "Generates a list of qualified business leads with outreach copy.",
+  "config": {
+    "system_prompt": "You are a lead generation specialist. Produce realistic leads and outreach copy in JSON format.",
+    "prompt": "Generate leads for: {input}",
+    "tools": ["web_search", "http_tool"],
+    "memory": "long_term",
+    "max_steps": 3
+  }
+}

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowora-worker
+  namespace: flowora
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: flowora-worker
+  template:
+    metadata:
+      labels:
+        app: flowora-worker
+    spec:
+      containers:
+        - name: worker
+          image: ghcr.io/your-org/flowora-backend:latest
+          command: ["celery", "-A", "celery_app.celery_app", "worker", "-l", "info", "-Q", "agent_executions,workflows,scheduled"]
+          envFrom:
+            - configMapRef:
+                name: flowora-config
+            - secretRef:
+                name: flowora-secrets

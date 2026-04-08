@@ -1,0 +1,443 @@
+{
+  "auth": {
+    "module": "auth",
+    "endpoints": [
+      {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time": 2.377333641052246,
+        "url": "http://localhost:8000/auth/register",
+        "method": "POST"
+      },
+      {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time": 2.364372968673706,
+        "url": "http://localhost:8000/auth/login",
+        "method": "POST"
+      },
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.0618557929992676,
+        "url": "http://localhost:8000/auth/me",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      }
+    ],
+    "total_tests": 3,
+    "passed": 2,
+    "failed": 1,
+    "avg_response_time": 2.2678541342417398
+  },
+  "agents": {
+    "module": "agents",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.0753798484802246,
+        "url": "http://localhost:8000/agents",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      },
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.0644495487213135,
+        "url": "http://localhost:8000/agents",
+        "method": "POST",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      }
+    ],
+    "total_tests": 2,
+    "passed": 0,
+    "failed": 2,
+    "avg_response_time": 2.069914698600769
+  },
+  "executions": {
+    "module": "executions",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 404,
+        "response_time": 2.0847713947296143,
+        "url": "http://localhost:8000/executions",
+        "method": "GET",
+        "error": "Expected 200, got 404",
+        "error_details": {
+          "detail": "Not Found"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.0847713947296143
+  },
+  "workflows": {
+    "module": "workflows",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.084768295288086,
+        "url": "http://localhost:8000/workflows",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.084768295288086
+  },
+  "marketplace": {
+    "module": "marketplace",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 404,
+        "response_time": 2.053830146789551,
+        "url": "http://localhost:8000/marketplace/agents",
+        "method": "GET",
+        "error": "Expected 200, got 404",
+        "error_details": {
+          "detail": "Not Found"
+        }
+      },
+      {
+        "status": "FAIL",
+        "status_code": 404,
+        "response_time": 2.081000566482544,
+        "url": "http://localhost:8000/marketplace/templates",
+        "method": "GET",
+        "error": "Expected 200, got 404",
+        "error_details": {
+          "detail": "Not Found"
+        }
+      }
+    ],
+    "total_tests": 2,
+    "passed": 0,
+    "failed": 2,
+    "avg_response_time": 2.0674153566360474
+  },
+  "schedules": {
+    "module": "schedules",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.0915141105651855,
+        "url": "http://localhost:8000/schedules",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.0915141105651855
+  },
+  "intelligence": {
+    "module": "intelligence",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 404,
+        "response_time": 2.067711353302002,
+        "url": "http://localhost:8000/intelligence/insights",
+        "method": "GET",
+        "error": "Expected 200, got 404",
+        "error_details": {
+          "detail": "Not Found"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.067711353302002
+  },
+  "workspaces": {
+    "module": "workspaces",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.0937654972076416,
+        "url": "http://localhost:8000/workspaces",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.0937654972076416
+  },
+  "billing": {
+    "module": "billing",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.0870325565338135,
+        "url": "http://localhost:8000/billing/subscription",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      },
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.091787099838257,
+        "url": "http://localhost:8000/billing/usage",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      }
+    ],
+    "total_tests": 2,
+    "passed": 0,
+    "failed": 2,
+    "avg_response_time": 2.089409828186035
+  },
+  "innovation": {
+    "module": "innovation",
+    "endpoints": [
+      {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time": 2.097191572189331,
+        "url": "http://localhost:8000/innovation/goals",
+        "method": "GET"
+      }
+    ],
+    "total_tests": 1,
+    "passed": 1,
+    "failed": 0,
+    "avg_response_time": 2.097191572189331
+  },
+  "deployment": {
+    "module": "deployment",
+    "endpoints": [
+      {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time": 2.0807673931121826,
+        "url": "http://localhost:8000/deployment/metrics",
+        "method": "GET"
+      },
+      {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time": 2.072953224182129,
+        "url": "http://localhost:8000/deployment/templates",
+        "method": "GET"
+      }
+    ],
+    "total_tests": 2,
+    "passed": 2,
+    "failed": 0,
+    "avg_response_time": 2.0768603086471558
+  },
+  "admin": {
+    "module": "admin",
+    "endpoints": [],
+    "total_tests": 0,
+    "passed": 0,
+    "failed": 0,
+    "avg_response_time": 0
+  },
+  "growth": {
+    "module": "growth",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 500,
+        "response_time": 2.1041224002838135,
+        "url": "http://localhost:8000/growth/showcase/trending",
+        "method": "GET",
+        "error": "Expected 200, got 500",
+        "error_details": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n    self.dialect.do_execute(\n    ~~~~~~~~~~~~~~~~~~~~~~~^\n        cursor, str_statement, effective_parameters, context\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 952, in do_execute\n    cursor.execute(statement, parameters)\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\nsqlite3.OperationalError: no such column: agents.created_at\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\errors.py\", line 164, in __call__\n    await self.app(scope, receive, _send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\base.py\", line 191, in __call__\n    with recv_stream, send_stream, collapse_excgroups():\n                                   ~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Python314\\Lib\\contextlib.py\", line 162, in __exit__\n    self.gen.throw(value)\n    ~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_utils.py\", line 87, in collapse_excgroups\n    raise exc\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\base.py\", line 193, in __call__\n    response = await self.dispatch_func(request, call_next)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\middleware\\rate_limit.py\", line 56, in dispatch\n    response = await call_next(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\base.py\", line 168, in call_next\n    raise app_exc from app_exc.__cause__ or app_exc.__context__\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\base.py\", line 144, in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\cors.py\", line 87, in __call__\n    await self.app(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\exceptions.py\", line 63, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\middleware\\asyncexitstack.py\", line 18, in __call__\n    await self.app(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\routing.py\", line 716, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\routing.py\", line 736, in app\n    await route.handle(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\routing.py\", line 290, in handle\n    await self.app(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\routing.py\", line 119, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\routing.py\", line 105, in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\routing.py\", line 424, in app\n    raw_response = await run_endpoint_function(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\routing.py\", line 314, in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\concurrency.py\", line 32, in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\anyio\\to_thread.py\", line 63, in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py\", line 2502, in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py\", line 986, in run\n    result = context.run(func, *args)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\routers\\growth.py\", line 50, in get_trending_agents\n    ).group_by(models.Agent.id).order_by(func.count(models.Execution.id).desc()).limit(limit).all()\n                                                                                              ~~~^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\query.py\", line 2704, in all\n    return self._iter().all()  # type: ignore\n           ~~~~~~~~~~^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\query.py\", line 2857, in _iter\n    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(\n                                                  ~~~~~~~~~~~~~~~~~~~~^\n        statement,\n        ^^^^^^^^^^\n        params,\n        ^^^^^^^\n        execution_options={\"_sa_orm_load_options\": self.load_options},\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\session.py\", line 2351, in execute\n    return self._execute_internal(\n           ~~~~~~~~~~~~~~~~~~~~~~^\n        statement,\n        ^^^^^^^^^^\n    ...<4 lines>...\n        _add_event=_add_event,\n        ^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\session.py\", line 2249, in _execute_internal\n    result: Result[Any] = compile_state_cls.orm_execute_statement(\n                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        self,\n        ^^^^^\n    ...<4 lines>...\n        conn,\n        ^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\context.py\", line 306, in orm_execute_statement\n    result = conn.execute(\n        statement, params or {}, execution_options=execution_options\n    )\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1419, in execute\n    return meth(\n        self,\n        distilled_parameters,\n        execution_options or NO_OPTIONS,\n    )\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\sql\\elements.py\", line 527, in _execute_on_connection\n    return connection._execute_clauseelement(\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        self, distilled_params, execution_options\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1641, in _execute_clauseelement\n    ret = self._execute_context(\n        dialect,\n    ...<8 lines>...\n        cache_hit=cache_hit,\n    )\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1846, in _execute_context\n    return self._exec_single_context(\n           ~~~~~~~~~~~~~~~~~~~~~~~~~^\n        dialect, context, statement, parameters\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1986, in _exec_single_context\n    self._handle_dbapi_exception(\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        e, str_statement, effective_parameters, cursor, context\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2363, in _handle_dbapi_exception\n    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1967, in _exec_single_context\n    self.dialect.do_execute(\n    ~~~~~~~~~~~~~~~~~~~~~~~^\n        cursor, str_statement, effective_parameters, context\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 952, in do_execute\n    cursor.execute(statement, parameters)\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\nsqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: agents.created_at\n[SQL: SELECT agents.id AS agents_id, agents.name AS agents_name, agents.description AS agents_description, agents.config AS agents_config, agents.owner_id AS agents_owner_id, agents.is_published AS agents_is_published, agents.tags AS agents_tags, agents.category AS agents_category, agents.version AS agents_version, agents.workspace_id AS agents_workspace_id, agents.edge_enabled AS agents_edge_enabled, agents.resource_priority AS agents_resource_priority, agents.performance_rating AS agents_performance_rating, agents.execution_count AS agents_execution_count, agents.created_at AS agents_created_at, agents.updated_at AS agents_updated_at, agents.role AS agents_role, agents.skills AS agents_skills, count(executions.id) AS exec_count \nFROM agents JOIN executions ON agents.id = executions.agent_id \nWHERE executions.timestamp >= ? GROUP BY agents.id ORDER BY count(executions.id) DESC\n LIMIT ? OFFSET ?]\n[parameters: ('2026-03-04 19:36:58.382360', 10, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)\n"
+      },
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.0904810428619385,
+        "url": "http://localhost:8000/growth/insights",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      }
+    ],
+    "total_tests": 2,
+    "passed": 0,
+    "failed": 2,
+    "avg_response_time": 2.097301721572876
+  },
+  "wallet": {
+    "module": "wallet",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 401,
+        "response_time": 2.0625970363616943,
+        "url": "http://localhost:8000/wallet/balance",
+        "method": "GET",
+        "error": "Expected 200, got 401",
+        "error_details": {
+          "detail": "Not authenticated"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.0625970363616943
+  },
+  "talent": {
+    "module": "talent",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 404,
+        "response_time": 2.0545148849487305,
+        "url": "http://localhost:8000/talent/opportunities",
+        "method": "GET",
+        "error": "Expected 200, got 404",
+        "error_details": {
+          "detail": "Not Found"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.0545148849487305
+  },
+  "compliance": {
+    "module": "compliance",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 500,
+        "response_time": 2.047999143600464,
+        "url": "http://localhost:8000/compliance/scan",
+        "method": "POST",
+        "error": "Expected 200, got 500",
+        "error_details": {
+          "detail": "Compliance scan failed: Client.chat() got an unexpected keyword argument 'timeout'"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.047999143600464
+  },
+  "code-auditor": {
+    "module": "code-auditor",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 500,
+        "response_time": 11.159821271896362,
+        "url": "http://localhost:8000/code/audit",
+        "method": "POST",
+        "error": "Expected 200, got 500",
+        "error_details": {
+          "detail": "Code analysis failed: Client.chat() got an unexpected keyword argument 'timeout'"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 11.159821271896362
+  },
+  "wellness": {
+    "module": "wellness",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 500,
+        "response_time": 6.087261915206909,
+        "url": "http://localhost:8000/wellness/analyze",
+        "method": "POST",
+        "error": "Expected 200, got 500",
+        "error_details": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\routers\\wellness.py\", line 41, in analyze_wellness\n    repo = Repo(input_data.repo_path)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\git\\repo\\base.py\", line 235, in __init__\n    raise NoSuchPathError(epath)\ngit.exc.NoSuchPathError: C:\\tmp\\test\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\tenacity\\asyncio\\__init__.py\", line 116, in __call__\n    result = await fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\routers\\wellness.py\", line 95, in analyze_wellness\n    raise HTTPException(status_code=500, detail=f\"Wellness analysis failed: {str(e)}\")\nfastapi.exceptions.HTTPException: 500: Wellness analysis failed: C:\\tmp\\test\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\errors.py\", line 164, in __call__\n    await self.app(scope, receive, _send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\base.py\", line 191, in __call__\n    with recv_stream, send_stream, collapse_excgroups():\n                                   ~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Python314\\Lib\\contextlib.py\", line 162, in __exit__\n    self.gen.throw(value)\n    ~~~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_utils.py\", line 87, in collapse_excgroups\n    raise exc\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\base.py\", line 193, in __call__\n    response = await self.dispatch_func(request, call_next)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\middleware\\rate_limit.py\", line 56, in dispatch\n    response = await call_next(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\base.py\", line 168, in call_next\n    raise app_exc from app_exc.__cause__ or app_exc.__context__\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\base.py\", line 144, in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\cors.py\", line 87, in __call__\n    await self.app(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\middleware\\exceptions.py\", line 63, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\middleware\\asyncexitstack.py\", line 18, in __call__\n    await self.app(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\routing.py\", line 716, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\routing.py\", line 736, in app\n    await route.handle(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\routing.py\", line 290, in handle\n    await self.app(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\routing.py\", line 119, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\starlette\\_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\routing.py\", line 105, in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\routing.py\", line 424, in app\n    raw_response = await run_endpoint_function(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\fastapi\\routing.py\", line 312, in run_endpoint_function\n    return await dependant.call(**values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\tenacity\\asyncio\\__init__.py\", line 193, in async_wrapped\n    return await copy(fn, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\tenacity\\asyncio\\__init__.py\", line 112, in __call__\n    do = await self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\tenacity\\asyncio\\__init__.py\", line 157, in iter\n    result = await action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\tenacity\\_utils.py\", line 111, in inner\n    return call(*args, **kwargs)\n  File \"C:\\Users\\Admin\\Documents\\trae_projects\\AI Agent Builder\\apps\\backend\\.venv\\Lib\\site-packages\\tenacity\\__init__.py\", line 414, in exc_check\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x22a392129f0 state=finished raised HTTPException>]\n"
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 6.087261915206909
+  },
+  "infra-optimizer": {
+    "module": "infra-optimizer",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 404,
+        "response_time": 2.061661958694458,
+        "url": "http://localhost:8000/infra/analyze",
+        "method": "GET",
+        "error": "Expected 200, got 404",
+        "error_details": {
+          "detail": "Not Found"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.061661958694458
+  },
+  "ethics-guardian": {
+    "module": "ethics-guardian",
+    "endpoints": [
+      {
+        "status": "FAIL",
+        "status_code": 404,
+        "response_time": 2.0398998260498047,
+        "url": "http://localhost:8000/ethics/scan",
+        "method": "POST",
+        "error": "Expected 200, got 404",
+        "error_details": {
+          "detail": "Not Found"
+        }
+      }
+    ],
+    "total_tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "avg_response_time": 2.0398998260498047
+  }
+}

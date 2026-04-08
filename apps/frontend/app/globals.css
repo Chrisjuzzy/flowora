@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 10 11 14;
+  --foreground: 236 239 244;
+  --surface: 18 20 26;
+  --surface-2: 24 27 35;
+  --accent: 250 204 21;
+  --accent-2: 59 130 246;
+  --muted: 148 163 184;
+  --border: 51 65 85;
+  --font-sans: "Space Grotesk", "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-serif: "Fraunces", "Iowan Old Style", "Times New Roman", Times, serif;
+}
+
+* {
+  border-color: rgb(var(--border));
+}
+
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(59, 130, 246, 0.25), transparent),
+    radial-gradient(900px 500px at 80% -10%, rgba(250, 204, 21, 0.18), transparent),
+    rgb(var(--background));
+  color: rgb(var(--foreground));
+  min-height: 100vh;
+}
+
+.app-surface {
+  background: linear-gradient(135deg, rgba(30, 32, 40, 0.88), rgba(18, 20, 26, 0.88));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.text-muted {
+  color: rgb(var(--muted));
+}
+
+.heading-serif {
+  font-family: var(--font-serif);
+}
+
+@keyframes flowora-run {
+  0% {
+    transform: translateX(-20%) scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120%) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes flowora-trail {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  45% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+.flowora-runner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  animation: flowora-run 1.8s linear infinite;
+}
+
+.flowora-runner img {
+  filter: drop-shadow(0 6px 18px rgba(250, 204, 21, 0.35));
+}
+
+.flowora-trail {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(250, 204, 21, 0.25), transparent);
+  filter: blur(8px);
+  animation: flowora-trail 1.8s linear infinite;
+}

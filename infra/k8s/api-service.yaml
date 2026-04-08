@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flowora-api
+  namespace: flowora
+spec:
+  selector:
+    app: flowora-api
+  ports:
+    - port: 80
+      targetPort: 8000
+  type: ClusterIP

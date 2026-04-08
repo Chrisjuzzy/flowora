@@ -1,0 +1,104 @@
+apiVersion: 1
+
+groups:
+  - orgId: 1
+    name: flowora-alerts
+    folder: Flowora
+    interval: 1m
+    rules:
+      - uid: flowora-api-down
+        title: Flowora API Down
+        condition: A
+        data:
+          - refId: A
+            datasourceUid: prometheus
+            relativeTimeRange:
+              from: 300
+              to: 0
+            model:
+              expr: up{job="flowora-api"} == 0
+              intervalMs: 1000
+              maxDataPoints: 43200
+              refId: A
+        noDataState: Alerting
+        execErrState: Alerting
+        for: 1m
+        annotations:
+          summary: Backend is not responding to Prometheus.
+        labels:
+          severity: critical
+
+      - uid: flowora-high-error-rate
+        title: Flowora High Error Rate
+        condition: A
+        data:
+          - refId: A
+            datasourceUid: prometheus
+            relativeTimeRange:
+              from: 300
+              to: 0
+            model:
+              expr: |
+                sum(rate(http_errors_total[5m]))
+                /
+                clamp_min(sum(rate(http_requests_total[5m])), 1)
+                > 0.05
+              intervalMs: 1000
+              maxDataPoints: 43200
+              refId: A
+        noDataState: NoData
+        execErrState: Error
+        for: 5m
+        annotations:
+          summary: Error rate above 5% for 5 minutes.
+        labels:
+          severity: warning
+
+      - uid: flowora-high-latency
+        title: Flowora High P95 Latency
+        condition: A
+        data:
+          - refId: A
+            datasourceUid: prometheus
+            relativeTimeRange:
+              from: 300
+              to: 0
+            model:
+              expr: |
+                histogram_quantile(
+                  0.95,
+                  sum(rate(http_request_duration_seconds_bucket[5m])) by (le)
+                )
+                > 1
+              intervalMs: 1000
+              maxDataPoints: 43200
+              refId: A
+        noDataState: NoData
+        execErrState: Error
+        for: 5m
+        annotations:
+          summary: P95 latency above 1s for 5 minutes.
+        labels:
+          severity: warning
+
+      - uid: flowora-queue-depth
+        title: Flowora Queue Depth High
+        condition: A
+        data:
+          - refId: A
+            datasourceUid: prometheus
+            relativeTimeRange:
+              from: 300
+              to: 0
+            model:
+              expr: max(celery_queue_depth) > 100
+              intervalMs: 1000
+              maxDataPoints: 43200
+              refId: A
+        noDataState: NoData
+        execErrState: Error
+        for: 5m
+        annotations:
+          summary: Celery queue depth above 100.
+        labels:
+          severity: warning

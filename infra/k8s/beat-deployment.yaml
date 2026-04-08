@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowora-beat
+  namespace: flowora
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flowora-beat
+  template:
+    metadata:
+      labels:
+        app: flowora-beat
+    spec:
+      containers:
+        - name: beat
+          image: ghcr.io/your-org/flowora-backend:latest
+          command: ["celery", "-A", "celery_app.celery_app", "beat", "-l", "info"]
+          envFrom:
+            - configMapRef:
+                name: flowora-config
+            - secretRef:
+                name: flowora-secrets
