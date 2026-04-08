@@ -69,34 +69,40 @@ Set these in your cloud provider or `.env.prod`.
 - `GRAFANA_ADMIN_PASSWORD`
 
 **Render Deployment**
-Recommended layout is four services plus managed Postgres and Redis.
+Use the root `render.yaml` for a safe first deployment of the backend.
 
-1. Create a Render Postgres instance and copy its connection URL into `DATABASE_URL`.
-2. Create a Render Redis instance and set `REDIS_URL`, `CELERY_BROKER_URL`, `CELERY_RESULT_BACKEND`.
-3. Create a Web Service for the backend.
-4. Set the backend start command:
+Quick start:
+
+1. Import the repo into Render and point it at `render.yaml`.
+2. Deploy the `flowora-api` service.
+3. Verify:
+```bash
+curl https://<your-render-url>/health
+curl https://<your-render-url>/api/health
 ```
-uvicorn main:app --host 0.0.0.0 --port 8000
-```
-5. Create a Background Worker for Celery:
-```
-celery -A celery_app.celery_app worker --loglevel=INFO --queues=celery,agent_executions,workflows,optimization,scheduled,swarm,compliance,ethics,simulation
-```
-6. Create a second Background Worker for Celery Beat:
-```
-celery -A celery_app.celery_app beat --loglevel=INFO
-```
-7. Create a Web Service for the frontend.
-8. Set frontend build command:
-```
-npm install && npm run build
-```
-9. Set frontend start command:
-```
-npm run start -- -p 3000
-```
-10. Set `NEXT_PUBLIC_API_URL` to the backend public URL and `NEXT_PUBLIC_SITE_URL` to the frontend public URL.
-11. Use a managed LLM provider in cloud by setting `DEFAULT_AI_PROVIDER=openai` (or Anthropic/Gemini) and keep `ALLOW_LLM_MOCK_FALLBACK=false`.
+4. Once the backend is healthy, move the frontend to Vercel and set
+   `NEXT_PUBLIC_API_URL` to the Render backend URL.
+
+Safe boot values used by `render.yaml`:
+
+- `DATABASE_URL=sqlite:///./test.db`
+- `USE_PGVECTOR=false`
+- `REDIS_URL=redis://localhost:6379/0`
+- `CELERY_BROKER_URL=redis://localhost:6379/0`
+- `CELERY_RESULT_BACKEND=redis://localhost:6379/0`
+- `DEFAULT_AI_PROVIDER=mock`
+- `ALLOW_LLM_MOCK_FALLBACK=true`
+- `ENABLE_ASYNC_EXECUTION=false`
+- `EMAIL_VERIFICATION_REQUIRED=false`
+- `AUTO_VERIFY_EMAIL=true`
+
+Later, switch to production values:
+
+- managed Postgres
+- managed Redis
+- `DEFAULT_AI_PROVIDER=openai` or another managed provider
+- `ALLOW_LLM_MOCK_FALLBACK=false`
+- `ENABLE_ASYNC_EXECUTION=true`
 
 **Fly.io Deployment**
 Recommended layout is separate apps for API, worker, beat, and frontend.
