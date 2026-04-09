@@ -165,6 +165,8 @@ app.add_middleware(SlowAPIMiddleware)
 # Only allow whitelisted origins
 allowed_origins = settings.ALLOWED_ORIGINS if isinstance(settings.ALLOWED_ORIGINS, list) else settings.ALLOWED_ORIGINS.split(",")
 allowed_origins = [origin.strip() for origin in allowed_origins]  # Clean whitespace
+if "https://flowora-k13fslrwo-mainstreetagent.vercel.app" not in allowed_origins:
+    allowed_origins.append("https://flowora-k13fslrwo-mainstreetagent.vercel.app")
 
 logger.info(f"CORS allowed origins: {allowed_origins}")
 
